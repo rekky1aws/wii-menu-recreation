@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .game {
@@ -58,14 +59,30 @@ footer {
 	background-color: white;
 	width: 50%;
 	padding: 10px;
-	border-radius: 0px 0px 25px 25px;
+	border-radius: 0px 0px 50px 50px;
 	text-align: center;
+	color: cornflowerblue;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	font-size: 30px;
 }
 
 .wii-menu-container {
 	display: flex;
 	width: 100%;
-	justify-content: center;
+	justify-content: space-evenly;
+}
+
+.wii-menu-button {
+	position: relative;
+	bottom: -50px;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	height: 60px;
+	border: 1px solid cornflowerblue;
+	color: cornflowerblue;
+
+	width: auto;
 }
 
 .navigation-buttons {
