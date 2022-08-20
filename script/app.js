@@ -55,17 +55,20 @@ const games = new GameCollection (
 // Fonctions
 function swapItems (sourceA, sourceB)
 {
-    // Getting parents
-    const parentA = sourceA.parentNode;
-    const parentB = sourceB.parentNode;
+    if (sourceA !== sourceB)
+    {
+        // Getting parents
+        const parentA = sourceA.parentNode;
+        const parentB = sourceB.parentNode;
 
-    // Deleting original
-    parentA.removeChild(sourceA);
-    parentB.removeChild(sourceB);
+        // Deleting original
+        parentA.removeChild(sourceA);
+        parentB.removeChild(sourceB);
 
-    // Adding new
-    parentA.appendChild(sourceB);
-    parentB.appendChild(sourceA);    
+        // Adding new
+        parentA.appendChild(sourceB);
+        parentB.appendChild(sourceA);
+    }
 }
 
 // Main
@@ -76,10 +79,12 @@ let selectedItem = null;
 document.body.addEventListener('mousedown', (e) => {
     if (e.target.className.split(' ').indexOf('game-image') !== -1) {
         selectedItem = e.target;
+        document.body.style.cursor = 'grabbing';
     }
 });
 
 document.body.addEventListener('mouseup', (e) => {
+    document.body.removeAttribute('style');
     if (e.target.className.split(' ').indexOf('game-image') !== -1 && selectedItem) {
         swapItems(e.target, selectedItem);
     }
