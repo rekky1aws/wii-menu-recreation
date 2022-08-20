@@ -5,7 +5,6 @@ body {
 
 .game {
 	border-radius: 10% 10% 10% 10% / 25% 25% 25% 25%;
-	width: 100%;
 	height: 200px;
 	background-color: #2C2C2C;
 	border: 3px solid cornflowerblue;
@@ -31,6 +30,10 @@ body {
 	display: block;
 	cursor: grab;
 
+	/* Background to dispay when ther is no image */
+	background-color: #e5e5f7;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #b7b7b755, #b7b7b7 );
+
 	/* cancel user selection on every browser */
 	user-select: none;
 	-moz-user-select: none;
@@ -44,7 +47,7 @@ body {
 	cursor: grabbing;
 }
 
-.game:hover > img {
+.game:hover > .game-image {
 	color: white;
 }
 
@@ -133,4 +136,26 @@ footer {
 
 .cliquable-button:active {
 	transform: scale(0.9);
+}
+
+.moving-image {
+	opacity: 0.5;
+	position: fixed;
+	border-radius: 25px;
+	height: 200px;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+
+		/* cancel user selection on every browser */
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-drag: none;
+	-webkit-user-drag: none;
+}
+
+.empty-moving-image {
+	background-color: #e5e5f7;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #b7b7b755, #b7b7b7 );
 }
