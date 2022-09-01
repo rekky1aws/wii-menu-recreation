@@ -1,0 +1,43 @@
+body {
+	font-family: Helvetica, sans-serif;
+	color: #EEE;
+	background-color: #1D1D1D;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.container {
+	height:  100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.invisible {
+	display: none;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+}
+
+.start-button {
+	font-size: 5rem;
+	font-weight: bold;
+	background-color: cornflowerblue;
+	border: none;
+	padding: 0.5em 0.7em;
+	border-radius: 1em;
+	letter-spacing: 0.05em;
+}
+
+.start-button:hover {
+	transform: scale(1.05);
+}
+
+.start-button:active {
+	transform: scale(0.9);
+}
