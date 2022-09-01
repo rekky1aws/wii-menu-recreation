@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
+	cursor: none;
 }
 
 .game {
@@ -28,7 +29,6 @@ body {
 	width: 100%;
 	height: 100%;
 	display: block;
-	cursor: grab;
 
 	/* Background to dispay when ther is no image */
 	background-color: #e5e5f7;
@@ -72,6 +72,7 @@ footer {
 	height: 15%;
 	position: fixed;
 	bottom: 0;
+	border: 2px solid cornflowerblue;
 }
 
 .menu-title {
@@ -83,6 +84,10 @@ footer {
 	color: cornflowerblue;
 	font-weight: bold;
 	font-size: 30px;
+	border: 2px solid cornflowerblue;
+	position: relative;
+	border-top: none;
+	top: -2px;
 }
 
 .menu-container {
@@ -158,4 +163,10 @@ footer {
 .empty-moving-image {
 	background-color: #e5e5f7;
 	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #b7b7b755, #b7b7b7 );
+}
+
+.cursor-image {
+	position: fixed;
+	height: 4rem;
+	z-index: 20;
 }

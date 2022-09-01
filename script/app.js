@@ -86,14 +86,12 @@ function placeImageOnCursor()
 games.displayGames;
 
 let selectedItem;
-const cursPos = {x: undefined, y: undefined};
 let grabbingInterval;
 let movingImage;
 
 document.body.addEventListener('mousedown', (e) => {
     if (e.target.className.split(' ').indexOf('game-image') !== -1) {
         selectedItem = e.target;
-        document.body.style.cursor = 'grabbing';
         if (selectedItem.src) {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
@@ -107,20 +105,25 @@ document.body.addEventListener('mousedown', (e) => {
     }
 });
 
-document.body.addEventListener('mousemove', (e) => {
-    cursPos.x = e.x;
-    cursPos.y = e.y;
-});
-
 document.body.addEventListener('mouseup', (e) => {
     document.body.removeAttribute('style');
     if (e.target.className.split(' ').indexOf('game-image') !== -1 && selectedItem) {
-        document.body.removeChild(movingImage);
         swapItems(e.target, selectedItem);
         clearInterval(grabbingInterval);
         cursPos.x = null;
         cursPos.y = null;
     }
     selectedItem = null;
+    movingImage.parentNode.removeChild(movingImage);
 
+});
+
+document.querySelectorAll('.game-image').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursorImage.src = "/media/images/cursors/grabbable_cursor.png"
+    });
+
+    element.addEventListener('mouseleave', () => {
+        cursorImage.src = "/media/images/cursors/basic_cursor.png"
+    })
 });
