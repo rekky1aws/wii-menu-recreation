@@ -96,6 +96,7 @@ document.body.addEventListener('mousedown', (e) => {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
             movingImage.className = 'moving-image';
+            cursorImage.src = "/media/images/cursors/grabbing_cursor.png";
         } else {
             movingImage = document.createElement('div');
             movingImage.className = 'moving-image empty-moving-image';
@@ -114,16 +115,22 @@ document.body.addEventListener('mouseup', (e) => {
         cursPos.y = null;
     }
     selectedItem = null;
-    movingImage.parentNode.removeChild(movingImage);
+    if (movingImage && movingImage.parentNode) {
+        movingImage.parentNode.removeChild(movingImage);
+    }
 
 });
 
 document.querySelectorAll('.game-image').forEach(element => {
     element.addEventListener('mouseenter', () => {
-        cursorImage.src = "/media/images/cursors/grabbable_cursor.png"
+        if (selectedItem === null || selectedItem === undefined) {
+            cursorImage.src = "/media/images/cursors/grabbable_cursor.png";
+        }
     });
 
     element.addEventListener('mouseleave', () => {
-        cursorImage.src = "/media/images/cursors/basic_cursor.png"
+        if (selectedItem === null || selectedItem === undefined) {
+            cursorImage.src = "/media/images/cursors/basic_cursor.png";
+        }
     })
 });
