@@ -2,6 +2,14 @@ body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	cursor: none;
+
+	/* cancel user selection on every browser */
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-drag: none;
+	-webkit-user-drag: none;
 }
 
 .game {
@@ -11,6 +19,13 @@ body {
 	border: 3px solid cornflowerblue;
 	overflow: hidden;
 	transition: ease-in-out 0.2s;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-drag: none;
+	-webkit-user-drag: none;
 }
 
 .hover-light:hover {

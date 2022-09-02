@@ -1,22 +1,26 @@
 // Classes
 class Game {
-    constructor (name = 'No Game', imageLink = null) {
+    constructor (name = 'No Game', imageLink = null, gameLink = "#") {
         this.name = name;
         this.imageLink = imageLink;
+        this.gameLink = gameLink;
     }
 
     display () {
-        let game = document.createElement('div');
+        let game = document.createElement('a');
+        game.href = this.gameLink;
+        game.draggable = "false";
         game.className="game hover-light";
         let image;
         if (this.imageLink !== null) {
             image = document.createElement('img');
             image.alt = this.name;
-            image.src = this.imageLink; 
+            image.src = this.imageLink;
         } else {
             image = document.createElement('div');
         }
         image.className = 'game-image';
+        image.draggable = "false";
         game.appendChild(image);
         return game;
     }
@@ -51,7 +55,7 @@ class GameCollection {
 // Constantes
 const games = new GameCollection (
     [
-        new Game ('Test 1', 'media/gifs/3d1.gif'),
+        new Game ('Test 1', 'media/gifs/DVD.gif', 'dvd/'),
         new Game ('Test 2', 'media/gifs/loop2.gif')
     ]
 );
