@@ -55,8 +55,8 @@ class GameCollection {
 // Constantes
 const games = new GameCollection (
     [
-        new Game ('Test 1', 'media/gifs/DVD.gif', 'dvd/'),
-        new Game ('Test 2', 'media/gifs/loop2.gif')
+        new Game ('DVD', 'media/gifs/DVD.gif', 'dvd/'),
+        new Game ('JS_Paint', 'media/gifs/loop2.gif', 'JSPaint/')
     ]
 );
 
