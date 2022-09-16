@@ -1,8 +1,13 @@
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 header {
 	background-color: lightgrey;
 	height: 50px;
+}
+
+canvas {
+/* 	border: 1px solid black; */
 }
