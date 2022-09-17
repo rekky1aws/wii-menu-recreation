@@ -9,14 +9,20 @@
 </head>
 <body>
 	<header>
-		<div class="brush-size-container flex flex-col">
-			<label for="brush-size-range" class="name"> Brush Size : </label>
+		<div class="logo-container">
+			<img src="media/jspaint-logo.png" alt="Logo">
+		</div>
+		<h1> JS-Paint </h1>
+		<div class="brush-size-container flex flex-col param-container">
+			<label for="brush-size-range" class="name"> Brush Size </label>
 			<input type="range" min="0" max="50" value="5" step="0.1" name="brush-size" id="brush-size-range">
 			<span class="infos" id="brush-size-infos"></span>
 		</div>
-		<div class="color-container flex flex-col">
-			<label for="color-selector" class="name"> Color : </label>
-			<input type="color" name="color" id="color-selector">
+		<div class="color-container flex flex-col param-container">
+			<label for="color-selector" class="name"> Color </label>
+			<div class="color-input-container">
+				<input type="color" name="color" id="color-selector">
+			</div>
 			<span class="infos" id="brush-size-infos"></span>
 		</div>
 	</header>
