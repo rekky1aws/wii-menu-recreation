@@ -1,6 +1,8 @@
 // Constantes globales
 const header = document.querySelector('header');
 const brushSizeSelector = document.querySelector('#brush-size-range');
+const colorSelector = document.querySelector('#color-selector');
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -22,6 +24,7 @@ canvas.addEventListener('mouseup', endDrawInterval);
 canvas.addEventListener('mouseleave', endDrawInterval);
 canvas.addEventListener('mousemove', setMousePos);
 brushSizeSelector.addEventListener('change', setBrushSize);
+colorSelector.addEventListener('change', setBrushColor);
 
 // Setting Canvas size
 canvas.height = window.innerHeight - header.offsetHeight;
@@ -50,6 +53,10 @@ function setMousePos (e) {
 
 function setBrushSize () {
 	toolData.brushSize = brushSizeSelector.value;
+}
+
+function setBrushColor () {
+	toolData.color = colorSelector.value;
 }
 
 // Main

@@ -10,8 +10,13 @@
 <body>
 	<header>
 		<div class="brush-size-container flex flex-col">
-			<span class="name"> Brush Size : </span>
+			<label for="brush-size-range" class="name"> Brush Size : </label>
 			<input type="range" min="0" max="50" value="5" step="0.1" name="brush-size" id="brush-size-range">
+			<span class="infos" id="brush-size-infos"></span>
+		</div>
+		<div class="color-container flex flex-col">
+			<label for="color-selector" class="name"> Color : </label>
+			<input type="color" name="color" id="color-selector">
 			<span class="infos" id="brush-size-infos"></span>
 		</div>
 	</header>
