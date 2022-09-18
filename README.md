@@ -8,4 +8,4 @@ Un projet inspiré de l'idle screen des lecteurs DVD. Une balle rebondit sur les
 **ATENTION** : Il y a quelques fois un bug qui fait que la balle s'initialise dans un mur et les sons se déclenchent tous en même temps et en boucle. Je conseille donc de le pas mettre le volume trop fort au lancement.
 
 ## JS-Paint
-JS-Paint est une copie très minimaliste du fameux logiciel de Microsoft. On peut y séléctionner une couleur, la taille du pinceau et commencer à déssiner. Pour le moment il n'y a pas de fonctions trop avancées comme la sauvegarde, le color picking, le changement de brush, la réinitialisation du canevas ... Mais j'aimerais bien les ajouter par la suite.
+JS-Paint est une copie très minimaliste du fameux logiciel de Microsoft. On peut y séléctionner une couleur, la taille du pinceau et commencer à déssiner. Pour le moment il n'y a pas de fonctions trop avancées comme la sauvegarde, le color picking, le changement de brush ... Mais j'aimerais bien les ajouter par la suite.
