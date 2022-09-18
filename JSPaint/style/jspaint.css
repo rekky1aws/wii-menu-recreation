@@ -70,3 +70,39 @@ input[type="color"] {
 	appearance: none;
 	transform: scale(1.5);
 }
+
+.clean-container {
+	position: absolute;
+	right: 0;
+	margin: 10px;
+	height: 50px;
+	aspect-ratio: 1;
+	padding: 15px;
+	border-radius: 50%;
+}
+
+.clean-container  > img {
+	width: 100%;
+	height: 100%;
+}
+
+.clean-container > img:hover {
+	animation: jiggle 0.2s infinite;
+}
+
+.cliquable:hover {
+	transform: scale(1.05);
+}
+
+.cliquable:active {
+	transform: scale(0.9);
+}
+
+@keyframes jiggle {
+	0%, 10% {
+		transform: rotate(0deg);
+	}
+	2% {
+		transform: rotate(-10deg);
+	}
+}

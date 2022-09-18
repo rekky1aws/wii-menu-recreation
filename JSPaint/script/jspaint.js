@@ -2,6 +2,7 @@
 const header = document.querySelector('header');
 const brushSizeSelector = document.querySelector('#brush-size-range');
 const colorSelector = document.querySelector('#color-selector');
+const cleanButton = document.querySelector('#clean-button');
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -25,6 +26,7 @@ canvas.addEventListener('mouseleave', endDrawInterval);
 canvas.addEventListener('mousemove', setMousePos);
 brushSizeSelector.addEventListener('change', setBrushSize);
 colorSelector.addEventListener('change', setBrushColor);
+cleanButton.addEventListener('click', clearCanvas)
 
 // Setting Canvas size
 canvas.height = window.innerHeight - header.offsetHeight;
@@ -57,6 +59,13 @@ function setBrushSize () {
 
 function setBrushColor () {
 	toolData.color = colorSelector.value;
+}
+
+function clearCanvas () {
+	let flag = window.confirm('Nettoyer le canevas ?');
+	if (flag) {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	}
 }
 
 // Main
