@@ -62,9 +62,19 @@ function setBrushColor () {
 }
 
 function clearCanvas () {
-	let flag = window.confirm('Nettoyer le canevas ?');
-	if (flag) {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	let userAccepted = window.confirm('Nettoyer le canevas ?');
+	if (userAccepted) {
+		let i = 0;
+		let cleanerInterval;
+		let cleaner = function () {
+			if (i <= canvas.height) {
+				ctx.clearRect(0, 0, canvas.width, i);
+				i += 5;
+			} else {
+				clearInterval(cleanerInterval);
+			}
+		}
+		cleanerInterval = setInterval(cleaner, 1);
 	}
 }
 
