@@ -3,6 +3,7 @@ const header = document.querySelector('header');
 const brushSizeSelector = document.querySelector('#brush-size-range');
 const colorSelector = document.querySelector('#color-selector');
 const cleanButton = document.querySelector('#clean-button');
+const colorHistory = document.querySelector('#color-history');
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -57,8 +58,27 @@ function setBrushSize () {
 	toolData.brushSize = brushSizeSelector.value;
 }
 
-function setBrushColor () {
-	toolData.color = colorSelector.value;
+function setBrushColor (e, color = null) {
+	if (color) {
+		toolData.color = color;
+		colorSelector.value = color;
+
+	} else {
+		toolData.color = colorSelector.value;
+
+		let histColor = document.createElement('div');
+		histColor.className = "color-history-part";
+		histColor.style.backgroundColor = toolData.color;
+		histColor.style.color = toolData.color;
+		histColor.textContent = toolData.color;
+		histColor.addEventListener('click', setColorFromHistory);
+
+		colorHistory.insertBefore(histColor, colorHistory.firstChild);
+
+		if (colorHistory.childNodes.length > 15) {
+			colorHistory.removeChild(colorHistory.lastChild)
+		}
+	}
 }
 
 function clearCanvas () {
@@ -76,6 +96,10 @@ function clearCanvas () {
 		}
 		cleanerInterval = setInterval(cleaner, 1);
 	}
+}
+
+function setColorFromHistory (e) {
+	setBrushColor(e, e.target.textContent);
 }
 
 // Main

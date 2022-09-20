@@ -99,10 +99,26 @@ input[type="color"] {
 }
 
 @keyframes jiggle {
-	0%, 10% {
+	0%, 10%, 100% {
 		transform: rotate(0deg);
 	}
-	2% {
+	5% {
 		transform: rotate(-10deg);
 	}
+}
+
+#color-history {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	height: 30px;
+	width: 200px;
+}
+
+.color-history-part {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid white;
+	cursor: pointer;
 }
