@@ -88,18 +88,28 @@ function setBrushColor (e, color = null) {
 }
 
 function clearCanvas () {
+	// Demander à l'utilisateur s'il est sur de vouloir nettoyer le canevas
 	let userAccepted = window.confirm('Nettoyer le canevas ?');
+
+	// S'il accepte
 	if (userAccepted) {
+		// On initialise nos varibales;
 		let i = 0;
 		let cleanerInterval;
+
+		// Cette fonction se lancera en boucle jusqu'à ce que le canevas soit entierement nettoyé
 		let cleaner = function () {
 			if (i <= canvas.height) {
+				// On efface un rectangle de plus en plus grand qui fait toute la largeur du canevas et qui commence en haut de celui ci.
 				ctx.clearRect(0, 0, canvas.width, i);
 				i += 5;
 			} else {
+				// Si on a effacé tout le canevas (i a atteint la hauteur du canevas), alors on arrete.
 				clearInterval(cleanerInterval);
 			}
 		}
+
+		// On lance la boucle qui va nettoyer le canevas.
 		cleanerInterval = setInterval(cleaner, 1);
 	}
 }
