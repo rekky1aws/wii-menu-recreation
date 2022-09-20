@@ -59,13 +59,17 @@ function setBrushSize () {
 }
 
 function setBrushColor (e, color = null) {
+	// Si on passe une couleur en paramètre.
 	if (color) {
+		// On met la bonne couleur pour peindre.
 		toolData.color = color;
+		// On remet la couleur dans le selecteur.
 		colorSelector.value = color;
-
 	} else {
+		// On met la bonne couleur pour peindre.
 		toolData.color = colorSelector.value;
 
+		// Création de la div avec la couleur.
 		let histColor = document.createElement('div');
 		histColor.className = "color-history-part";
 		histColor.style.backgroundColor = toolData.color;
@@ -73,8 +77,10 @@ function setBrushColor (e, color = null) {
 		histColor.textContent = toolData.color;
 		histColor.addEventListener('click', setColorFromHistory);
 
+		// On ajoute la div de la couleur au début de la grille des couleurs.
 		colorHistory.insertBefore(histColor, colorHistory.firstChild);
 
+		// Si, après ajout, il y a plus de couleurs que ce que la grille pourrait contenir, on supprime la couleur la plus ancienne.
 		if (colorHistory.childNodes.length > 15) {
 			colorHistory.removeChild(colorHistory.lastChild)
 		}
