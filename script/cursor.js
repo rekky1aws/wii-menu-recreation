@@ -2,7 +2,7 @@ const cursorImage = document.createElement('img');
 const cursPos = {x: undefined, y: undefined};
 
 // Handling cursor image.
-cursorImage.src = "/media/images/cursors/basic_cursor.png";
+cursorImage.src = "../media/images/cursors/basic_cursor.png";
 cursorImage.className = "cursor-image";
 document.body.appendChild(cursorImage);
 
