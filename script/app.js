@@ -39,7 +39,7 @@ class GameCollection {
         }
     }
 
-    get displayGames () 
+    get displayGames ()
     {
         const mainElement = document.querySelector('main');
         for (let i = 0; i < Math.floor(this.collection.length / 12); i++) {
@@ -100,7 +100,7 @@ document.body.addEventListener('mousedown', (e) => {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
             movingImage.className = 'moving-image';
-            cursorImage.src = "/media/images/cursors/grabbing_cursor.png";
+              cursorImage.src = "../media/images/cursors/grabbing_cursor.png";
         } else {
             movingImage = document.createElement('div');
             movingImage.className = 'moving-image empty-moving-image';
@@ -128,13 +128,13 @@ document.body.addEventListener('mouseup', (e) => {
 document.querySelectorAll('.game-image').forEach(element => {
     element.addEventListener('mouseenter', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "/media/images/cursors/grabbable_cursor.png";
+            cursorImage.src = "../media/images/cursors/grabbable_cursor.png";
         }
     });
 
     element.addEventListener('mouseleave', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "/media/images/cursors/basic_cursor.png";
+            cursorImage.src = "../media/images/cursors/basic_cursor.png";
         }
     })
 });
