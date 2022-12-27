@@ -1,0 +1,47 @@
+let keysDown = [];
+
+function saveKeyUp (evt)
+{
+  keysDown[evt.key] = false;
+}
+
+function saveKeyDown (evt)
+{
+  keysDown[evt.key] = true;
+  if (keysDown['h'] && keysDown['o'] && keysDown['m'] && keysDown['e']) {
+    hm.display();
+  }
+}
+
+class HomeMenu {
+  constructor ()
+  {
+    console.log("Creating Home Menu");
+    this.createElts();
+    this.addButtons();
+  }
+
+  createElts ()
+  {
+    // Creating div for thr home menu
+    this.menuDiv = document.createElement('div');
+    this.menuDiv.className = 'homeMenu hidden';
+    document.body.append(this.menuDiv);
+  }
+
+  addButtons ()
+  {
+    // Adding buttons combo to trigger the menu
+    document.body.addEventListener('keydown', saveKeyDown);
+    document.body.addEventListener('keyup', saveKeyUp);
+  }
+
+  display ()
+  {
+    // Showing menu
+    this.menuDiv.classList.toggle('hidden');
+    console.log("Showing menu");
+  }
+}
+
+const hm = new HomeMenu();

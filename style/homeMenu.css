@@ -1,0 +1,11 @@
+.homeMenu {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top:0;
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
