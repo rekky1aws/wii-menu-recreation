@@ -1,0 +1,22 @@
+.burger-container {
+	width: 2vw;
+	aspect-ratio: 1.2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 20px;
+	opacity: 0.2;
+}
+
+.burger-container:hover {
+	opacity: 1;
+	transition: ease-out 0.2s;
+}
+
+.burger-part {
+	width: 100%;
+	height: 20%;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+}

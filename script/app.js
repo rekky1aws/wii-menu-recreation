@@ -56,7 +56,8 @@ class GameCollection {
 const games = new GameCollection (
     [
         new Game ('DVD', 'media/gifs/DVD.gif', 'dvd/'),
-        new Game ('JS_Paint', 'media/gifs/loop2.gif', 'JSPaint/')
+        new Game ('JS_Paint', 'media/gifs/loop2.gif', 'JSPaint/'),
+        new Game ('Klondike', 'media/gifs/klondike.gif', 'klondike/')
     ]
 );
 

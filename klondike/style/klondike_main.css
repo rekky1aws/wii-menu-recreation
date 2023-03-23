@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: #0E2E17;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #00000022;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+h1 {
+	margin: 20px;
+}
+
+.cliquable:hover {
+	transform: scale(1.05);
+}
+
+.cliquable:active {
+	transform: scale(0.95);
+}
