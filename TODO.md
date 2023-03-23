@@ -9,6 +9,9 @@
  + Add favicon
  + Add gif
 
+## DVD
+ + Add favicon
+
 ## Klondike
  + Add favicon
  + Make cards class
