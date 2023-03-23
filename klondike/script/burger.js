@@ -4,6 +4,7 @@ function toggleBurger ()
 
 }
 
+// Permet de faire automatiquement le burger menu
 function addBurgerDesign (containerElt)
 {
 	for (let i=0; i<3; i++) {
