@@ -1,10 +1,11 @@
 * {
-	margin: 0;
-	padding: 0;
+	/* DEBUG */
+	padding: 5px;
+	border: 1px solid red;
+	background-color: #FFFFFF10;
 }
 
 body {
-	font-family: Helvetica, sans-serif;
 	background-color: #0E2E17;
 	color: #FFFFFF;
 	margin: 0;
@@ -15,12 +16,16 @@ header {
 	background-color: #00000022;
 	height: 10vh;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
 }
 
 h1 {
 	margin: 20px;
+}
+
+nav {
+	width: 20vh;
+	right: 0;
+	top: 0;
 }
 
 .cliquable:hover {
@@ -29,4 +34,9 @@ h1 {
 
 .cliquable:active {
 	transform: scale(0.95);
+}
+
+.nav_header {
+	height: 10vh;
+	background-color: red;
 }
