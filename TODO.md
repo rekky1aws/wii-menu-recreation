@@ -22,3 +22,5 @@
  	+ @ constructor
  	+ @ shuffle
  + Add Burger Menu
+    + Content
+    + f changeState
