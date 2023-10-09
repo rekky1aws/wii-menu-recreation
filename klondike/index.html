@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="style/framework.css">
 	<link rel="stylesheet" type="text/css" href="style/klondike_main.css">
 	<link rel="stylesheet" type="text/css" href="style/burger.css">
-	<script type="text/javascript" src="script/burger.js" defer></script>
+	<!-- <script type="text/javascript" src="script/burger.js" defer></script> -->
+	<script type="text/javascript" src="script/cards.js" defer></script>
 </head>
 <body>
 	<header class="flex align-center justify-between">
@@ -29,18 +30,18 @@
 		</div>
 	</nav>
 	<main>
-		<div class="top-zone flex justify-between">
+		<section class="top-zone flex justify-between">
 			<div class="scored flex justify-center">
-				<div class="scord-spades">
+				<div class="scored-spades">
 					<!-- Scored cards of spades -->
 				</div>
-				<div class="scord-dimaonds">
+				<div class="scored-dimaonds">
 					<!-- Scored cards of dimaonds -->
 				</div>
-				<div class="scord-clubs">
+				<div class="scored-clubs">
 					<!-- Scored cards of clubs -->
 				</div>
-				<div class="scord-hearts">
+				<div class="scored-hearts">
 					<!-- Scored cards of hearts -->
 				</div>
 			</div>
@@ -52,10 +53,16 @@
 					
 				</div>
 			</div>
-		</div>
-		<div class="main-zone">
-			
-		</div>
+		</section>
+		<section class="main-zone flex">
+			<div class="main-row" id="row1"></div>
+			<div class="main-row" id="row2"></div>
+			<div class="main-row" id="row3"></div>
+			<div class="main-row" id="row4"></div>
+			<div class="main-row" id="row5"></div>
+			<div class="main-row" id="row6"></div>
+			<div class="main-row" id="row7"></div>
+		</section>
 	</main>
 </body>
 </html>
