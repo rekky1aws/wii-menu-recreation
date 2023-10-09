@@ -40,3 +40,16 @@ nav {
 	height: 10vh;
 	background-color: red;
 }
+
+.red {
+	color: red;
+}
+
+.black {
+	color: black;
+}
+
+.card {
+	background-color: #FFFFFF;
+	font-weight: bold;
+}

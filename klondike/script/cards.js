@@ -1,15 +1,16 @@
-class Card {
+class Card 
+{
 	/*
 		value: 1 <= int <= 13
 		suit: 0 (spades), 1 (diamonds), 2 (clubs), 3 (hearts) 
 	*/
-	constructor(value, suit) {
-		if ((value < 1) || (value > 13))
-		{
+	constructor(value, suit) 
+	{
+		// Throwing Errors if inputed values are wrong
+		if ((value < 1) || (value > 13)) {
 			throw new Error('Value must be an integer beetween 1 and 13 included');
 		}
-		if ((suit < 0) || (suit > 3))
-		{
+		if ((suit < 0) || (suit > 3)) {
 			throw new Error('Suit must be an integer beetween 0 and 3 included. 0: Spades, 1: Diamonds, 2: Clubs and 3: Hearts');
 		}
 
@@ -36,8 +37,7 @@ class Card {
 		cardSuit.classList.add('card-suit');
 
 		// Adding class to display correct color
-		if (this.suit % 2 == 0)
-		{
+		if (this.suit % 2 == 0) {
 			cardElt.classList.add('red');
 		} else {
 			cardElt.classList.add('black');
@@ -56,15 +56,53 @@ class Card {
 
 		return true;
 	}
+
+	get textDisplay ()
+	{
+		// Association table
+		const assocValue = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+		const assocSuit = ['♠', '♦', '♥', '♣'];
+
+		return assocSuit[this.suit] + " " + assocValue[this.value - 1];
+	}
 }
 
 class CardDeck {
+	constructor ()
+	{
+		this.cards = [];
+		for(let i=0; i<4; i++) { // Each Suit
+			for(let j=1; j<=13; j++) { // Each Value
+				this.cards.push(new Card(j, i));
+			}
+		}
 
+		return this;
+	}
+
+	shuffle ()
+	{
+		let newCards = [];
+		while (this.cards.length > 0)
+		{
+			// Choosing a card
+			let rnd = Math.floor(Math.random() * this.cards.length);
+			newCards.push(this.cards[rnd]);
+
+			// Removing it from the main deck
+			let part1 = this.cards.slice(0,rnd);
+			let part2 = this.cards.slice(rnd+1);
+			this.cards = part1.concat(part2);
+		}
+		this.cards = newCards;
+	}
 }
 
-let cardArr = [
-	new Card(11, 0), // J of Spades
-];
 
-let row1 = document.querySelector('#row1');
-cardArr[0].display(row1);
+// Debug code to test
+let testSection = document.querySelector('section#test');
+let deck = new CardDeck();
+deck.shuffle();
+deck.cards.forEach((element) => {
+	element.display(testSection);
+})
