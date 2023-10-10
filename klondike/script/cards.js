@@ -106,9 +106,6 @@ A class using the previous one (Card) to handle the behavior of a deck of playin
 	}
 }
 
-
-export
-
 // Debug code to test
 let testSection = document.querySelector('section#test');
 let deck = new CardDeck();
