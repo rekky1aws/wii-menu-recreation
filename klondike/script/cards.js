@@ -1,7 +1,7 @@
 class Card 
 {
 /*
-A class to handle the behavior of à playing card
+A class to handle the behavior of a playing card.
 */
 	constructor(value, suit, visible = false) 
 	/*
@@ -73,6 +73,9 @@ A class to handle the behavior of à playing card
 
 class CardDeck
 {
+/*
+A class using the previous one (Card) to handle the behavior of a deck of playing cards.
+*/
 	constructor ()
 	{
 		this.cards = [];
