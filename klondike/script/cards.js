@@ -1,10 +1,13 @@
 class Card 
 {
+/*
+A class to handle the behavior of à playing card
+*/
+	constructor(value, suit, visible = false) 
 	/*
 		value: 1 <= int <= 13
 		suit: 0 (spades), 1 (diamonds), 2 (clubs), 3 (hearts) 
 	*/
-	constructor(value, suit) 
 	{
 		// Throwing Errors if inputed values are wrong
 		if ((value < 1) || (value > 13)) {
@@ -16,6 +19,7 @@ class Card
 
 		this.value = value;
 		this.suit = suit;
+		this.visible = false;
 
 		return this;
 	}
@@ -67,7 +71,8 @@ class Card
 	}
 }
 
-class CardDeck {
+class CardDeck
+{
 	constructor ()
 	{
 		this.cards = [];
@@ -98,6 +103,8 @@ class CardDeck {
 	}
 }
 
+
+export
 
 // Debug code to test
 let testSection = document.querySelector('section#test');
