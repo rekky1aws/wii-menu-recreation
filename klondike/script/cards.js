@@ -105,11 +105,3 @@ A class using the previous one (Card) to handle the behavior of a deck of playin
 		this.cards = newCards;
 	}
 }
-
-// Debug code to test
-let testSection = document.querySelector('section#test');
-let deck = new CardDeck();
-deck.shuffle();
-deck.cards.forEach((element) => {
-	element.display(testSection);
-})
