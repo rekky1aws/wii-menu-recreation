@@ -17,3 +17,7 @@
  + Add Burger Menu
     + Content
     + f changeState
+ + Gameplay :
+   + Movable Cards
+   + Check placable card
+   + Card distribution
