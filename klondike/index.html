@@ -8,7 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="style/klondike_main.css">
 	<link rel="stylesheet" type="text/css" href="style/burger.css">
 	<!-- <script type="text/javascript" src="script/burger.js" defer></script> -->
-	<script type="text/javascript" src="script/cards.js" defer></script>
+	<script type="text/javascript" src="script/cards.js" type="module" defer></script>
+	<script type="text/javascript" src="script/klondike.js" type="module" defer></script>
+	<!-- DEBUG -->
+	<style type="text/css">
+		#test {
+			display: none !important;
+		}
+	</style>
 </head>
 <body>
 	<header class="flex align-center justify-between">
@@ -32,24 +39,24 @@
 	<main>
 		<section class="top-zone flex justify-between">
 			<div class="scored flex justify-center">
-				<div class="scored-spades">
+				<div id="scored-spades" class="scored-row">
 					<!-- Scored cards of spades -->
 				</div>
-				<div class="scored-dimaonds">
+				<div id="scored-diamonds" class="scored-row">
 					<!-- Scored cards of dimaonds -->
 				</div>
-				<div class="scored-clubs">
+				<div id="scored-clubs" class="scored-row">
 					<!-- Scored cards of clubs -->
 				</div>
-				<div class="scored-hearts">
+				<div id="scored-hearts" class="scored-row">
 					<!-- Scored cards of hearts -->
 				</div>
 			</div>
 			<div class="draw flex">
-				<div class="pile">
+				<div id="pile">
 					
 				</div>
-				<div class="visible_card">
+				<div id="visible_card">
 					
 				</div>
 			</div>
