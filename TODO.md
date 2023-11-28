@@ -14,13 +14,6 @@
 
 ## Klondike
  + Add favicon
- + Make cards class
- 	+ color
- 	+ family
- 	+ value
- + Make deck class
- 	+ @ constructor
- 	+ @ shuffle
  + Add Burger Menu
     + Content
     + f changeState
