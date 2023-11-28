@@ -3,7 +3,7 @@ class Card
 /*
 A class to handle the behavior of a playing card.
 */
-	constructor(value, suit, visible = false) 
+	constructor (value, suit, revealed = false) 
 	/*
 		value: 1 <= int <= 13
 		suit: 0 (spades), 1 (diamonds), 2 (clubs), 3 (hearts) 
@@ -19,7 +19,7 @@ A class to handle the behavior of a playing card.
 
 		this.value = value;
 		this.suit = suit;
-		this.visible = false;
+		this.revealed = revealed;
 
 		return this;
 	}
@@ -34,27 +34,34 @@ A class to handle the behavior of a playing card.
 		let cardElt = document.createElement('div');
 		let cardValue = document.createElement('div');
 		let cardSuit = document.createElement('div');
-
+		
 		// Adding classes to HTML elements
 		cardElt.classList.add('card');
-		cardValue.classList.add('card-value');
-		cardSuit.classList.add('card-suit');
-
-		// Adding class to display correct color
-		if (this.suit % 2 == 0) {
-			cardElt.classList.add('red');
-		} else {
-			cardElt.classList.add('black');
-		}
+		cardValue.classList.add('card_value');
+		cardSuit.classList.add('card_suit');
 
 		// Setinng values up
-		cardValue.textContent = assocValue[this.value - 1];
-		cardSuit.textContent = assocSuit[this.suit];
+			cardValue.textContent = assocValue[this.value - 1];
+			cardSuit.textContent = assocSuit[this.suit];
+
+		// Change display
+		if (this.revealed)
+		{
+			// Adding class to display correct color
+			if (this.suit % 2 == 0) {
+				cardElt.classList.add('red');
+			} else {
+				cardElt.classList.add('black');
+			}
+		} else {
+			// Adding class to displau the back of the card
+			cardElt.classList.add('card_back');
+		}
 
 		// Appending all sub elements to cardElt
-		cardElt.appendChild(cardValue);
-		cardElt.appendChild(cardSuit);
-
+			cardElt.appendChild(cardValue);
+			cardElt.appendChild(cardSuit);
+		
 		// Appending the cardElt to the given parent element
 		parentElt.appendChild(cardElt);
 
