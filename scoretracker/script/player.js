@@ -10,6 +10,7 @@ class Player
 	add (score = 0)
 	{
 		this.score += score;
+		this.playerCard.childNodes[2].textContent = this.score
 	}
 
 	changeName (elt)
@@ -54,7 +55,7 @@ class Player
 		// Creating score buttons
 		scoreModif.forEach((value) => {
 			let newScoreButton = document.createElement('button');
-			newScoreButton.addEventListener('click', this.add);
+			newScoreButton.addEventListener('click', () => this.add(value));
 			newScoreButton.value = value;
 			if (value < 0) {
 				newScoreButton.textContent = value;
@@ -69,8 +70,9 @@ class Player
 		playerCard.append(playerName, playerSCT, playerScore, playerSCB, removeButton);
 		parent.append(playerCard);
 
+		this.playerCard = playerCard;
 
-		console.log(playerCard); // DEBUG
+		console.log(this); // DEBUG
 	}
 
 	updateDisplay ()
