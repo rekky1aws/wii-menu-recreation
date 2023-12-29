@@ -32,3 +32,6 @@
       + Fix to make it change name in JS too
  + Reset Scores
  + localStorage to save data between sessions
+   + f saveLocal : Saves data in localStorage
+   + f loadLocal : Load data from the localStorage
+ + f changeTheme
