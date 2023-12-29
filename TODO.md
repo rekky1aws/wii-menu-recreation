@@ -31,3 +31,4 @@
    + @ changeName
       + Fix to make it change name in JS too
  + Reset Scores
+ + localStorage to save data between sessions
