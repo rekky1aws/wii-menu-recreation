@@ -12,10 +12,11 @@ class Player
 		this.score += score;
 	}
 
-	changeName ()
+	changeName (elt)
 	{
 		let newName = prompt("Enter the new name for the player", this.name);
 		this.name = newName;
+		elt.target.textContent = this.name;
 	}
 
 	display (parent = null)
@@ -29,12 +30,14 @@ class Player
 		let playerScore = document.createElement('div');
 		let playerSCT = document.createElement('div'); // Player score change top
 		let playerSCB = document.createElement('div'); // Player score change bottom
+		let removeButton = document.createElement('button');
 
 		// Content of elements
 		playerCard.classList.add('playerCard');
 		playerCard.id = "card"+this.id;
 
 		playerName.classList.add('playerName');
+		playerName.addEventListener('click', this.changeName);
 		playerName.textContent = this.name;
 
 		playerScore.classList.add('playerScore');
@@ -43,6 +46,10 @@ class Player
 		playerSCT.classList.add('scoreChange', 'scoreChangeTop');
 
 		playerSCB.classList.add('scoreChange', 'scoreChangeBottom');
+
+		removeButton.classList.add('removePlayer');
+		removeButton.addEventListener('click', this.remove);
+		removeButton.textContent = "-";
 		
 		// Creating score buttons
 		scoreModif.forEach((value) => {
@@ -59,7 +66,7 @@ class Player
 		});
 
 		// Structuring
-		playerCard.append(playerName, playerSCT, playerScore, playerSCB);
+		playerCard.append(playerName, playerSCT, playerScore, playerSCB, removeButton);
 		parent.append(playerCard);
 
 
@@ -67,6 +74,11 @@ class Player
 	}
 
 	updateDisplay ()
+	{
+
+	}
+
+	remove (elt)
 	{
 
 	}
