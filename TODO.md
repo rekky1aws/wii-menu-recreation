@@ -27,20 +27,7 @@
 
 ## Score Tracker
  + Player Class
-   + Container
-      + Name
-         + @ Change player name
-      + Score
-      + Buttons
-         + @ Add 1
-         + @ Add 5
-         + @ Add 10
-         + @ Add 100
-         + @ Sub 1
-         + @ Sub 5
-         + @ Sub 10
-         + @ Sub 100
- + Add Player
- + Remove Player
-   + Confirm
+   + @ updateDisplay (to prevent from regenerating everything)
+   + @ changeName
+      + Fix to make it change name in JS too
  + Reset Scores
