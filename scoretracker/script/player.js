@@ -15,8 +15,17 @@ class Player
 
 	changeName (elt)
 	{
-		let newName = prompt("Enter the new name for the player", this.name);
-		this.name = newName;
+		const id = parseInt(elt.target.parentNode.id.split('card')[1]); // Getting {id} for id="card{id}" in HTML
+
+		let newName = "";
+		while(newName == "") {
+			newName = prompt("Enter the new name for the player", this.name);
+			if (newName == "") {
+				alert("Player name can't be empty");
+			}
+		}
+		
+		players[id].name = newName;
 		elt.target.textContent = this.name;
 	}
 
