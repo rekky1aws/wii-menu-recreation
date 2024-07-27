@@ -24,3 +24,8 @@
  + Add Burger Menu
     + Content
     + f changeState
+
+## Static Generator
+ + Generate Grid
+ + Random color per pixel (black or white)
+ + Generate each frame
