@@ -1,6 +1,8 @@
 // CONSTANTS
-const viewHeight = Math.floor(window.innerHeight / 10);
-const viewWidth = Math.floor(window.innerWidth / 10);
+const divRatio = 30;
+
+const viewHeight = Math.floor(window.innerHeight / divRatio);
+const viewWidth = Math.floor(window.innerWidth / divRatio);
 
 const mainElt = document.querySelector('main');
 const gridSizeElt = document.querySelector('#grid-size');
@@ -23,10 +25,9 @@ function setGridSize (parent = gridSizeElt)
 
 function getColor ()
 {
-	// Number between 0 and 100
-	const blackRatio = 55
-	const colorNum = Math.floor(Math.random() * 100)
-	if (colorNum < 55) {
+	// Number between 0 and 1
+	const blackRatio = 3/5
+	if (Math.random() < blackRatio) {
 		return "black";
 	}
 
@@ -60,4 +61,4 @@ function refreshGrid (parent = mainElt)
 setGridSize();
 generateGrid();
 
-staticInterval = setInterval(refreshGrid, 50);
+staticInterval = setInterval(refreshGrid, 1);
