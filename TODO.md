@@ -26,6 +26,8 @@
     + f changeState
 
 ## Static Generator
- + Generate Grid
- + Random color per pixel (black or white)
- + Generate each frame
+ + Optimize to generate each frame faster
+ + Add a pause/unpause button
+ + Header with sliders
+   + time between each frame
+   + number of pixels
