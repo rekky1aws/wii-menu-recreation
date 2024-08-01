@@ -28,6 +28,7 @@
 ## Static Generator
  + Optimize to generate each frame faster
  + Add a pause/unpause button
+ + Settings object to store every parameter
  + Header with sliders
    + time between each frame
    + number of pixels
