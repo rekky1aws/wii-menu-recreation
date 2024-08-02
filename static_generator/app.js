@@ -1,14 +1,17 @@
-// CONSTANTS
-const divRatio = 30;
+// VARIABLES
+let staticInterval;
 
-const viewHeight = Math.floor(window.innerHeight / divRatio);
-const viewWidth = Math.floor(window.innerWidth / divRatio);
+let settings = {
+	timeInterval: 1,
+	divRatio: 30,
+};
+
+// CONSTANTS
+const viewHeight = Math.floor(window.innerHeight / settings.divRatio);
+const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
 
 const mainElt = document.querySelector('main');
 const gridSizeElt = document.querySelector('#grid-size');
-
-// VARIABLES
-let staticInterval;
 
 // FUNCTIONS
 function setGridSize (parent = gridSizeElt)
@@ -61,4 +64,4 @@ function refreshGrid (parent = mainElt)
 setGridSize();
 generateGrid();
 
-staticInterval = setInterval(refreshGrid, 1);
+staticInterval = setInterval(refreshGrid, settings.timeInterval);
