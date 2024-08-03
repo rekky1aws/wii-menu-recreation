@@ -53,6 +53,10 @@ header {
 	text-align: center;
 }
 
-.cliquable:hover {
+.clickable:hover {
+	transform: scale(1.05);
+}
 
+.clickable:active {
+	transform: scale(0.95);
 }
