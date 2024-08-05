@@ -22,9 +22,8 @@ header {
 	position: fixed;
 	z-index: 10;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
-	gap: 1vw;
-	padding: 0 0.5vw;
 }
 
 /* BOXES */
@@ -43,15 +42,8 @@ header {
 /* OTHER */
 .back-button {
 	background-color: slateblue;
-	color: #FFFFFF;
-	font-weight: bold;
-	width: 1vw;
-	aspect-ratio: 1/1;
-	text-decoration: none;
-	border-radius: 50%;
-	padding: 0.25vw;
-	text-align: center;
 }
+
 
 .clickable:hover {
 	transform: scale(1.05);
@@ -59,4 +51,28 @@ header {
 
 .clickable:active {
 	transform: scale(0.95);
+}
+
+.header-button {
+	color: #FFFFFF;
+	font-weight: bold;
+	width: 1vw;
+	height: 1vw;
+	text-decoration: none;
+	border-radius: 50%;
+	padding: 0.25vw;
+	text-align: center;
+}
+
+.header-part {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	gap: 1vw;
+	padding: 0 0.5vw;
+}
+
+.hidden {
+	display: none;
 }
