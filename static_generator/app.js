@@ -4,6 +4,7 @@ let staticInterval;
 let settings = {
 	timeInterval: 1,
 	divRatio: 30,
+	blackRatio: 3/5, // Float beatween 0 and 1
 };
 
 // CONSTANTS
@@ -28,9 +29,7 @@ function setGridSize (parent = gridSizeElt)
 
 function getColor ()
 {
-	// Number between 0 and 1
-	const blackRatio = 3/5
-	if (Math.random() < blackRatio) {
+	if (Math.random() < settings.blackRatio) {
 		return "black";
 	}
 
