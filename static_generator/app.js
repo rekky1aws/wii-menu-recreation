@@ -2,9 +2,10 @@
 let staticInterval;
 
 let settings = {
-	timeInterval: 1,
+	timeInterval: 100, 
 	divRatio: 30,
 	blackRatio: 3/5, // Float beatween 0 and 1
+	isPaused: true,
 };
 
 // CONSTANTS
@@ -13,6 +14,7 @@ const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
 
 const mainElt = document.querySelector('main');
 const gridSizeElt = document.querySelector('#grid-size');
+const pauseBtn = document.querySelector('#pause-button');
 
 // FUNCTIONS
 function setGridSize (parent = gridSizeElt)
@@ -59,8 +61,23 @@ function refreshGrid (parent = mainElt)
 	}
 }
 
+function playPause ()
+{
+	console.log(`playPause : ${settings.isPaused}`);
+
+	if (settings.isPaused) {
+		staticInterval = setInterval(refreshGrid, settings.timeInterval);
+		settings.isPaused = false;
+	} else {
+		clearInterval(staticInterval);
+		settings.isPaused = true;
+	}
+}
+
+// EVENT LISTENERS
+pauseBtn.addEventListener("click", playPause);
+
 // MAIN
 setGridSize();
 generateGrid();
-
-staticInterval = setInterval(refreshGrid, settings.timeInterval);
+playPause();

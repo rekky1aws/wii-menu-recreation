@@ -1,3 +1,4 @@
+/* Tags */
 body {
 	background-color: #1D1D1D;
 	height: 100vh;
@@ -26,6 +27,16 @@ header {
 	align-items: center;
 }
 
+/* Id */
+#back-button {
+	background-color: slateblue;
+}
+
+#pause-button {
+
+}
+
+/* Classes */
 /* BOXES */
 .black {
 	background-color: #000000;
@@ -40,11 +51,6 @@ header {
 }
 
 /* OTHER */
-.back-button {
-	background-color: slateblue;
-}
-
-
 .clickable:hover {
 	transform: scale(1.05);
 }
