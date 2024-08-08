@@ -4,6 +4,8 @@
  + Add Favicon
  + +/- buttons position
  + Dynamic aspect ratio for apps
+ + Add static generator channel
+ + Add modal for photosensivty warning
 
 ## JSPaint
  + Add favicon
