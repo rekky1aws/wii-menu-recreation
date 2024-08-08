@@ -2,7 +2,7 @@
 let staticInterval;
 
 let settings = {
-	timeInterval: 100, 
+	timeInterval: 10, 
 	divRatio: 30,
 	blackRatio: 3/5, // Float beatween 0 and 1
 	isPaused: true,
