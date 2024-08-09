@@ -32,6 +32,7 @@
  + Add a pause/unpause button
  + Header with sliders and buttons
    + pause button
+    + style
     + change icon to a play button when paused
    + time between each frame
    + control the ratio of black pixels
