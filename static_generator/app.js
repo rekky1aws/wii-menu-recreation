@@ -65,12 +65,17 @@ function playPause ()
 {
 	console.log(`playPause : ${settings.isPaused}`);
 
+	// Unpause
 	if (settings.isPaused) {
 		staticInterval = setInterval(refreshGrid, settings.timeInterval);
 		settings.isPaused = false;
+		pauseBtn.innerHTML = "&#x23F8;";
+		
+	// Pause
 	} else {
 		clearInterval(staticInterval);
 		settings.isPaused = true;
+		pauseBtn.innerHTML = "&#x23EF;";
 	}
 }
 
