@@ -26,7 +26,6 @@ function setGridSize (parent = gridSizeElt)
 		}
 	`
 	parent.innerHTML = text;
-
 }
 
 function getColor ()
@@ -79,7 +78,21 @@ function playPause ()
 	}
 }
 
+function keyEventHandler (evt)
+{
+	switch (evt.code) {
+		case "Space":
+			playPause();
+			break;
+			
+		default:
+			// statements_def
+			break;
+	}
+}
+
 // EVENT LISTENERS
+addEventListener("keypress", keyEventHandler);
 pauseBtn.addEventListener("click", playPause);
 
 // MAIN
