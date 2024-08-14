@@ -28,7 +28,6 @@
     + f changeState
 
 ## Static Generator
- + Press space to pause/unpause
  + Optimize to generate each frame faster
  + Add a pause/unpause button
  + Header with sliders and buttons
