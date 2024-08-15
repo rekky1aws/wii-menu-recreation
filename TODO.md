@@ -29,7 +29,6 @@
 
 ## Static Generator
  + Optimize to generate each frame faster
- + Add a pause/unpause button
  + Header with sliders and buttons
    + pause button
     + style
