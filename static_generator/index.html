@@ -14,10 +14,27 @@
 			<a href="../" id="back-button" class="header-button clickable">&larr;</a>
 			<h1>Static Generator</h1>
 		</div>
-		<div class="header-right header-part">
-			<button type="button" id="pause-button" class="header-button">&#x23F8;</button>
+		<div class="header-right header-part clickable" id="burger-button">
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
 	</header>
+	<nav>
+		<div class="nav-header">
+			Menu
+		</div>
+		<ul>
+			<li> 
+				<label for="pause-button"> Pause / Unpause : </label>
+				<button type="button" id="pause-button" class="header-button">&#x23F8;</button>
+			</li>
+			<li>
+				<label for="div-ratio"> Division Ratio : </label>
+				<input type="range" min="1" max="100" value="30" name="div-ratio" class="slider" id="div-ratio">
+			</li>
+		</ul>
+	</nav>
 	<main>
 		
 	</main>

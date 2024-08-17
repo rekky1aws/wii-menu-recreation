@@ -15,6 +15,8 @@ const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
 const mainElt = document.querySelector('main');
 const gridSizeElt = document.querySelector('#grid-size');
 const pauseBtn = document.querySelector('#pause-button');
+const divRatioSlider = document.querySelector('#div-ratio');
+
 
 // FUNCTIONS
 function setGridSize (parent = gridSizeElt)
