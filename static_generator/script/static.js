@@ -15,10 +15,15 @@ const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
 const mainElt = document.querySelector('main');
 const gridSizeElt = document.querySelector('#grid-size');
 const pauseBtn = document.querySelector('#pause-button');
-const divRatioSlider = document.querySelector('#div-ratio');
-
+const sliders = document.querySelectorAll('.slider');
 
 // FUNCTIONS
+function addEventListenerList(list, event, fn) {
+    for (var i = 0, len = list.length; i < len; i++) {
+        list[i].addEventListener(event, fn, false);
+    }
+}
+
 function setGridSize (parent = gridSizeElt)
 {
 	const text = `
@@ -93,11 +98,23 @@ function keyEventHandler (evt)
 	}
 }
 
+function toCamelCase (str)
+{
+	let splArr = str.split('-');
+	splArr = splArr.map( (e) => {
+		return e.charAt(0).toUpperCase() + e.slice(1)
+	})
+	let splJoined = splArr.join("")
+	return splJoined.charAt(0).toLowerCase() + splJoined.slice(1)
+}
+
 // EVENT LISTENERS
 addEventListener("keypress", keyEventHandler);
 pauseBtn.addEventListener("click", playPause);
 
+addEventListenerList(sliders, "change", updateSlider);
+
 // MAIN
 setGridSize();
 generateGrid();
-playPause();
+// playPause();
