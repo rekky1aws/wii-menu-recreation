@@ -9,8 +9,6 @@ let settings = {
 };
 
 // CONSTANTS
-const viewHeight = Math.floor(window.innerHeight / settings.divRatio);
-const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
 
 const mainElt = document.querySelector('main');
 const gridSizeElt = document.querySelector('#grid-size');
@@ -26,6 +24,9 @@ function addEventListenerList(list, event, fn) {
 
 function setGridSize (parent = gridSizeElt)
 {
+	const viewHeight = Math.floor(window.innerHeight / settings.divRatio);
+	const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
+
 	const text = `
 		main {
 			grid-template-rows: repeat(${viewHeight}, 1fr);
@@ -44,8 +45,16 @@ function getColor ()
 	return "white";
 }
 
+function emptyGrid (parent = mainElt)
+{
+	parent.innerHTML = null;
+}
+
 function generateGrid (parent = mainElt)
 {
+	const viewHeight = Math.floor(window.innerHeight / settings.divRatio);
+	const viewWidth = Math.floor(window.innerWidth / settings.divRatio);
+
 	for (let x = 0; x<(viewHeight * viewWidth); x++) {
 		const elt = document.createElement('div');
 		
@@ -69,8 +78,6 @@ function refreshGrid (parent = mainElt)
 
 function playPause ()
 {
-	console.log(`playPause : ${settings.isPaused}`);
-
 	// Unpause
 	if (settings.isPaused) {
 		staticInterval = setInterval(refreshGrid, settings.timeInterval);
@@ -98,6 +105,13 @@ function keyEventHandler (evt)
 	}
 }
 
+function updateSetting (evt)
+{
+
+	settings[toCamelCase(evt.target.id)] = evt.target.value;
+	start();
+}
+
 // This function takes a kebab-case string and translates it to camelCase
 function toCamelCase (str)
 {
@@ -109,13 +123,20 @@ function toCamelCase (str)
 	return splJoined.charAt(0).toLowerCase() + splJoined.slice(1)
 }
 
+// MAIN FUNCTION
+function start ()
+{
+	emptyGrid();
+	setGridSize();
+	generateGrid();
+}
+
 // EVENT LISTENERS
 addEventListener("keypress", keyEventHandler);
 pauseBtn.addEventListener("click", playPause);
 
-addEventListenerList(sliders, "change", updateSlider);
+addEventListenerList(sliders, "change", updateSetting);
 
 // MAIN
-setGridSize();
-generateGrid();
+start();
 // playPause();
