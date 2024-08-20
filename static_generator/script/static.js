@@ -98,6 +98,7 @@ function keyEventHandler (evt)
 	}
 }
 
+// This function takes a kebab-case string and translates it to camelCase
 function toCamelCase (str)
 {
 	let splArr = str.split('-');
