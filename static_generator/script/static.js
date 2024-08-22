@@ -107,7 +107,6 @@ function keyEventHandler (evt)
 
 function updateSetting (evt)
 {
-
 	settings[toCamelCase(evt.target.id)] = evt.target.value;
 	start();
 }
