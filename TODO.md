@@ -35,3 +35,6 @@
    + time between each frame
    + control the ratio of black pixels
    + number of pixels
+
+## Polar Clock
+ + Concentric circles progressing to show time span.
