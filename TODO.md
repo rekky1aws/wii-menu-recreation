@@ -41,3 +41,8 @@
 
 ## Game of Life
  + Playable conway's game of life
+
+## Ovo
+ + One and two player version of the game OVO
+  + 6x6 board
+  + movable eggs with a wolor "underneath"
