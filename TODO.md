@@ -46,3 +46,9 @@
  + One and two player version of the game OVO
   + 6x6 board
   + movable eggs with a wolor "underneath"
+
+## Arkanoid
+ + Clasic brick breaker
+  + moving ball
+  + bricks on top of the screen
+  + a bar to throw the ball back to the bricks
