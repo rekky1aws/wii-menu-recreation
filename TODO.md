@@ -52,3 +52,9 @@
   + moving ball
   + bricks on top of the screen
   + a bar to throw the ball back to the bricks
+
+## Minesweeper
+ + Classic Minesweeper game
+  + Generating a grid with mine
+  + Clicking a box shows numbers of mines in the 8 surrounding boxes
+  + If there's no mine around, show boxes until there is
