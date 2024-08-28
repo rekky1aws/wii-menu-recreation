@@ -58,3 +58,15 @@
   + Generating a grid with mine
   + Clicking a box shows numbers of mines in the 8 surrounding boxes
   + If there's no mine around, show boxes until there is
+
+## QuizMaker
+ + A simple app to create quiz and share it with your friends using a string
+  + Create a quiz
+    + Create a question
+      + Add choices
+      + Choose possible answers
+    + Save a quiz
+      + Export JSON of questions to a base64 string
+  + Play a quiz
+    + Enter a base64 string
+    + Play pre-made quizs
