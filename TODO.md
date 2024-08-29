@@ -70,3 +70,6 @@
   + Play a quiz
     + Enter a base64 string
     + Play pre-made quizs
+
+## Jsaac
+ + A simplier version of the binding of isaac
