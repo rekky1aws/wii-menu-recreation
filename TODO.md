@@ -73,3 +73,6 @@
 
 ## Jsaac
  + A simplier version of the binding of isaac
+
+## Double pendulum
+ + A double pendulum simulation to demonstrate chaos theory
