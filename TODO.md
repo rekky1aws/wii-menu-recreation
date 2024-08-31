@@ -76,3 +76,12 @@
 
 ## Double pendulum
  + A double pendulum simulation to demonstrate chaos theory
+
+## Tabletop Score
+ + App to to register the scores during a tabletop game
+  + Choose number of players / teams
+  + Score for a round
+    + Add or remove score for each player
+    + Round
+  + Display game stats
+  + Save scores in localStorage
