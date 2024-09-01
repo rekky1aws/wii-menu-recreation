@@ -85,3 +85,6 @@
     + Round
   + Display game stats
   + Save scores in localStorage
+
+## Device Infos
+ + Displays all the infos the browser can get from your device
