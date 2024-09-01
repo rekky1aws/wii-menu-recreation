@@ -88,3 +88,13 @@
 
 ## Device Infos
  + Displays all the infos the browser can get from your device
+
+## Notepad
+ + App to take notes
+  + Add a new tab
+  + Write things
+  + Save current content to localStorage
+  + Save file to computer
+  + (Bonus : handle markdown syntax highlighting)
+  + (Bonus : handle markdown rendering)
+  + (Bonus Bonus : handle many languages syntax highlighting)
