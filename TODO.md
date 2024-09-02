@@ -6,6 +6,8 @@
  + Dynamic aspect ratio for apps
  + Add static generator channel
  + Add modal for photosensivty warning
+ + Channel prompt before opening
+ + Loader
 
 ## JSPaint
  + Add favicon
