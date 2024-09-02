@@ -1,5 +1,11 @@
 # TO DO
 
+## General
+ + Add a master js to generate common elements
+  + Header
+  + Home Button
+  + Home Menu on press of escape
+
 ## Main Menu
  + Add Favicon
  + +/- buttons position
