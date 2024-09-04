@@ -95,6 +95,7 @@
   + Save scores in localStorage
 
 ## Device Infos
+ + !!! Find a way to limit infinite loop on the recursion
  + Displays all the infos the browser can get from your device
 
 ## Notepad
