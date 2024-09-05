@@ -101,6 +101,7 @@
 ## Notepad
  + App to take notes
   + Add a new tab
+  + Close a tab
   + Write things
   + Save current content to localStorage
   + Save file to computer
