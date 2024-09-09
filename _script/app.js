@@ -1,9 +1,14 @@
 // Classes
 class Game {
-    constructor (name = 'No Game', imageLink = null, gameLink = "#") {
+    constructor (name = 'No Game', imageName = null, gameLink = "#") {
         this.name = name;
-        this.imageLink = imageLink;
         this.gameLink = gameLink;
+
+        if (imageName != null) {
+            this.imageLink = `/_media/${imageName}`;
+        } else {
+            this.imageLink = null;
+        }
     }
 
     display () {
@@ -71,10 +76,10 @@ class GameCollection {
 // Constantes
 const games = new GameCollection (
     [
-        new Game ('DVD', 'media/gifs/DVD.gif', 'dvd/'),
-        new Game ('JS_Paint', 'media/gifs/loop2.gif', 'JSPaint/'),
-        new Game ('Klondike', 'media/gifs/klondike.gif', 'klondike/'),
-        new Game ('Static_Generator', 'media/gifs/static.gif', 'static_generator/')
+        new Game ('DVD', 'gifs/DVD.gif', 'dvd/'),
+        new Game ('JS_Paint', 'gifs/loop2.gif', 'JSPaint/'),
+        new Game ('Klondike', 'gifs/klondike.gif', 'klondike/'),
+        new Game ('Static_Generator', 'gifs/static.gif', 'static_generator/')
     ]
 );
 
@@ -126,7 +131,7 @@ document.body.addEventListener('mousedown', (e) => {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
             movingImage.className = 'moving-image';
-            cursorImage.src = "media/images/cursors/grabbing_cursor.png";
+            cursorImage.src = "/_media/images/cursors/grabbing_cursor.png";
         // Sinon on crée une div qui aura le même comportement, avec le fond par défaut
         } else {
             movingImage = document.createElement('div');
@@ -171,13 +176,13 @@ document.body.addEventListener('mouseup', (e) => {
 document.querySelectorAll('.game-image').forEach(element => {
     element.addEventListener('mouseenter', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "media/images/cursors/grabbable_cursor.png";
+            cursorImage.src = "/_media/images/cursors/grabbable_cursor.png";
         }
     });
 
     element.addEventListener('mouseleave', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "media/images/cursors/basic_cursor.png";
+            cursorImage.src = "/_media/images/cursors/basic_cursor.png";
         }
     })
 });
