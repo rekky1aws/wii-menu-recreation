@@ -5,13 +5,16 @@
   + Header
   + Home Button
   + Home Menu on press of escape
+ + Complete README
+ + Trnaslate README in English (while keeping French)
 
 ## Main Menu
  + Add Favicon
- + +/- buttons position
+ + +/- buttons
+  + positions
+  + Navigating through the different pages
  + Dynamic aspect ratio for apps
- + Add static generator channel
- + Add modal for photosensivty warning
+ + Add modals for warnings (photosensitivity and app status) 
  + Channel prompt before opening
  + Loader
 
