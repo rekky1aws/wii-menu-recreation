@@ -1,8 +1,9 @@
 // CLASSES
 class Game {
-    constructor (name = 'No Game', imageName = null, gameLink = "#") {
+    constructor (name = 'No Game', imageName = null, gameLink = "#", status = null) {
         this.name = name;
         this.gameLink = gameLink;
+        this.status = status;
 
         if (imageName != null) {
             this.imageLink = `/_media/${imageName}`;
@@ -32,11 +33,16 @@ class Game {
         }
 
         // Propriétés de l'element
-        image.className = 'game-image';
+        image.classList.add('game-image');
         image.draggable = "false";
 
         game.appendChild(image);
         
+        if (this.status != null)
+        {
+            game.classList.add(this.status)
+        }
+
         return game;
     }
 }
@@ -79,8 +85,8 @@ const games = new GameCollection (
         new Game ('DVD', 'gifs/DVD.gif', 'dvd/'),
         new Game ('JS_Paint', 'gifs/loop2.gif', 'JSPaint/'),
         new Game ('Static_Generator', 'gifs/static.gif', 'static_generator/'),
-        new Game ('Klondike', 'gifs/klondike.gif', 'klondike/'),
-        new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/'),
+        new Game ('Klondike', 'gifs/klondike.gif', 'klondike/', 'beta-game'),
+        new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/', 'alpha-game'),
     ]
 );
 
