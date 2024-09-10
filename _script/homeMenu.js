@@ -1,22 +1,8 @@
-let keysDown = [];
-
-function saveKeyUp (evt)
-{
-  keysDown[evt.key] = false;
-}
-
-function saveKeyDown (evt)
-{
-  keysDown[evt.key] = true;
-  if (keysDown['h'] && keysDown['o'] && keysDown['m'] && keysDown['e']) {
-    hm.display();
-  }
-}
-
+// CLASSES
 class HomeMenu {
   constructor ()
   {
-    console.log("Creating Home Menu");
+    // console.log("Creating Home Menu"); // DEBUG
     this.createElts();
     this.addButtons();
   }
@@ -44,4 +30,22 @@ class HomeMenu {
   }
 }
 
+// CONSTANTS
 const hm = new HomeMenu();
+
+// VARIABLES
+let keysDown = [];
+
+// FUNCTIONS
+function saveKeyUp (evt)
+{
+  keysDown[evt.key] = false;
+}
+
+function saveKeyDown (evt)
+{
+  keysDown[evt.key] = true;
+  if (keysDown['h'] && keysDown['o'] && keysDown['m'] && keysDown['e']) {
+    hm.display();
+  }
+}

@@ -9,3 +9,6 @@ Un projet inspiré de l'idle screen des lecteurs DVD. Une balle rebondit sur les
 
 ## JS-Paint
 JS-Paint est une copie très minimaliste du fameux logiciel de Microsoft. On peut y séléctionner une couleur, la taille du pinceau et commencer à déssiner. Pour le moment il n'y a pas de fonctions trop avancées comme la sauvegarde, le color picking, le changement de brush ... Mais j'aimerais bien les ajouter par la suite.
+
+## Static-Generator
+Comme son nom l'indique, cette app permet de générer une image de statique visuel, aussi appelée neige. Différents paramètres sont réglables comme la taille des pixels, le ratio de pixels noirs, la vitesse...
