@@ -94,7 +94,8 @@ class Player
 		console.log(elt);
 		const htmlElt = elt.target.parentNode;
 		const id = parseInt(htmlElt.id.split('card')[1]); // Getting {id} for id="card{id}" in HTML
-		delete players[id];
+		players = players.filter((player) => player.id != id);
+		// delete players[id];
 		
 		if (confirm("Are you sure you want to delete this player (all its data will be lost) ?")) {
 			htmlElt.parentNode.removeChild(htmlElt);
