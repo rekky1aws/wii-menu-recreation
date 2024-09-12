@@ -108,3 +108,12 @@
   + (Bonus : handle markdown syntax highlighting)
   + (Bonus : handle markdown rendering)
   + (Bonus Bonus : handle many languages syntax highlighting)
+
+## Score Tracker
+ + Player Class
+   + @ updateDisplay (to prevent from regenerating everything)
+ + Reset Scores
+ + localStorage to save data between sessions
+   + f saveLocal : Saves data in localStorage
+   + f loadLocal : Load data from the localStorage
+ + f changeTheme

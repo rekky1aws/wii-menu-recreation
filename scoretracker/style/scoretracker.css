@@ -1,0 +1,9 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
