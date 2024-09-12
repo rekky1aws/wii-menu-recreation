@@ -26,7 +26,6 @@
     + f changeState
 
 ## Score Tracker
- + Corrctly update name on change
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
  + Reset Scores
