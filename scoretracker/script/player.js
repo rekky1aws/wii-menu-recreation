@@ -26,7 +26,7 @@ class Player
 		}
 		
 		players[id].name = newName;
-		elt.target.textContent = this.name;
+		players[id].updateName();
 	}
 
 	display (parent = null)
@@ -84,9 +84,11 @@ class Player
 		console.log(this); // DEBUG
 	}
 
-	updateDisplay ()
+	updateName ()
 	{
-
+		const playerNameElt = this.playerCard.querySelector('.playerName');
+		console.log(playerNameElt)
+		this.playerCard.querySelector('.playerName').textContent = this.name;
 	}
 
 	remove (elt)
