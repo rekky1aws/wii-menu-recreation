@@ -27,7 +27,6 @@
 
 ## Score Tracker
  + Corrctly update name on change
- + Fix item suppression in players
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
  + Reset Scores
