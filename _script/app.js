@@ -85,7 +85,7 @@ const games = new GameCollection (
         new Game ('DVD', 'gifs/DVD.gif', 'dvd/'),
         new Game ('JS_Paint', 'gifs/loop2.gif', 'JSPaint/'),
         new Game ('Static_Generator', 'gifs/static.gif', 'static_generator/'),
-        new Game ('ScoreTracker', 'gifs/counter.gif', 'scoretracker/'),
+        new Game ('ScoreTracker', 'gifs/counter.gif', 'scoretracker/' ,'beeta-game'),
         new Game ('Klondike', 'gifs/klondike.gif', 'klondike/', 'beta-game'),
         new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/', 'alpha-game'),
     ]
