@@ -3,7 +3,7 @@ class Player
 	constructor (id, name = "Player", score = 0)
 	{
 		this.id = id;
-		this.name = name;
+		this.name = Player.validateName();
 		this.score = score;
 	}
 
@@ -17,19 +17,13 @@ class Player
 	{
 		const id = parseInt(elt.target.parentNode.id.split('card')[1]); // Getting {id} for id="card{id}" in HTML
 
-		let newName = "";
-		while(newName == "") {
-			newName = prompt("Enter the new name for the player", this.name);
-			if (newName == "") {
-				alert("Player name can't be empty");
-			}
-		}
+		let newName = Player.validateName();
 		
 		players[id].name = newName;
 		players[id].updateName();
 	}
 
-	display (parent = null)
+	create (parent = null)
 	{
 		// Possible score modifiers
 		const scoreModif = [-100, -10, -5, -1, 1, 5, 10, 100];
@@ -106,5 +100,17 @@ class Player
 		if (confirm("Are you sure you want to delete this player (all its data will be lost) ?")) {
 			htmlElt.parentNode.removeChild(htmlElt);
 		}
+	}
+
+	static validateName (newName = "")
+	{
+		while(newName.replace(/\s+/g, '') == "") {
+			newName = prompt("Enter the new name for the player", this.name);
+			if (newName.replace(/\s+/g, '') == "") {
+				alert("Player name can't be empty");
+			}
+		}
+
+		return newName;
 	}
 }
