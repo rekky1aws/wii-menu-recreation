@@ -1,10 +1,10 @@
 class Player
 {
-	constructor (id, name = "Player")
+	constructor (id, name = "Player", score = 0)
 	{
 		this.id = id;
 		this.name = name;
-		this.score = 0;
+		this.score = score;
 	}
 
 	add (score = 0)
