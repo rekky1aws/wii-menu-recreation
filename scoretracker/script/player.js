@@ -40,6 +40,7 @@ class Player
 		let playerScore = document.createElement('div');
 		let playerSCT = document.createElement('div'); // Player score change top
 		let playerSCB = document.createElement('div'); // Player score change bottom
+		let playerScoreContainer = document.createElement('div'); 
 		let removeButton = document.createElement('button');
 
 		// Content of elements
@@ -56,6 +57,8 @@ class Player
 		playerSCT.classList.add('scoreChange', 'scoreChangeTop');
 
 		playerSCB.classList.add('scoreChange', 'scoreChangeBottom');
+
+		playerScoreContainer.classList.add('scoreContainer')
 
 		removeButton.classList.add('removePlayer');
 		removeButton.addEventListener('click', this.remove);
@@ -76,7 +79,8 @@ class Player
 		});
 
 		// Structuring
-		playerCard.append(playerName, playerSCT, playerScore, playerSCB, removeButton);
+		playerScoreContainer.append(playerSCT, playerScore, playerSCB)
+		playerCard.append(playerName, playerScoreContainer, removeButton);
 		parent.append(playerCard);
 
 		this.playerCard = playerCard;
