@@ -8,9 +8,9 @@ let players =  [];
 // FUNCTIONS
 function addPlayer ()
 {
-	let playerName = prompt("Name your player", "Player n°"+(players.length+1));
+	let playerName = `Player n°+${players.length+1}`;
 	players.push(new Player(players.length, playerName));
-	players[players.length - 1].display(playerZone);
+	players[players.length - 1].create(playerZone);
 }
 
 // EVENT LISTENERS
