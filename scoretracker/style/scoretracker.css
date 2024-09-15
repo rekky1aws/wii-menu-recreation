@@ -7,3 +7,36 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
+
+.playerCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.playerName {
+	text-align: center;
+}
+
+.playerScore {
+	text-align: center;
+}
+
+.scoreChange {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+
+.scoreContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr);
+}
+
+#playerZone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
