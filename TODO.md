@@ -85,14 +85,18 @@
 ## Double pendulum
  + A double pendulum simulation to demonstrate chaos theory
 
-## Tabletop Score
- + App to to register the scores during a tabletop game
-  + Choose number of players / teams
-  + Score for a round
-    + Add or remove score for each player
-    + Round
-  + Display game stats
-  + Save scores in localStorage
+## Score Tracker
+ + Player Class
+   + @ updateDisplay (to prevent from regenerating everything)
+ + Reset Scores
+ + localStorage to save data between sessions
+   + f saveLocal : Saves data in localStorage
+   + f loadLocal : Load data from the localStorage
+ + f changeTheme
+ + Rounds
+  + Add or remove score for each player
+  + Confirm Round Scores
+ + Display game stats
 
 ## Device Infos
  + !!! Find a way to limit infinite loop on the recursion
@@ -109,11 +113,3 @@
   + (Bonus : handle markdown rendering)
   + (Bonus Bonus : handle many languages syntax highlighting)
 
-## Score Tracker
- + Player Class
-   + @ updateDisplay (to prevent from regenerating everything)
- + Reset Scores
- + localStorage to save data between sessions
-   + f saveLocal : Saves data in localStorage
-   + f loadLocal : Load data from the localStorage
- + f changeTheme
