@@ -12,3 +12,6 @@ JS-Paint est une copie très minimaliste du fameux logiciel de Microsoft. On peu
 
 ## Static-Generator
 Comme son nom l'indique, cette app permet de générer une image de statique visuel, aussi appelée neige. Différents paramètres sont réglables comme la taille des pixels, le ratio de pixels noirs, la vitesse...
+
+## Device Infos
+Permet d'afficher le maximum d'infos que la page peut recevoir concernant l'appareil et le navigateur que vous uitlisez.
