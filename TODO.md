@@ -36,6 +36,7 @@
    + Card distribution
 
 ## Static Generator
++ Add Favicon
  + Optimize to generate each frame faster
  + Header with sliders and buttons
    + pause button
@@ -86,6 +87,7 @@
  + A double pendulum simulation to demonstrate chaos theory
 
 ## Score Tracker
+ + Add Favicon
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
  + Reset Scores
@@ -99,6 +101,7 @@
  + Display game stats
 
 ## Device Infos
+ + Add favicon
  + !!! Find a way to limit infinite loop on the recursion
  + Displays all the infos the browser can get from your device
 
@@ -112,4 +115,3 @@
   + (Bonus : handle markdown syntax highlighting)
   + (Bonus : handle markdown rendering)
   + (Bonus Bonus : handle many languages syntax highlighting)
-
