@@ -15,3 +15,6 @@ Comme son nom l'indique, cette app permet de générer une image de statique vis
 
 ## Device Infos
 Permet d'afficher le maximum d'infos que la page peut recevoir concernant l'appareil et le navigateur que vous uitlisez.
+
+## ScoreTracker
+Compter des scores et en garder une trace devient facile grave à cette petite app. Que ce soit dans un contexte de jeu de société, de jeu de role ou de partie de Magic : The Gathering, vous pouvez ajouter ou retirer des points a chaque joueur / equipe que vous pouvez nommer à votre guise.
