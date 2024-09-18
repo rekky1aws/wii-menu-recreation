@@ -1,5 +1,6 @@
 // CONSTANTS
 const addPlayerButton = document.querySelector('#addPlayer');
+const changeMode = document.querySelector('#changeTheme');
 const playerZone = document.querySelector('#playerZone');
 
 // VARIABLES
