@@ -14,6 +14,11 @@ function addPlayer ()
 	players[players.length - 1].create(playerZone);
 }
 
+function changeTheme ()
+{
+	
+}
+
 // EVENT LISTENERS
 addPlayerButton.addEventListener('click', addPlayer);
 
