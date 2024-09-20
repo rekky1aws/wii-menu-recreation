@@ -16,7 +16,8 @@ function addPlayer ()
 
 function changeTheme ()
 {
-	
+	const body = document.body;
+	console.log(body);
 }
 
 // EVENT LISTENERS
