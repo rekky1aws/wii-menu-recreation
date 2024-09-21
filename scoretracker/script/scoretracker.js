@@ -22,5 +22,6 @@ function changeTheme ()
 
 // EVENT LISTENERS
 addPlayerButton.addEventListener('click', addPlayer);
+changeMode.addEventListener('click', changeTheme);
 
 // MAIN
