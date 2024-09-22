@@ -17,7 +17,11 @@ function addPlayer ()
 function changeTheme ()
 {
 	const body = document.body;
-	console.log(body);
+	if (Array.from(body.classList).includes('dark')) {
+		body.classList.remove('dark');
+	} else {
+		body.classList.add('dark');
+	}
 }
 
 // EVENT LISTENERS
