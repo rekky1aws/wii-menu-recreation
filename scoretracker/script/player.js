@@ -3,7 +3,7 @@ class Player
 	constructor (id, name = "Player", score = 0)
 	{
 		this.id = id;
-		this.name = Player.validateName();
+		this.name = Player.validateName(name);
 		this.score = score;
 	}
 
@@ -79,7 +79,7 @@ class Player
 
 		this.playerCard = playerCard;
 
-		console.log(this); // DEBUG
+		// console.log(this); // DEBUG
 	}
 
 	updateName ()
@@ -104,10 +104,13 @@ class Player
 
 	static validateName (newName = "")
 	{
-		while(newName.replace(/\s+/g, '') == "") {
-			newName = prompt("Enter the new name for the player", this.name);
+		let nameIsCorrect = false;
+		while(!nameIsCorrect) {
+			newName = prompt("Enter the new name for the player", newName);
 			if (newName.replace(/\s+/g, '') == "") {
 				alert("Player name can't be empty");
+			} else {
+				nameIsCorrect = true;
 			}
 		}
 
