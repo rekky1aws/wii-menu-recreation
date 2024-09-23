@@ -10,7 +10,7 @@ class Player
 	add (score = 0)
 	{
 		this.score += score;
-		this.playerCard.childNodes[2].textContent = this.score
+		this.playerCard.querySelector(".playerScore").textContent = this.score
 	}
 
 	changeName (elt)
