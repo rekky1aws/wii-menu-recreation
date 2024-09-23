@@ -29,6 +29,7 @@ header {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr;
+}
 
 .scoreContainer {
 	display: grid;
@@ -40,4 +41,5 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	gap: 1.5em;
 }
