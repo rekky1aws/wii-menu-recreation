@@ -9,6 +9,7 @@
  + Trnaslate README in English (while keeping French)
 
 ## Main Menu
+ + Fix images not loading on pages
  + Add Favicon
  + +/- buttons
   + positions
@@ -87,6 +88,7 @@
  + A double pendulum simulation to demonstrate chaos theory
 
 ## Score Tracker
+ + Flex-wrap on playerZone
  + Add Favicon
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
