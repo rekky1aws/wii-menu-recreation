@@ -89,6 +89,9 @@
 
 ## Score Tracker
  + Flex-wrap on playerZone
+ + Style
+   + playerCards
+   + playerZone
  + Add Favicon
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
