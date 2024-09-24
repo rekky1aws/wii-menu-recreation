@@ -88,9 +88,10 @@
  + A double pendulum simulation to demonstrate chaos theory
 
 ## Score Tracker
- + Flex-wrap on playerZone
  + Style
    + playerCards
+     + bigger playerName
+     + bigger score
    + playerZone
    + Dark Mode
  + Add Favicon
