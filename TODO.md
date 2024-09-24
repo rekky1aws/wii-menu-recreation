@@ -92,6 +92,7 @@
  + Style
    + playerCards
    + playerZone
+   + Dark Mode
  + Add Favicon
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
