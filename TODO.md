@@ -92,6 +92,11 @@
    + playerCards
      + bigger playerName
      + bigger score
+     + removeButton red
+     + scoreButtons
+       + rounded border
+       + small padding
+       + drop shadow
    + playerZone
    + Dark Mode
  + Add Favicon
