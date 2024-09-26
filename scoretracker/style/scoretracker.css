@@ -1,3 +1,4 @@
+/* Native Elements */
 body {
 	font-family: Helvetica, sans-serif;
 }
@@ -8,6 +9,10 @@ header {
 	align-items: center;
 }
 
+/* Reusable */
+
+
+/* Classes */
 .playerCard {
 	display: flex;
 	flex-direction: column;
@@ -54,6 +59,7 @@ header {
 	grid-template-rows: 1fr 2fr 1fr;
 }
 
+/* IDs */
 #playerZone {
 	display: flex;
 	justify-content: center;
