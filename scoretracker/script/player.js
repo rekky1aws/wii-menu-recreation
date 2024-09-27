@@ -63,6 +63,7 @@ class Player
 			let newScoreButton = document.createElement('button');
 			newScoreButton.addEventListener('click', () => this.add(value));
 			newScoreButton.value = value;
+			newScoreButton.classList.add('cliquable');
 			if (value < 0) {
 				newScoreButton.textContent = value;
 				playerSCB.append(newScoreButton);
