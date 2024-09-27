@@ -10,7 +10,13 @@ header {
 }
 
 /* Reusable */
+.cliquable:hover {
+	transform: scale(1.05);
+}
 
+.cliquable:active {
+	transform: scale(0.95);
+}
 
 /* Classes */
 .playerCard {
