@@ -90,8 +90,6 @@
 ## Score Tracker
  + Style
    + playerCards
-     + bigger playerName
-     + bigger score
      + removeButton red
      + scoreButtons
        + rounded border
