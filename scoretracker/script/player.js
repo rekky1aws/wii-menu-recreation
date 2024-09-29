@@ -41,7 +41,7 @@ class Player
 		playerCard.classList.add('playerCard');
 		playerCard.id = "card"+this.id;
 
-		playerName.classList.add('playerName');
+		playerName.classList.add('playerName', 'cliquable');
 		playerName.addEventListener('click', this.changeName);
 		playerName.textContent = this.name;
 
