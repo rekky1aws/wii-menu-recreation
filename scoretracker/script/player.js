@@ -54,7 +54,7 @@ class Player
 
 		playerScoreContainer.classList.add('scoreContainer')
 
-		removeButton.classList.add('removePlayer');
+		removeButton.classList.add('removePlayer', 'cliquable');
 		removeButton.addEventListener('click', this.remove);
 		removeButton.textContent = "-";
 		
