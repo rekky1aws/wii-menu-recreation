@@ -90,7 +90,7 @@
 ## Score Tracker
  + Style
    + playerCards
-     + removeButton red
+     + polish
    + playerZone
    + Dark Mode
  + Add Favicon

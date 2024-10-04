@@ -44,6 +44,17 @@ header {
 	padding: 0.5em;
 }
 
+.removePlayer {
+	background-color: salmon;
+	border: none;
+	height: 1.5em;
+	width: 100%;
+	border-radius: 0.25em;
+	font-weight: bold;
+	margin-top: 0.5em;
+	box-shadow: 1px 1px 5px -1px #000000;
+}
+
 .scoreChange {
 	width: 100%;
 	display: grid;
