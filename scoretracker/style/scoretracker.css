@@ -20,6 +20,7 @@ header {
 
 /* Classes */
 .playerCard {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -45,12 +46,16 @@ header {
 }
 
 .removePlayer {
+	position: absolute;
 	background-color: salmon;
+	right: -0.75em;
+	bottom: -0.75em;
 	border: none;
 	height: 1.5em;
-	width: 100%;
-	border-radius: 0.25em;
+	width: 1.5em;
+	border-radius: 50%;
 	font-weight: bold;
+	font-size: 1em;
 	margin-top: 0.5em;
 	box-shadow: 1px 1px 5px -1px #000000;
 }
