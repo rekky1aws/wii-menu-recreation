@@ -91,7 +91,6 @@
  + Style
    + playerCards
      + polish
-   + playerZone
    + Dark Mode
  + Add Favicon
  + Player Class
