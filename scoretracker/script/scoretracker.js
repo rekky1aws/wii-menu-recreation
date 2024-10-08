@@ -1,6 +1,7 @@
 // CONSTANTS
-const addPlayerButton = document.querySelector('#addPlayer');
-const changeMode = document.querySelector('#changeTheme');
+const addPlayerBtn = document.querySelector('#addPlayer');
+const changeThemeBtn = document.querySelector('#changeTheme');
+const resetScoresBtn = document.querySelector('#resetScores');
 const playerZone = document.querySelector('#playerZone');
 
 // VARIABLES
@@ -24,8 +25,14 @@ function changeTheme ()
 	}
 }
 
+function resetScores ()
+{
+
+}
+
 // EVENT LISTENERS
-addPlayerButton.addEventListener('click', addPlayer);
-changeMode.addEventListener('click', changeTheme);
+addPlayerBtn.addEventListener('click', addPlayer);
+changeThemeBtn.addEventListener('click', changeTheme);
+resetScoresBtn.addEventListener('click', resetScores);
 
 // MAIN
