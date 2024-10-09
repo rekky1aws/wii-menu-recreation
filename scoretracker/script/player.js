@@ -90,6 +90,11 @@ class Player
 		this.playerCard.querySelector('.playerName').textContent = this.name;
 	}
 
+	updateScore ()
+	{
+
+	}
+
 	remove (elt)
 	{
 		console.log(elt);
@@ -101,6 +106,12 @@ class Player
 		if (confirm("Are you sure you want to delete this player (all its data will be lost) ?")) {
 			htmlElt.parentNode.removeChild(htmlElt);
 		}
+	}
+
+	setScore (score = 0)
+	{
+		this.score = score;
+		this.updateScore();
 	}
 
 	static validateName (newName = "")

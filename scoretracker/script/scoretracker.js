@@ -27,7 +27,9 @@ function changeTheme ()
 
 function resetScores ()
 {
-
+	players.forEach( (player) => {
+		player.setScore(0);
+	});
 }
 
 // EVENT LISTENERS
