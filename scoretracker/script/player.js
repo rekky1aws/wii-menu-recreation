@@ -86,13 +86,13 @@ class Player
 	updateName ()
 	{
 		const playerNameElt = this.playerCard.querySelector('.playerName');
-		console.log(playerNameElt)
-		this.playerCard.querySelector('.playerName').textContent = this.name;
+		playerNameElt.textContent = this.name;
 	}
 
 	updateScore ()
 	{
-
+		const playerScoreElt = this.playerCard.querySelector('.playerScore');
+		playerScoreElt.textContent = this.score;
 	}
 
 	remove (elt)
