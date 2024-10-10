@@ -101,8 +101,8 @@
    + f loadLocal : Load data from the localStorage
  + f changeTheme
  + Rounds
-  + Add or remove score for each player
-  + Confirm Round Scores
+  + Confirm Scores for this round
+  + Save round to players and save players state to localStorage
  + Display game stats
 
 ## Device Infos
