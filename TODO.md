@@ -42,7 +42,6 @@
  + Header with sliders and buttons
    + pause button
     + style
-   + time between each frame
    + control the ratio of black pixels
    + number of pixels
 
