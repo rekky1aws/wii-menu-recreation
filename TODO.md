@@ -40,8 +40,7 @@
 + Add Favicon
  + Optimize to generate each frame faster
  + Header with sliders and buttons
-   + pause button
-    + style
+   + pause button style
    + control the ratio of black pixels
    + number of pixels
 
