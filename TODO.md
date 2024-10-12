@@ -118,3 +118,10 @@
   + (Bonus : handle markdown syntax highlighting)
   + (Bonus : handle markdown rendering)
   + (Bonus Bonus : handle many languages syntax highlighting)
+
+## Guitar Wiiro
+ + 3 tracks
+ + deafult keyboard config
+ + menu
+  + song selection
+  + keyboard settings
