@@ -6,7 +6,7 @@
   + Home Button
   + Home Menu on press of escape
  + Complete README
- + Trnaslate README in English (while keeping French)
+ + Translate README in English (while keeping French)
 
 ## Main Menu
  + Fix images not loading on pages
