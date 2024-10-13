@@ -53,7 +53,7 @@
 ## Ovo
  + One and two player version of the game OVO
   + 6x6 board
-  + movable eggs with a wolor "underneath"
+  + movable eggs with a color "underneath"
 
 ## Arkanoid
  + Clasic brick breaker
