@@ -30,8 +30,11 @@ function resetScores ()
 	players.forEach( (player) => {
 		player.setScore(0);
 	});
+}
 
-	console.log(players); // DEBUG
+function removeAllPlayers ()
+{
+	
 }
 
 // EVENT LISTENERS
