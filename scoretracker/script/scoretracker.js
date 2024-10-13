@@ -2,6 +2,7 @@
 const addPlayerBtn = document.querySelector('#addPlayer');
 const changeThemeBtn = document.querySelector('#changeTheme');
 const resetScoresBtn = document.querySelector('#resetScores');
+const removeAllPlayersBtn = document.querySelector('#removeAllPlayers');
 const playerZone = document.querySelector('#playerZone');
 
 // VARIABLES
@@ -34,7 +35,7 @@ function resetScores ()
 
 function removeAllPlayers ()
 {
-	if (prompt("This will delete all the players and their scores. Are you sure you want to do this ?")) {
+	if (confirm("This will delete all the players and their scores. Are you sure you want to do this ?")) {
 		players = [];
 		playerZone.innerHTML = "";
 	}
@@ -44,5 +45,6 @@ function removeAllPlayers ()
 addPlayerBtn.addEventListener('click', addPlayer);
 changeThemeBtn.addEventListener('click', changeTheme);
 resetScoresBtn.addEventListener('click', resetScores);
+removeAllPlayersBtn.addEventListener('click', removeAllPlayers);
 
 // MAIN
