@@ -34,7 +34,10 @@ function resetScores ()
 
 function removeAllPlayers ()
 {
-	
+	if (prompt("This will delete all the players and their scores. Are you sure you want to do this ?")) {
+		players = [];
+		playerZone.innerHTML = "";
+	}
 }
 
 // EVENT LISTENERS
