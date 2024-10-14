@@ -62,6 +62,7 @@
   + moving ball
   + bricks on top of the screen
   + a bar to throw the ball back to the bricks
+ + Menu to start a new game
 
 ## Minesweeper
  + Classic Minesweeper game
