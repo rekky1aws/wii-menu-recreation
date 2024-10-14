@@ -49,6 +49,8 @@
 
 ## Game of Life
  + Playable conway's game of life
+  + grid
+  + calculate cell next stage
 
 ## Ovo
  + One and two player version of the game OVO
