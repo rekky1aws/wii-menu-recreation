@@ -65,7 +65,7 @@
 
 ## Minesweeper
  + Classic Minesweeper game
-  + Generating a grid with mine
+  + Generating a grid with mines
   + Clicking a box shows numbers of mines in the 8 surrounding boxes
   + If there's no mine around, show boxes until there is
 
