@@ -70,6 +70,12 @@
   + Clicking a box shows numbers of mines in the 8 surrounding boxes
   + If there's no mine around, show boxes until there is
 
+## Tetrjs
+ + Tetris Game
+  + Gamezone
+  + keyboard controls
+  + xinput controls
+
 ## QuizMaker
  + A simple app to create quiz and share it with your friends using a string
   + Create a quiz
