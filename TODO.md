@@ -102,7 +102,6 @@
  + Add Favicon
  + Player Class
    + @ updateDisplay (to prevent from regenerating everything)
- + Button to remove all player with confirmation
  + localStorage to save data between sessions
    + f saveLocal : Saves data in localStorage
    + f loadLocal : Load data from the localStorage
