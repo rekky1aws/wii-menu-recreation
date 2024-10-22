@@ -43,7 +43,10 @@ function removeAllPlayers ()
 
 function saveLocal ()
 {
-
+	const gameState = {
+		players: players,
+	}
+	localStorage.setItem("scoretracker", JSON.stringify(gameState));
 }
 
 // EVENT LISTENERS
