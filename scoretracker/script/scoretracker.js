@@ -41,6 +41,11 @@ function removeAllPlayers ()
 	}
 }
 
+function saveLocal ()
+{
+
+}
+
 // EVENT LISTENERS
 addPlayerBtn.addEventListener('click', addPlayer);
 changeThemeBtn.addEventListener('click', changeTheme);
