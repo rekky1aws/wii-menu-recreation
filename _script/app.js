@@ -85,7 +85,7 @@ const games = new GameCollection (
     new Game ('DVD', 'gifs/DVD.gif', 'dvd/'),
     new Game ('JS_Paint', 'gifs/paint.gif', 'JSPaint/'),
     new Game ('Static_Generator', 'gifs/static.gif', 'static_generator/'),
-    new Game ('ScoreTracker', 'gifs/counter.gif', 'scoretracker/' ,'beeta-game'),
+    new Game ('ScoreTracker', 'gifs/counter.gif', 'scoretracker/' ,'beta-game'),
     new Game ('Klondike', 'gifs/klondike.gif', 'klondike/', 'beta-game'),
     new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/', 'alpha-game'),
     new Game ('Metallica Pinball Radio', 'gifs/metallica.gif', 'metallica_pinball_radio/'),
