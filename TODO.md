@@ -1,6 +1,8 @@
 # TO DO
 
 ## General
+ + ONE DAY I'LL RE DO ALL THIS WITH VUEJS
+
  + Add a master js to generate common elements
   + Header
   + Home Button
