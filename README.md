@@ -31,16 +31,16 @@ Compter des scores et en garder une trace devient facile grave à cette petite a
 ### Metallica Pinball Radio
 Re création de la radio de choix de musique qui apparait au lancement d'une partie sur les flippers _Metallica_ de chez _Stern_.
 Controles :
-	- PC :
-		- `Espace` pour jouer ou mettre en pause la musique.
-		- `Flèche de gauche` pour passer à la musique. précédente.
-		- `Flèche de droite` pour passer à la musique suivante.
-		- `Flèche du bas` pour diminuer le volume.
-		- `Flèche du haut` pour augmenter le volume.
-	- Mobile :
-		- Toucher la zone centrale pour jouer ou mettre en pause la musique.
-		- Toucher le potard de gauche pour passer à la musique précédente.
-		- Toucher le potard de droite pour passer à la musique suivante.
+ + PC :
+   + `Espace` pour jouer ou mettre en pause la musique.
+   + `Flèche de gauche` pour passer à la musique. précédente.
+   + `Flèche de droite` pour passer à la musique suivante.
+   + `Flèche du bas` pour diminuer le volume.
+   + `Flèche du haut` pour augmenter le volume.
+ + Mobile :
+   + Toucher la zone centrale pour jouer ou mettre en pause la musique.
+   + Toucher le potard de gauche pour passer à la musique précédente.
+   + Toucher le potard de droite pour passer à la musique suivante.
 
 ---
 
@@ -69,13 +69,13 @@ Counting scores and keeping track of them becomes easy thanks to this small app.
 ### Metallica Pinball Radio
 Re make of the radio appearing at the beggining of a game on _Metallica_ pinball machines by _Stern_.
 Controls :
-	- PC :
-		- `Space` to pause or unpause.
-		- `Left Arrow` to go to the previous track.
-		- `Right Arrow` to go to the next track.
-		- `Down Arrow` volume down.
-		- `Up Arrow` volume up.
-	- Mobile :
-		- Touch the central zone to pause or unpause.
-		- Touch the left knob to go to the previous track.
-		- Touch the right knob to go to the next track.
+ + PC :
+   + `Space` to pause or unpause. 
+   + `Left Arrow` to go to the previous track. 
+   + `Right Arrow` to go to the next track. 
+   + `Down Arrow` volume down. 
+   + `Up Arrow` volume up. 
+ + Mobile :
+	 + Touch the central zone to pause or unpause.
+	 + Touch the left knob to go to the previous track.
+	 + Touch the right knob to go to the next track.
