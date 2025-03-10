@@ -7,8 +7,20 @@
   + Header
   + Home Button
   + Home Menu on press of escape
+
+ + TO FINISH
+  + Klondike
+
+ + Imports
+  + JSimon
+  + Synclap
+  + Perfect Pitch
+  + Letter Frequency
+  + Chmod Calculator
+
  + Complete README
- + Translate README in English (while keeping French)
+  + Klondike
+  + (Imports when done)
 
 ## Main Menu
  + Fix images not loading on pages
