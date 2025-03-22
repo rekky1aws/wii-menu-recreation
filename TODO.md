@@ -12,7 +12,6 @@
   + Klondike
 
  + Imports
-  + JSimon
   + Synclap
   + Perfect Pitch
   + Letter Frequency
@@ -143,7 +142,20 @@
 
 ## Guitar Wiiro
  + 3 tracks
- + deafult keyboard config
+ + default keyboard config
  + menu
   + song selection
   + keyboard settings
+
+## JSimon
+ + Sequence
+  + Generate random input and add it to the sequence each round
+  + Play sequence
+  + Check sequence
+ + Play with keyboards arrows
+  + Hide visual arrows after some time
+ + Different Sounds for each button
+ + Modal to enable sound
+ + localStorage
+  + last score
+  + best score
