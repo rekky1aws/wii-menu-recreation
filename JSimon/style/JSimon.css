@@ -54,6 +54,6 @@ main {
 	border-radius: 5%;
 }
 
-.game-button:active {
+.game-button:active , .game-button.active{
 	opacity: 1;
 }
