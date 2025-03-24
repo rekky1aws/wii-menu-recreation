@@ -155,7 +155,7 @@
  + Play with keyboards arrows
   + Hide visual arrows after some time
  + Different Sounds for each button
- + Modal to enable sound
+ + Modal to enable warn user for sounds
  + localStorage
   + last score
   + best score
