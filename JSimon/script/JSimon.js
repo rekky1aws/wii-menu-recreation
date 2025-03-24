@@ -1,10 +1,11 @@
 // CONSTANTS
-const buttons = {
+const gameButtons = {
 	top: document.querySelector('.game-button#top'),
 	left: document.querySelector('.game-button#left'),
 	right: document.querySelector('.game-button#right'),
 	bottom: document.querySelector('.game-button#bottom'),
 };
+const startButton = document.querySelector('.game-button#start');
 
 const sounds = {
 	top: './media/beep-B.mp3',
@@ -19,9 +20,15 @@ let sequence = [];
 let playbackInterval = 300;
 let sequenceTimeout = undefined;
 let level = 0;
+let gameStarted = false;
 
 // FUNCTIONS
 function buttonPressed (evt) {
+	// Don't do anything if game hasn't started
+	if (!gameStarted) {
+		return null;
+	}
+
 	let btnPressed = undefined;
 	if (evt.target.localName == "span") {
 		btnPressed = evt.target.parentNode;
@@ -34,7 +41,7 @@ function buttonPressed (evt) {
 
 function simBtnPress (id) {
 	playSound(id);
-	lightButton(buttons[id]);
+	lightButton(gameButtons[id]);
 }
 
 function playSound (soundID) {
@@ -54,26 +61,32 @@ function sequencePlayback (i = 0) {
 		clearInterval(sequenceTimeout);
 	} else {
 		simBtnPress(sequence[i]);
-		setTimeout(sequencePlayback, playbackInterval, i+1);
+		sequenceTimeout = setTimeout(sequencePlayback, playbackInterval, i+1);
 	}
 }
 
+function startGame () {
+	startButton.style.display = 'none';
+
+	sequence = [
+		'right',
+		'right',
+		'top',
+		'bottom',
+		'left',
+		'bottom',
+		'top'
+	];
+
+	sequenceTimeout = setTimeout(sequencePlayback, playbackInterval);
+}
+
 // EVENT LISTENERS
-Object.keys(buttons).forEach( (e) => {
-	buttons[e].addEventListener('click', buttonPressed);
+startButton.addEventListener('click', startGame);
+
+Object.keys(gameButtons).forEach( (e) => {
+	gameButtons[e].addEventListener('click', buttonPressed);
 });
 
 //MAIN
-
-////// TEST SEQUENCE
-sequence = [
-	'right',
-	'right',
-	'top',
-	'bottom',
-	'left',
-	'bottom',
-	'top'
-];
-sequencePlayback();
 
