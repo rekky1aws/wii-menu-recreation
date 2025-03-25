@@ -1,11 +1,12 @@
 // CONSTANTS
+const gameContainer = document.querySelector('#game');
+const startButton = document.querySelector('.game-button#start');
 const gameButtons = {
 	top: document.querySelector('.game-button#top'),
 	left: document.querySelector('.game-button#left'),
 	right: document.querySelector('.game-button#right'),
 	bottom: document.querySelector('.game-button#bottom'),
 };
-const startButton = document.querySelector('.game-button#start');
 
 const sounds = {
 	top: './media/beep-B.mp3',
@@ -67,6 +68,7 @@ function sequencePlayback (i = 0) {
 
 function startGame () {
 	startButton.style.display = 'none';
+	gameContainer.classList.add('game-started');
 
 	sequence = [
 		'right',
