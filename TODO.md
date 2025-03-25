@@ -155,9 +155,6 @@
  + Play with keyboards arrows
   + Hide visual arrows after some time
  + Different Sounds for each buttons
- + Block .game-button:active when game not started
-  + Add a `standby` class on parent
-  + Remove it when game starts
  + localStorage
   + last score
   + best score
