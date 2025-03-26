@@ -149,7 +149,6 @@
 
 ## JSimon
  + Play with keyboards arrows
-  + Hide visual arrows after some time
  + Different Sounds for each buttons
  + localStorage
   + last score
