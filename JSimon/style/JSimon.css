@@ -71,7 +71,8 @@ header > #infos span {
 	box-shadow: inset -10px -10px 0px 0px rgba(0,0,0,0.3);
 }
 
-.player-turn .game-button:active ,.game-started .game-button.active{
+.player-turn .game-button:active ,
+.game-started .game-button.active {
 	opacity: 1;
 	box-shadow: none;
 }

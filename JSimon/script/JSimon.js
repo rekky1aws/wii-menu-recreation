@@ -18,10 +18,10 @@ const sounds = {
 
 // VARIABLES
 let sequence = [];
-let curSeqID = 0;
+let curSeqInd = 0;
 let pbItvl = 300;
 let seqTO = undefined;
-let level = 0;
+let lvl = 0;
 let gameStarted = false;
 
 // FUNCTIONS
@@ -38,7 +38,7 @@ function buttonPressed (evt) {
 		btnPressed = evt.target;
 	}
 
-	playSound(btnPressed.id);
+	const result = chckSeq(btnPressed.id);
 }
 
 function simBtnPress (id) {
@@ -85,6 +85,29 @@ function genNextSeqElt () {
 	const key =  Math.floor(Math.random() * values.length);
 
 	sequence.push(values[key]);
+}
+
+function chckSeq (btnId) {
+	if (btnId === sequence[curSeqInd]) {
+		playSound(btnId);
+		if (curSeqInd+1 < sequence.length) {
+			curSeqInd++;
+		} else {
+			curSeqInd = 0;
+			genNextSeqElt();
+			setTimeout(seqPb, 1000);
+		}
+	} else {
+		playSound('wrong');
+		resetGame();
+	}
+}
+
+function resetGame () {
+	sequence = [];
+	curSeqInd = 0;
+	pbItvl = 300;
+	lvl = 0;
 }
 
 // EVENT LISTENERS
