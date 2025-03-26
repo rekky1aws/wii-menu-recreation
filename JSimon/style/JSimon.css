@@ -31,7 +31,7 @@ header > #infos span {
 
 #game {
 	display: grid;
-	width: 33vw;
+	width: 50vw;
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
 	transform: rotate(45deg);
