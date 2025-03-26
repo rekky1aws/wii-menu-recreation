@@ -37,6 +37,8 @@ function buttonPressed (evt) {
 		btnPressed = evt.target;
 	}
 
+	console.log(btnPressed.id);
+
 	playSound(btnPressed.id);
 }
 
@@ -58,9 +60,14 @@ function lightButton (btn) {
 }
 
 function sequencePlayback (i = 0) {
-	if (i >= sequence.length) {
+
+	if (i >= sequence.length) { // Sequence end
 		clearInterval(sequenceTimeout);
-	} else {
+		gameContainer.classList.add('player-turn'); // Player can use the buttons.
+	} else { // Rest of the sequence
+		if ('player-turn' in gameContainer.classList) {
+			gameContainer.classList.remove('player-turn'); // Player can't use the buttons.
+		}
 		simBtnPress(sequence[i]);
 		sequenceTimeout = setTimeout(sequencePlayback, playbackInterval, i+1);
 	}
