@@ -69,18 +69,16 @@ function sequencePlayback (i = 0) {
 function startGame () {
 	startButton.style.display = 'none';
 	gameContainer.classList.add('game-started');
-
-	sequence = [
-		'right',
-		'right',
-		'top',
-		'bottom',
-		'left',
-		'bottom',
-		'top'
-	];
+	genNextSeqElt();
 
 	sequenceTimeout = setTimeout(sequencePlayback, playbackInterval);
+}
+
+function genNextSeqElt () {
+	const values = Object.keys(gameButtons);
+	const key =  Math.floor(Math.random() * values.length);
+
+	sequence.push(values[key]);
 }
 
 // EVENT LISTENERS
