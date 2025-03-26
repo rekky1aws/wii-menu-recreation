@@ -1,7 +1,7 @@
 // CONSTANTS
 const gameContainer = document.querySelector('#game');
-const startButton = document.querySelector('.game-button#start');
-const gameButtons = {
+const startBtn = document.querySelector('.game-button#start');
+const gameBtns = {
 	top: document.querySelector('.game-button#top'),
 	left: document.querySelector('.game-button#left'),
 	right: document.querySelector('.game-button#right'),
@@ -18,8 +18,9 @@ const sounds = {
 
 // VARIABLES
 let sequence = [];
-let playbackInterval = 300;
-let sequenceTimeout = undefined;
+let curSeqID = 0;
+let pbItvl = 300;
+let seqTO = undefined;
 let level = 0;
 let gameStarted = false;
 
@@ -37,14 +38,12 @@ function buttonPressed (evt) {
 		btnPressed = evt.target;
 	}
 
-	console.log(btnPressed.id);
-
 	playSound(btnPressed.id);
 }
 
 function simBtnPress (id) {
 	playSound(id);
-	lightButton(gameButtons[id]);
+	lightBtn(gameBtns[id]);
 }
 
 function playSound (soundID) {
@@ -52,47 +51,47 @@ function playSound (soundID) {
 	audio.play();
 }
 
-function lightButton (btn) {
+function lightBtn (btn) {
 	btn.classList.add('active');
 	setTimeout( () => {
 		btn.classList.remove('active');
 	}, 100);
 }
 
-function sequencePlayback (i = 0) {
-
+function seqPb (i = 0) {
 	if (i >= sequence.length) { // Sequence end
-		clearInterval(sequenceTimeout);
+		clearInterval(seqTO);
 		gameContainer.classList.add('player-turn'); // Player can use the buttons.
 	} else { // Rest of the sequence
 		if ('player-turn' in gameContainer.classList) {
 			gameContainer.classList.remove('player-turn'); // Player can't use the buttons.
 		}
 		simBtnPress(sequence[i]);
-		sequenceTimeout = setTimeout(sequencePlayback, playbackInterval, i+1);
+		seqTO = setTimeout(seqPb, pbItvl, i+1);
 	}
 }
 
 function startGame () {
-	startButton.style.display = 'none';
+	startBtn.style.display = 'none';
 	gameContainer.classList.add('game-started');
+	gameStarted = true;
 	genNextSeqElt();
 
-	sequenceTimeout = setTimeout(sequencePlayback, playbackInterval);
+	seqTO = setTimeout(seqPb, pbItvl);
 }
 
 function genNextSeqElt () {
-	const values = Object.keys(gameButtons);
+	const values = Object.keys(gameBtns);
 	const key =  Math.floor(Math.random() * values.length);
 
 	sequence.push(values[key]);
 }
 
 // EVENT LISTENERS
-startButton.addEventListener('click', startGame);
+startBtn.addEventListener('click', startGame);
 
-Object.keys(gameButtons).forEach( (e) => {
-	gameButtons[e].addEventListener('click', buttonPressed);
+Object.keys(gameBtns).forEach( (e) => {
+	gameBtns[e].addEventListener('click', buttonPressed);
 });
 
 //MAIN
