@@ -1,5 +1,12 @@
 // CONSTANTS
 const gameContainer = document.querySelector('#game');
+const infoElts = {
+	score: document.querySelector('#score'),
+	lastScore: document.querySelector('#last-score'),
+	highScore: document.querySelector('#high-score'),
+	timer: document.querySelector('#timer'),
+};
+
 const startBtn = document.querySelector('.game-button#start');
 const gameBtns = {
 	top: document.querySelector('.game-button#top'),
@@ -17,6 +24,11 @@ const sounds = {
 };
 
 // VARIABLES
+let score = {
+	current: 0,
+	last: 0,
+	high: 0,
+};
 let sequence = [];
 let curSeqInd = 0;
 let pbItvl = 300;
@@ -90,12 +102,14 @@ function genNextSeqElt () {
 function chckSeq (btnId) {
 	if (btnId === sequence[curSeqInd]) {
 		playSound(btnId);
-		if (curSeqInd+1 < sequence.length) {
+		if (curSeqInd+1 < sequence.length) { 
 			curSeqInd++;
 		} else {
+			// Sequence End => start new round
 			curSeqInd = 0;
+			upScore();
 			genNextSeqElt();
-			setTimeout(seqPb, 1000);
+			seqTO = setTimeout(seqPb, pbItvl);
 		}
 	} else {
 		playSound('wrong');
@@ -108,6 +122,24 @@ function resetGame () {
 	curSeqInd = 0;
 	pbItvl = 300;
 	lvl = 0;
+
+	score.last = score.current;
+	score.current = 0;
+
+	infoElts.score.textContent = score.current;
+	infoElts.lastScore.textContent = score.last;
+
+	genNextSeqElt();
+	seqTO = setTimeout(seqPb, pbItvl);
+}
+
+function upScore () {
+	score.current++;
+	infoElts.score.textContent = score.current;
+	if (score.current > score.high) {
+		score.high = score.current;
+		infoElts.highScore.textContent = score.high;
+	}
 }
 
 // EVENT LISTENERS
