@@ -148,10 +148,6 @@
   + keyboard settings
 
 ## JSimon
- + Sequence
-  + Generate random input and add it to the sequence each round
-  + Play sequence
-  + Check sequence
  + Play with keyboards arrows
   + Hide visual arrows after some time
  + Different Sounds for each buttons
