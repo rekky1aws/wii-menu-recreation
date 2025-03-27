@@ -149,5 +149,49 @@ Object.keys(gameBtns).forEach( (e) => {
 	gameBtns[e].addEventListener('click', buttonPressed);
 });
 
+document.addEventListener ('keydown', (e) => {
+	switch(e.key) {
+		case "ArrowUp":
+			lightBtn(gameBtns.top);
+			buttonPressed({
+				target: {
+					id: "top",
+					localName: "div"
+				}
+			})
+		break;
+
+	case "ArrowLeft":
+			lightBtn(gameBtns.left);
+			buttonPressed({
+				target: {
+					id: "left",
+					localName: "div"
+				}
+			})
+		break;
+
+	case "ArrowRight":
+			lightBtn(gameBtns.right);
+			buttonPressed({
+				target: {
+					id: "right",
+					localName: "div"
+				}
+			})
+		break;
+
+	case "ArrowDown":
+			lightBtn(gameBtns.bottom);
+			buttonPressed({
+				target: {
+					id: "bottom",
+					localName: "div"
+				}
+			})
+		break;
+	}
+});
+
 //MAIN
 
