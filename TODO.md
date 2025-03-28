@@ -148,7 +148,6 @@
   + keyboard settings
 
 ## JSimon
- + Play with keyboards arrows
  + Different Sounds for each buttons
  + localStorage
   + last score
