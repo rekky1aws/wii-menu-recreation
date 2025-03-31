@@ -63,6 +63,8 @@
  + localStorage
   + last score
   + best score
+ + Start to rotate the game after 100pts
+  + Speed Up every 10pts after
 
 ### Score Tracker
  + Style
@@ -157,7 +159,7 @@
   + song selection
   + keyboard settings
 
-### TODO
+### TodoList
  + Todo list
  + Save and Load in localStorage
 
