@@ -173,3 +173,14 @@
 
 ### Calculator
  + Hidden animation on special code entry
+
+### MisterCoco Web Helper
+ + Multiple Events
+ + Choose 2 random events
+ + Enter nb of players
+ + Enter player names
+ + Choose random undercover player
+ + For each player
+  + ask if it's correct player watching the screen
+  + show them the event they're "invited" to
+  + click again to hide and go to the next player
