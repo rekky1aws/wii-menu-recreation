@@ -1,8 +1,6 @@
 # TO DO
 
 ## General
- + ONE DAY I'LL RE DO ALL THIS WITH VUEJS
-
  + Add a master js to generate common elements
   + Header
   + Home Button
@@ -31,17 +29,18 @@
  + Add modals for warnings (photosensitivity and app status) 
  + Channel prompt before opening
  + Loader
- + Links
-  + JSimon
 
-## JSPaint
+---
+
+## Started Apps
+### JSPaint
  + Add favicon
  + Add gif
 
-## DVD
+### DVD
  + Add favicon
 
-## Klondike
+### Klondike
  + Add favicon
  + Add Burger Menu
     + Content
@@ -51,7 +50,7 @@
    + Check placable card
    + Card distribution
 
-## Static Generator
+### Static Generator
 + Add Favicon
  + Optimize to generate each frame faster
  + Header with sliders and buttons
@@ -59,57 +58,13 @@
    + control the ratio of black pixels
    + number of pixels
 
-## Polar Clock
- + Concentric circles progressing to show time span.
+### JSimon
+ + Different Sounds for each buttons
+ + localStorage
+  + last score
+  + best score
 
-## Game of Life
- + Playable conway's game of life
-  + grid
-  + calculate cell next stage
-
-## Ovo
- + One and two player version of the game OVO
-  + 6x6 board
-  + movable eggs with a color "underneath"
-
-## Arkanoid
- + Clasic brick breaker
-  + moving ball
-  + bricks on top of the screen
-  + a bar to throw the ball back to the bricks
- + Menu to start a new game
-
-## Minesweeper
- + Classic Minesweeper game
-  + Generating a grid with mines
-  + Clicking a box shows numbers of mines in the 8 surrounding boxes
-  + If there's no mine around, show boxes until there is
-
-## Tetrjs
- + Tetris Game
-  + Gamezone
-  + keyboard controls
-  + xinput controls
-
-## QuizMaker
- + A simple app to create quiz and share it with your friends using a string
-  + Create a quiz
-    + Create a question
-      + Add choices
-      + Choose possible answers
-    + Save a quiz
-      + Export JSON of questions to a base64 string
-  + Play a quiz
-    + Enter a base64 string
-    + Play pre-made quizs
-
-## Jsaac
- + A simplier version of the binding of isaac
-
-## Double pendulum
- + A double pendulum simulation to demonstrate chaos theory
-
-## Score Tracker
+### Score Tracker
  + Style
    + playerCards
      + polish
@@ -126,12 +81,65 @@
   + Save round to players and save players state to localStorage
  + Display game stats
 
-## Device Infos
+---
+
+## Coming Apps
+### Polar Clock
+ + Concentric circles progressing to show time span.
+
+### Game of Life
+ + Playable conway's game of life
+  + grid
+  + calculate cell next stage
+
+### Ovo
+ + One and two player version of the game OVO
+  + 6x6 board
+  + movable eggs with a color "underneath"
+
+### Arkanoid
+ + Clasic brick breaker
+  + moving ball
+  + bricks on top of the screen
+  + a bar to throw the ball back to the bricks
+ + Menu to start a new game
+
+### Minesweeper
+ + Classic Minesweeper game
+  + Generating a grid with mines
+  + Clicking a box shows numbers of mines in the 8 surrounding boxes
+  + If there's no mine around, show boxes until there is
+
+### Tetrjs
+ + Tetris Game
+  + Gamezone
+  + keyboard controls
+  + xinput controls
+
+### QuizMaker
+ + A simple app to create quiz and share it with your friends using a string
+  + Create a quiz
+    + Create a question
+      + Add choices
+      + Choose possible answers
+    + Save a quiz
+      + Export JSON of questions to a base64 string
+  + Play a quiz
+    + Enter a base64 string
+    + Play pre-made quizs
+
+### Jsaac
+ + A simplier version of the binding of isaac
+
+### Double pendulum
+ + A double pendulum simulation to demonstrate chaos theory
+
+### Device Infos
  + Add favicon
  + !!! Find a way to limit infinite loop on the recursion
  + Displays all the infos the browser can get from your device
 
-## Notepad
+### Notepad
  + App to take notes
   + Add a new tab
   + Close a tab
@@ -142,15 +150,10 @@
   + (Bonus : handle markdown rendering)
   + (Bonus Bonus : handle many languages syntax highlighting)
 
-## Guitar Wiiro
+### Guitar Wiiro
  + 3 tracks
  + default keyboard config
  + menu
   + song selection
   + keyboard settings
 
-## JSimon
- + Different Sounds for each buttons
- + localStorage
-  + last score
-  + best score
