@@ -79,3 +79,7 @@ Controls :
 	 + Touch the central zone to pause or unpause.
 	 + Touch the left knob to go to the previous track.
 	 + Touch the right knob to go to the next track.
+
+### JSimon
+Play the iconic game everyone knows : Simon; but in the web browser. Compare your scores with your friends.
+You can use the keyboard arrows to play.
