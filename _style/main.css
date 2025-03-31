@@ -211,3 +211,13 @@ footer {
 	-webkit-box-shadow: 0px 0px 50px 25px red;
 	-moz-box-shadow: 0px 0px 50px 25px red;
 }
+
+#options-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#options-button img {
+	width: 100%;
+}
