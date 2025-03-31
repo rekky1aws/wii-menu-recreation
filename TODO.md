@@ -157,3 +157,17 @@
   + song selection
   + keyboard settings
 
+### TODO
+ + Todo list
+ + Save and Load in localStorage
+
+### Chrono
+ + Start Time
+ + End Time
+ + Reset Time
+ + Laps
+
+### Tic Tac Toe
+
+### Calculator
+ + Hidden animation on special code entry
