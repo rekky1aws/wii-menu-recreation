@@ -1,0 +1,21 @@
+body {
+	font-family: sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+}
+
+header > a {
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: slateblue;
+	font-size: 2rem;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 0.5rem;
+	border-radius: 1rem;
+}
