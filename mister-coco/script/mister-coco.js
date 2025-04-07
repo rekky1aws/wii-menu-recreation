@@ -5,8 +5,7 @@ const playerNameElts = document.querySelectorAll('.player-name');
 
 // FUNCTIONS
 function playerNameAction (evt) {
-	if (evt.target.value === "" && evt.target.parentNode.children.length > 2) {
-		console.log(evt.target.value);
+	if (evt.target.value === "" && evt.target.parentNode.children.length > 3) {
 		evt.target.remove();
 	}
 
