@@ -19,3 +19,19 @@ header > a {
 	padding: 0 0.5rem;
 	border-radius: 1rem;
 }
+
+main.pregame > #pregame {
+	display: block;
+}
+
+main.pregame > #game {
+	display: none;
+}
+
+main.ingame > #pregame {
+	display: none;
+}
+
+main.ingame > #game {
+	display: block;
+}
