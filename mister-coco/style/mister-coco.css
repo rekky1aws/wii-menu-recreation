@@ -35,3 +35,12 @@ main.ingame > #pregame {
 main.ingame > #game {
 	display: block;
 }
+
+#player-entries {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0.5rem;
+	font-size: 1.5rem;
+}
