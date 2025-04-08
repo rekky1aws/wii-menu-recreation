@@ -175,11 +175,14 @@
  + Hidden animation on special code entry
 
 ### MisterCoco Web Helper
+ + Filter player better
+  + Removes empty spaces and weird characters before analyzing names.
+ + More verifications
+  + No doubles.
+
  + Multiple Events
- + Choose 2 random events
- + Enter nb of players
- + Enter player names
- + Choose random undercover player
+ + Pick 2 random events
+ + Pick random undercover player
  + For each player
   + ask if it's correct player watching the screen
   + show them the event they're "invited" to
