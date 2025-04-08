@@ -1,16 +1,27 @@
 // CONSTANTS
+const minPlayerNb = 3;
+const maxPlayerNb = 8;
+
 const playerNameElts = document.querySelectorAll('.player-name');
+const startBtn = document.querySelector('#start-button');
+const mainElt = document.querySelector('main');
 
 // VARIABLES
 
 // FUNCTIONS
 function playerNameAction (evt) {
-	if (evt.target.value === "" && evt.target.parentNode.children.length > 3 && evt.key !== "Tab") {
+	// Removing input field if it's empty and there are still enough
+	// fields for a playable game.
+	// Not doing this if key is Tab to allow tab navigation.  
+	if (evt.target.value === "" && evt.target.parentNode.children.length > minPlayerNb && evt.key !== "Tab") {
 		evt.target.remove();
 	}
 
-	if (evt.target.value !== "" && evt.target.parentNode.lastElementChild.value !== "") {
+	// As soon as there is text in the last field, add a new one.
+	// Don't add a field if there is alreaddy enough players il the game.
+	if (evt.target.value !== "" && evt.target.parentNode.lastElementChild.value !== "" && evt.target.parentNode.children.length < maxPlayerNb) {
 
+		// <input type="text" name="player-name" placeholder="Entrez le nom du joueur" class="player-name">
 		const newInput = document.createElement('input');
 		newInput.type = "text";
 		newInput.name = "player-name";
@@ -22,9 +33,48 @@ function playerNameAction (evt) {
 	}
 }
 
+function getPlayerList () {
+	const playerEntries = document.querySelectorAll('.player-name');
+	const players = Array.from(playerEntries).filter((e) => { // Removing empty fields.
+		if (e.value != "") {
+			return e;
+		}
+	}).map((e) => { // Getting values
+		return e.value;
+	});
+	return players;
+}
+
+function canGameStart (playerList) {
+	if (playerList.length < minPlayerNb) {
+		throw new Error(`Pas assez de joueurs, il devrait y en avoir un minimum de ${minPlayerNb}`);
+	}
+
+	if (playerList.length > maxPlayerNb) {
+		throw new Error(`Trop de joueurs, il devrait y en avoir au plus ${maxPlayerNb}`);
+	}
+}
+
+function startGame ()
+{
+	const playerList =  getPlayerList();
+
+	try {
+		canGameStart(playerList);
+	} catch (err) {
+		console.error(err);
+	}
+
+	// Changing the status of the game
+	// mainElt.classList.remove('pregame');
+	// mainElt.classList.add('ingame');
+}
+
 // EVENT LISTENERS
 playerNameElts.forEach((elt) => {
 	elt.addEventListener("keyup", playerNameAction);
 });
+
+startBtn.addEventListener("click", startGame);
 
 // MAIN
