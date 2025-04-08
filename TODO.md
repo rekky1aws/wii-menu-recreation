@@ -179,6 +179,7 @@
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
   + No doubles.
+ + Flash messages to display errors.
 
  + Multiple Events
  + Pick 2 random events
