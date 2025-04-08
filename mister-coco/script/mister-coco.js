@@ -5,8 +5,13 @@ const maxPlayerNb = 8;
 const playerNameElts = document.querySelectorAll('.player-name');
 const startBtn = document.querySelector('#start-button');
 const mainElt = document.querySelector('main');
+const secretElt = document.querySelector('#secret');
+const eventElt = document.querySelector('#event');
 
 // VARIABLES
+let undercover;
+let playerList;
+let playerIndex = 0;
 
 // FUNCTIONS
 function playerNameAction (evt) {
@@ -56,17 +61,38 @@ function canGameStart (playerList) {
 }
 
 function playRound () {
-	const gameElt = document.querySelector('#game');
-	const viewBtn = document.querySelector('#start-btn');
-	const nextBtn = document.querySelector('#view-btn');
-	const eventElt = document.querySelector('#event');
+	// Resetting secret to avoid cheating
+	secretElt.classList.add('hidden');
+	eventElt.textContent = "";
 
+	const currentPlayer = document.querySelector('#current-player');
+	const viewBtn = document.querySelector('#view-btn');
 	
+	currentPlayer.textContent = playerList[playerIndex];
+	viewBtn.addEventListener('click', showEvent);
+	
+}
+
+function showEvent () {
+	const nextBtn = document.querySelector('#next-btn');
+	// TODO : change event
+	secretElt.classList.remove('hidden');
+
+	playerIndex++;
+	if (playerIndex < playerList.length) {
+		nextBtn.addEventListener('click', playRound);
+		return 0;
+	} else {
+		nextBtn.addEventListener('click', () => {
+			mainElt.classList.remove('ingame');
+			mainElt.classList.add('postgame');
+		});
+	}
 }
 
 function startGame ()
 {
-	const playerList =  getPlayerList();
+	playerList =  getPlayerList();
 
 	try {
 		canGameStart(playerList);
@@ -75,10 +101,14 @@ function startGame ()
 		return  0;
 	}
 
+	// Pick random undercover player.
+	undercover = playerList[Math.floor(Math.random() * playerList.length)];
+
 	// Changing the status of the game
 	mainElt.classList.remove('pregame');
 	mainElt.classList.add('ingame');
 
+	
 	playRound();
 
 }

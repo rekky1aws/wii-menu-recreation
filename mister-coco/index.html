@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-	<a href="../">&larr;</a>
+	<a href="../">&lt;</a>
 	<h1>Mister Coco Assistant</h1>
 </header>
 <main class="pregame">
@@ -25,8 +25,13 @@
 	<div id="game">
 		<div>Au tour de : <span id="current-player">Glorbulakx</span></div>
 		<button id="view-btn">Voir</button>
-		<button id="next-btn">Suivant</button>
-		<div>Evenement <span id="event">Une orgie avec des moines.</span></div>
+		<div id="secret" class="hidden">
+			<div>Evenement <span id="event">Une orgie avec des moines.</span></div>
+			<button id="next-btn">Suivant</button>
+		</div>
+	</div>
+	<div id="postgame" class="hidden">
+		C'est la fin, rechargez la page pour recommencer une partie.
 	</div>
 </main>
 <footer>
