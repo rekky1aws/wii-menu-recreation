@@ -55,6 +55,15 @@ function canGameStart (playerList) {
 	}
 }
 
+function playRound () {
+	const gameElt = document.querySelector('#game');
+	const viewBtn = document.querySelector('#start-btn');
+	const nextBtn = document.querySelector('#view-btn');
+	const eventElt = document.querySelector('#event');
+
+	
+}
+
 function startGame ()
 {
 	const playerList =  getPlayerList();
@@ -63,11 +72,15 @@ function startGame ()
 		canGameStart(playerList);
 	} catch (err) {
 		console.error(err);
+		return  0;
 	}
 
 	// Changing the status of the game
-	// mainElt.classList.remove('pregame');
-	// mainElt.classList.add('ingame');
+	mainElt.classList.remove('pregame');
+	mainElt.classList.add('ingame');
+
+	playRound();
+
 }
 
 // EVENT LISTENERS

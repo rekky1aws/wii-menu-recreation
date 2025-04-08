@@ -54,3 +54,7 @@ main.ingame > #game {
 #start-button {
 	display: inline;
 }
+
+.hidden {
+	display:none;
+}
