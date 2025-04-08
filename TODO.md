@@ -175,16 +175,14 @@
  + Hidden animation on special code entry
 
 ### MisterCoco Web Helper
+ + Multiple Events
+ + Pick 2 random events
+
+ + Display correct event for the undercover.
+
  + Filter player better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
   + No doubles.
  + Flash messages to display errors.
 
- + Multiple Events
- + Pick 2 random events
- + Pick random undercover player
- + For each player
-  + ask if it's correct player watching the screen
-  + show them the event they're "invited" to
-  + click again to hide and go to the next player
