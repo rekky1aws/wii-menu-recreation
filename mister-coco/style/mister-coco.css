@@ -21,7 +21,7 @@ header > a {
 }
 
 main.pregame > #pregame {
-	display: block;
+	display: flex;
 }
 
 main.pregame > #game {
