@@ -12,6 +12,8 @@ const eventElt = document.querySelector('#event');
 let undercover;
 let playerList;
 let playerIndex = 0;
+let normalEvent;
+let undercoverEvent;
 
 // FUNCTIONS
 function playerNameAction (evt) {
@@ -73,9 +75,24 @@ function playRound () {
 	
 }
 
+function chooseEvents ()
+{
+	const normalEventInd = Math.floor(Math.random() * events.length);
+	normalEvent = events[normalEventInd];
+	let undercoverEventInd;
+	do {
+		undercoverEventInd = Math.floor(Math.random() * events.length);
+	} while (undercoverEventInd === normalEventInd);
+	undercoverEvent = events[undercoverEventInd];
+}
+
 function showEvent () {
 	const nextBtn = document.querySelector('#next-btn');
-	// TODO : change event
+	if (playerList[playerIndex] == undercover) {
+		eventElt.textContent = undercoverEvent;
+	} else {
+		eventElt.textContent = normalEvent;
+	}
 	secretElt.classList.remove('hidden');
 
 	playerIndex++;
@@ -103,6 +120,9 @@ function startGame ()
 
 	// Pick random undercover player.
 	undercover = playerList[Math.floor(Math.random() * playerList.length)];
+
+	// Choosing events
+	chooseEvents();
 
 	// Changing the status of the game
 	mainElt.classList.remove('pregame');
