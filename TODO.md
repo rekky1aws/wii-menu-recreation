@@ -83,6 +83,15 @@
   + Save round to players and save players state to localStorage
  + Display game stats
 
+### MisterCoco Web Helper
+ + Style
+ + Icons
+ + Filter player better
+  + Removes empty spaces and weird characters before analyzing names.
+ + More verifications
+  + No doubles.
+ + Flash messages to display errors.
+
 ---
 
 ## Coming Apps
@@ -173,16 +182,4 @@
 
 ### Calculator
  + Hidden animation on special code entry
-
-### MisterCoco Web Helper
- + Multiple Events
- + Pick 2 random events
-
- + Display correct event for the undercover.
-
- + Filter player better
-  + Removes empty spaces and weird characters before analyzing names.
- + More verifications
-  + No doubles.
- + Flash messages to display errors.
 
