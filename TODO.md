@@ -7,6 +7,8 @@
   + Home Menu on press of escape
  + Fix GIFs not loading on GitHub Pages
 
+ + Add Mister Coco to the main menu
+
  + TO FINISH
   + Klondike
 
@@ -91,8 +93,9 @@
  + Filter player better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
-  + No doubles.
+  + No double names (use nickname or first letter of lastname to differentiate).
  + Flash messages to display errors.
+
  + Change end text to let players know that now is the time to use the cards to play
     + Each player put a card on the table for two turns (resulting in two cards per player).
 
