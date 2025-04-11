@@ -92,6 +92,8 @@
  + More verifications
   + No doubles.
  + Flash messages to display errors.
+ + Change end text to let players know that now is the time to use the cards to play
+    + Each player put a card on the table for two turns (resulting in two cards per player).
 
 ---
 
