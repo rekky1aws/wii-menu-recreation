@@ -13,7 +13,6 @@
   + Klondike
 
  + Imports
-  + Metallica Pinball Radio
   + Synclap
   + Perfect Pitch
   + Letter Frequency
