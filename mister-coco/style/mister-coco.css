@@ -56,21 +56,53 @@ main.postgame > #game {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	gap: 0.5rem;
 	font-size: 1.5rem;
+	width: 100vw;
+	padding: 0.25rem;
+}
+
+#player-entries input {
+	display: inline-block;
+	font-size: 2rem;
+	width: 50%;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	font-family: Leelawadee, sans-serif;
 }
 
 #pregame {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 1rem;
 }
 
 #start-button {
-	display: inline;
+	font-size: 2rem;
+	width: 50%;
+	color: #FFF;
+	background-color: #80064A;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-family: Leelawadee, sans-serif;
 }
 
 .hidden {
 	display:none;
+}
+
+.clickable {
+	transition: 0.2s ease-in-out;
+}
+
+.clickable:hover {
+	transform: scale(1.05);
+}
+
+.clickable:active {
+	transform: scale(0.95);
 }
