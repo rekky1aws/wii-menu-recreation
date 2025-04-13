@@ -25,14 +25,16 @@
 			<input type="text" name="player-name" placeholder="Entrez le nom du joueur" class="player-name">
 			<input type="text" name="player-name" placeholder="Entrez le nom du joueur" class="player-name">
 		</div>
-		<button id="start-button" class="clickable">Commencer</button>
+		<button id="start-button" class="btn clickable">Commencer</button>
 	</div>
 	<div id="game">
-		<div>Au tour de : <span id="current-player">Player Placeholder</span></div>
-		<button id="view-btn">Voir</button>
+		<div>Au tour de : </div>
+		<span id="current-player">Player Placeholder</span>
+		<button id="view-btn" class="clickable">Voir</button>
 		<div id="secret" class="hidden">
-			<div>Evenement : <span id="event">Event Placeholder</span></div>
-			<button id="next-btn">Suivant</button>
+			<div>Evenement : </div>
+			<span id="event">Event Placeholder</span>
+			<button id="next-btn" class="btn clickable">Suivant</button>
 		</div>
 	</div>
 	<div id="postgame" class="hidden">

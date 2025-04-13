@@ -80,7 +80,7 @@ main.postgame > #game {
 	gap: 1rem;
 }
 
-#start-button {
+.btn {
 	font-size: 2rem;
 	width: 50%;
 	color: #FFF;
@@ -105,4 +105,20 @@ main.postgame > #game {
 
 .clickable:active {
 	transform: scale(0.95);
+}
+
+#game {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}
+
+#secret {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
 }
