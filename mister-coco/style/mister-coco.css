@@ -122,3 +122,19 @@ main.postgame > #game {
 	align-items: center;
 	gap: 0.5rem;
 }
+
+#view-btn {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#event {
+	font-size: 2rem;
+	width: 50%;
+	outline: 2px solid #000000;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-family: Leelawadee, sans-serif;
+	text-align: center;
+	margin: 1rem;
+}
