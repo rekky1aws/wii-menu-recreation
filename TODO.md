@@ -87,10 +87,6 @@
  + Display game stats
 
 ### MisterCoco Web Helper
- + Style
-  + Fonts
-    + Title = Goldroom
-    + Cards = Leelawadee
  + Icons
  + Filter player better
   + Removes empty spaces and weird characters before analyzing names.
