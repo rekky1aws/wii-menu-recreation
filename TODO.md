@@ -7,8 +7,6 @@
   + Home Menu on press of escape
  + Fix GIFs not loading on GitHub Pages
 
- + Add Mister Coco to the main menu
-
  + TO FINISH
   + Klondike
 
