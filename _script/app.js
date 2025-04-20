@@ -6,7 +6,7 @@ class Game {
     this.status = status;
 
     if (imageName != null) {
-      this.imageLink = `/_media/${imageName}`;
+      this.imageLink = `_media/${imageName}`;
     } else {
       this.imageLink = null;
     }
