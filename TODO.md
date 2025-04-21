@@ -5,7 +5,6 @@
   + Header
   + Home Button
   + Home Menu on press of escape
- + Fix GIFs not loading on GitHub Pages
 
  + TO FINISH
   + Klondike
