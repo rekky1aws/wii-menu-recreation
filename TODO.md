@@ -20,7 +20,6 @@
   + (Imports when done)
 
 ## Main Menu
- + Fix images not loading on pages
  + Add Favicon
  + +/- buttons
   + positions
