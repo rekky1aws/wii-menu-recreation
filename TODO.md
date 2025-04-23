@@ -34,7 +34,7 @@
 ## Started Apps
 ### JSPaint
  + Add favicon
- + Add gif
+ + Replace Gif by a custom one
 
 ### DVD
  + Add favicon
