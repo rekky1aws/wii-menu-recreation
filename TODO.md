@@ -48,14 +48,14 @@
    + Movable Cards
    + Check placable card
    + Card distribution
+   + Check Victory conditions
+    + Every suit has all of it's cards
 
 ### Static Generator
 + Add Favicon
  + Optimize to generate each frame faster
  + Header with sliders and buttons
    + pause button style
-   + control the ratio of black pixels
-   + number of pixels
 
 ### JSimon
  + Different Sounds for each buttons
