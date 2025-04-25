@@ -28,6 +28,7 @@
  + Add modals for warnings (photosensitivity and app status) 
  + Channel prompt before opening
  + Loader
+ + Settings
 
 ---
 
