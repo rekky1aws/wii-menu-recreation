@@ -42,6 +42,10 @@ Controles :
    + Toucher le potard de gauche pour passer à la musique précédente.
    + Toucher le potard de droite pour passer à la musique suivante.
 
+### JSimon
+Jouez au jeu iconique que tout le monde connait : Simon; mais dans votre navigateur. Comparez vos scores avec vos amis !
+Vous pouvez utiliser les flèches du clavier pour jouer.
+
 ---
 
 ## English
