@@ -17,22 +17,22 @@ class Game {
     let game = document.createElement('a');
     let image;
 
-        // Ajout des propriétés à l'element
+        // Common element attributes
     game.href = this.gameLink;
     game.draggable = "false";
     game.className="game hover-light";
 
-        // On crée une image si on a une app
+        // If there's an app, create img
     if (this.imageLink !== null) {
       image = document.createElement('img');
       image.alt = this.name;
       image.src = this.imageLink;
-        // Sinon on crée une div
+        // Else create div
     } else {
       image = document.createElement('div');
     }
 
-        // Propriétés de l'element
+        // Adding element attributes
     image.classList.add('game-image');
     image.draggable = "false";
 
@@ -48,8 +48,8 @@ class Game {
 }
 
 class GameCollection {
-    // Une GameCollection représente une grille de jeux sur un écran.
-    // Elle permet de gérer automatiquement le fait que les jeux s'affichent par grilles de 3*4
+    // A GameCollection represents the games grid on a page.
+    // It automatically handles the grid displaying on a 3*4 size
   constructor (games = [])
   {
     this.collection = [];
@@ -103,7 +103,7 @@ let movingImage;
 // FUNCTIONS
 function swapItems (sourceA, sourceB)
 {
-    // Permet de procéder à l'échange entre deux app
+    // Swapping two apps
   if (sourceA !== sourceB)
   {
         // Getting parents
