@@ -10,29 +10,29 @@ document.body.addEventListener('mousemove', (e) => {
 	cursorImage.style.top = `${e.y + 5}px`;
 });
 
-// Detection du début du clic de la souris
+// Detecting the start of a mouse click
 document.body.addEventListener('mousedown', (e) => {
-    // On vérifie si l'endoroit cliqué est une image d'app
+    // Checking if user clicked on a game image
     if (e.target.className.split(' ').indexOf('game-image') !== -1) {
         
         selectedItem = e.target;
         
-        // Si on a une src pour une image, on crée un dupliqué de l'image qui va suivre la souris jusqu'au relachement 
+        // If we have a src for an img => image copy that follows mouse
         if (selectedItem.src) {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
             movingImage.className = 'moving-image';
             cursorImage.src = "/_media/images/cursors/grabbing_cursor.png";
-        // Sinon on crée une div qui aura le même comportement, avec le fond par défaut
+        // Else => div that follows mouse with empty game design
         } else {
             movingImage = document.createElement('div');
             movingImage.className = 'moving-image empty-moving-image';
         }
 
-        // On ajoute l'image au body pour qu'elle soit visible
+        // Adding img to body to make it visible
         document.body.appendChild(movingImage);
 
-        // On crée un intervale qui va déplacer l'image toutes les 10ms pour qu'elle suive le curseur
+        // Interval to move img/div every 10ms to make it follow the cursor
         grabbingInterval = setInterval(placeImageOnCursor, 10);
     }
 });
