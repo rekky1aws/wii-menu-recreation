@@ -37,17 +37,17 @@ document.body.addEventListener('mousedown', (e) => {
     }
 });
 
-// Detection de la fin du clic de la souris
+// Detecting the end of a mouse click
 document.body.addEventListener('mouseup', (e) => {
-    // On reset le style inline du body
+    // Resetting body style to remove inline
     document.body.removeAttribute('style');
     
-    // On vérifie la nature de l'endroit ou l'on arrete le clic
+    // Checking where the user stopped clicking
     if (e.target.className.split(' ').indexOf('game-image') !== -1 && selectedItem) {
-        // Echange des images et des liens des apps
+        
         swapItems(e.target, selectedItem);
         
-        // Suppression de l'intervalle pour le déplacement de la copie d'image
+        // Removing interval that moved element with the cursor
         clearInterval(grabbingInterval);
 
         cursPos.x = null;
@@ -56,7 +56,7 @@ document.body.addEventListener('mouseup', (e) => {
 
     selectedItem = null;
     
-    // Suppression de la copie d'image
+    // Removing image that followed the mouse
     if (movingImage && movingImage.parentNode) {
         movingImage.parentNode.removeChild(movingImage);
     }
@@ -66,7 +66,6 @@ document.body.addEventListener('mouseup', (e) => {
 // FUNCTIONS
 function placeImageOnCursor()
 {
-    // Permet de faire suivre l'image du curseur wii par rapport au curseur réel
     movingImage.style.left = `${cursPos.x + 5}px`;
     movingImage.style.top = `${cursPos.y + 5}px`;
 }
@@ -80,7 +79,7 @@ document.body.appendChild(cursorImage);
 // Making original cursor disappear
 document.body.style.cursor = "none";
 
-// Changement visuel du curseur lorsqu'on le passe sur un emplcement d'app
+// Changing fake cursor when hovering app
 document.querySelectorAll('.game-image').forEach(element => {
     element.addEventListener('mouseenter', () => {
         if (selectedItem === null || selectedItem === undefined) {
