@@ -110,6 +110,18 @@ function swapItems (sourceA, sourceB)
     const parentA = sourceA.parentNode;
     const parentB = sourceB.parentNode;
 
+      // Saving parent classes
+    let parentClassSwpA = [...parentA.classList]
+    let parentClassSwpB = [...parentB.classList];
+
+      // Removing previous parent classes
+    parentA.classList.remove(...parentA.classList);
+    parentB.classList.remove(...parentB.classList);
+
+      // Applying new parent classes
+    parentA.classList.add(...parentClassSwpB);
+    parentB.classList.add(...parentClassSwpA);
+
         // Deleting original
     parentA.removeChild(sourceA);
     parentB.removeChild(sourceB);
