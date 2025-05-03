@@ -186,6 +186,11 @@
  + Laps
 
 ### Tic Tac Toe
+ + 3x3 grid
+ + 2 players
+  + each round is another players
+ + check victory
+ + check end
 
 ### Calculator
  + Hidden animation on special code entry
