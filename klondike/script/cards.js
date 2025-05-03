@@ -40,7 +40,7 @@ A class to handle the behavior of a playing card.
 		cardValue.classList.add('card_value');
 		cardSuit.classList.add('card_suit');
 
-		// Setinng values up
+		// Setting values up
 			cardValue.textContent = assocValue[this.value - 1];
 			cardSuit.textContent = assocSuit[this.suit];
 
