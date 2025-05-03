@@ -20,8 +20,6 @@
   + (Imports when done)
 
 ## Main Menu
- + Change border when moving an app on the main menu
-  + Swap classes
  + Add Favicon
  + +/- buttons
   + positions
