@@ -22,7 +22,7 @@ document.body.addEventListener('mousedown', (e) => {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
             movingImage.className = 'moving-image';
-            cursorImage.src = "/_media/images/cursors/grabbing_cursor.png";
+            cursorImage.src = "_media/images/cursors/grabbing_cursor.png";
         // Else => div that follows mouse with empty game design
         } else {
             movingImage = document.createElement('div');
@@ -83,13 +83,13 @@ document.body.style.cursor = "none";
 document.querySelectorAll('.game-image').forEach(element => {
     element.addEventListener('mouseenter', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "/_media/images/cursors/grabbable_cursor.png";
+            cursorImage.src = "_media/images/cursors/grabbable_cursor.png";
         }
     });
 
     element.addEventListener('mouseleave', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "/_media/images/cursors/basic_cursor.png";
+            cursorImage.src = "_media/images/cursors/basic_cursor.png";
         }
     })
 });
