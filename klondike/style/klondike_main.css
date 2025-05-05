@@ -70,3 +70,10 @@ nav {
 .card_back > .card_suit {
 	display: none;
 }
+
+.card-reciever {
+	padding: 2px;
+	min-width: 33px;
+	min-height: 66px;
+	margin: 2px;
+}
