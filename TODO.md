@@ -1,5 +1,9 @@
 # TO DO
 
+## Pending
+ + Klondike
+  + Make cards movable
+
 ## General
  + Add a master js to generate common elements
   + Header
