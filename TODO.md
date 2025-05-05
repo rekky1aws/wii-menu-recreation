@@ -1,5 +1,9 @@
 # TO DO
 
+## Pending
+ + Klondike
+  + Make cards movable
+
 ## General
  + Add a master js to generate common elements
   + Header
@@ -45,6 +49,12 @@
  + Add Burger Menu
     + Content
     + f changeState
+ + Playfield :
+  + Top zone
+    + Validated Suits
+    + Pile
+    + Visible Card
+  + Rows
  + Gameplay :
    + Movable Cards
    + Check placable card
