@@ -43,15 +43,9 @@ A class to handle the behavior of a playing card.
 		cardValue.classList.add('card_value');
 		cardSuit.classList.add('card_suit');
 
-<<<<<<< HEAD
 			// Setinng values up
 		cardValue.textContent = assocValue[this.value - 1];
 		cardSuit.textContent = assocSuit[this.suit];
-=======
-		// Setting values up
-			cardValue.textContent = assocValue[this.value - 1];
-			cardSuit.textContent = assocSuit[this.suit];
->>>>>>> fe77efaf1a4be58fcccd2d8df122262d545555a4
 
 		// Change display
 		if (this.revealed)
