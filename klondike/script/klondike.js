@@ -9,6 +9,7 @@ class Klondike
 		this.deck = new CardDeck();
 
 		this.playfield = {
+			main: playfield,
 			scored: {
 				spades: playfield.querySelector('#scored-spades'),
 				diamonds: playfield.querySelector('#scored-diamonds'),
@@ -53,11 +54,10 @@ const game = new Klondike(gameZone);
 
 // DEBUG
 console.log(gameZone);
-console.log(game.playfield);
+console.log(game);
 
 const displayZone = document.querySelector('section#test')
-const deck = new CardDeck();
-deck.shuffle();
-deck.cards.forEach((element) => {
+game.deck.shuffle();
+game.deck.cards.forEach((element) => {
 	element.display(displayZone);
 });
