@@ -26,23 +26,26 @@ A class to handle the behavior of a playing card.
 
 	display (parentElt)
 	{
-		// Association table
+			// Association table
 		const assocValue = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 		const assocSuit = ['♠', '♦', '♥', '♣'];
 
-		// Creating HTML elements
+			// Creating HTML elements
 		let cardElt = document.createElement('div');
 		let cardValue = document.createElement('div');
 		let cardSuit = document.createElement('div');
 		
-		// Adding classes to HTML elements
+			// Making card draggable
+		cardElt.draggable = true;
+
+			// Adding classes to HTML elements
 		cardElt.classList.add('card');
 		cardValue.classList.add('card_value');
 		cardSuit.classList.add('card_suit');
 
-		// Setinng values up
-			cardValue.textContent = assocValue[this.value - 1];
-			cardSuit.textContent = assocSuit[this.suit];
+			// Setinng values up
+		cardValue.textContent = assocValue[this.value - 1];
+		cardSuit.textContent = assocSuit[this.suit];
 
 		// Change display
 		if (this.revealed)
@@ -58,11 +61,11 @@ A class to handle the behavior of a playing card.
 			cardElt.classList.add('card_back');
 		}
 
-		// Appending all sub elements to cardElt
-			cardElt.appendChild(cardValue);
-			cardElt.appendChild(cardSuit);
+			// Appending all sub elements to cardElt
+		cardElt.appendChild(cardValue);
+		cardElt.appendChild(cardSuit);
 		
-		// Appending the cardElt to the given parent element
+			// Appending the cardElt to the given parent element
 		parentElt.appendChild(cardElt);
 
 		return true;
