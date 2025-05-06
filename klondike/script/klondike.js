@@ -40,6 +40,48 @@ class Klondike
 			},
 			rows: []
 		};
+
+		this.playfield.main.addEventListener('dragstart', this.startDrag);
+		this.playfield.main.addEventListener('dragend', this.endDrag);
+		this.playfield.main.addEventListener('dragover', this.dragoverHandler);
+
+		this.draggedCard = null;
+		this.dragDestination = null;
+
+	}
+
+	startDrag (evt)
+	{
+		// console.group('startDrag'); // DEBUG
+		if (evt.target.classList.contains('card')) {
+			this.draggedCard = evt.target;
+		}
+
+		// console.groupEnd('startDrag'); // DEBUG
+	}
+
+	endDrag (evt)
+	{
+		console.group('endDrag'); // DEBUG
+		if (this.dragDestination) {
+			// TODO : Check if this move is valid
+			console.log('Moving Card'); // DEBUG
+			this.dragDestination.append(this.draggedCard);
+		}
+
+		console.groupEnd('endDrag'); // DEBUG
+
+	}
+
+	dragoverHandler (evt)
+	{
+		// console.group('dropHandler'); // DEBUG
+		if (evt.target.classList.contains('card-reciever')) {
+			this.dragDestination = evt.target;
+		} else {
+			this.dragDestination = null;
+		}
+		// console.groupEnd('dropHandler'); // DEBUG
 	}
 
 	setup ()
