@@ -7,6 +7,8 @@ class Klondike
 	constructor (playfield)
 	{
 		this.deck = new CardDeck();
+		this.draggedCard = null;
+		this.dragDestination = null;
 
 		this.playfield = {
 			main: playfield,
@@ -23,32 +25,14 @@ class Klondike
 			rows: []
 		};
 
-		/*this.values = {
-			scored: {
-				spades: [],
-				diamonds: [],
-				clubs:[],
-				hearts: []
-			},
-			draw: {
-				pile: [],
-				visibleCard: []
-			},
-			rows: []
-		};
-*/
+		// Getting all rows
 		for (let i = 0; i < 7; i++) {
 			this.playfield.rows[i] = playfield.querySelector('#row' + (i+1));
-			// this.values.rows[i] = [];
 		}
 
 		this.playfield.main.addEventListener('dragstart', this.startDrag);
 		this.playfield.main.addEventListener('dragend', this.endDrag);
 		this.playfield.main.addEventListener('dragover', this.dragoverHandler);
-
-		this.draggedCard = null;
-		this.dragDestination = null;
-
 	}
 
 	startDrag (evt)
