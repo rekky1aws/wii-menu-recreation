@@ -92,8 +92,11 @@ class Klondike
 	setup () // Initializes cards at the starting position for the game
 	{
 		this.deck.shuffle();
+
+		// Displaying all cards unrevealed to the pile.
 		this.deck.displayAll(this.playfield.draw.pile);
 
+		// Serving rows
 		for (let i=0; i<this.playfield.rows.length; i++) {
 			for (let j=0; j<i+1; j++) {
 				this.playfield.rows[i].append(this.playfield.draw.pile.lastChild);
