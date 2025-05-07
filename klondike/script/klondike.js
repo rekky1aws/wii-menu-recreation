@@ -18,16 +18,12 @@ class Klondike
 			},
 			draw: {
 				pile: playfield.querySelector('#pile'),
-				visibleCard: playfield.querySelector('#visible_card')
+				visibleCard: playfield.querySelector('#visible-card')
 			},
 			rows: []
 		};
 
-		for (let i = 0; i < 7; i++) {
-			this.playfield.rows[i] = playfield.querySelector('#row' + (i+1));
-		}
-
-		this.values = {
+		/*this.values = {
 			scored: {
 				spades: [],
 				diamonds: [],
@@ -40,6 +36,11 @@ class Klondike
 			},
 			rows: []
 		};
+*/
+		for (let i = 0; i < 7; i++) {
+			this.playfield.rows[i] = playfield.querySelector('#row' + (i+1));
+			// this.values.rows[i] = [];
+		}
 
 		this.playfield.main.addEventListener('dragstart', this.startDrag);
 		this.playfield.main.addEventListener('dragend', this.endDrag);
@@ -78,28 +79,36 @@ class Klondike
 		// console.group('dropHandler'); // DEBUG
 		if (evt.target.classList.contains('card-reciever')) {
 			this.dragDestination = evt.target;
+		} else if (evt.target.classList.contains('card')) {
+			if (evt.target.parentNode.classList.contains('card-reciever')) {
+				this.dragDestination = evt.target.parentNode;
+			}
 		} else {
 			this.dragDestination = null;
 		}
 		// console.groupEnd('dropHandler'); // DEBUG
 	}
 
-	setup ()
+	setup () // Initializes cards at the starting position for the game
 	{
-		/* Initializes cards at the starting position for the game */
+		this.deck.shuffle();
+		this.deck.displayAll(this.playfield.draw.pile);
+
+		for (let i=0; i<this.playfield.rows.length; i++) {
+			for (let j=0; j<i+1; j++) {
+				this.playfield.rows[i].append(this.playfield.draw.pile.lastChild);
+			}
+			console.log(this.playfield.rows[i].lastChild);
+			this.playfield.rows[i].lastChild.classList.remove('card-back');
+		}
 	}
 }
 
+// DEBUG
 const gameZone = document.querySelector('main');
 const game = new Klondike(gameZone);
 
+console.log(gameZone); // DEBUG
+console.log(game); // DEBUG
 
-// DEBUG
-console.log(gameZone);
-console.log(game);
-
-const displayZone = document.querySelector('section#test')
-game.deck.shuffle();
-game.deck.cards.forEach((element) => {
-	element.display(displayZone);
-});
+game.setup();
