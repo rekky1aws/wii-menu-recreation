@@ -71,9 +71,22 @@ nav {
 	display: none;
 }
 
-.card-reciever {
-	padding: 2px;
+.card-slot {
+	padding: 5px;
 	min-width: 33px;
 	min-height: 66px;
 	margin: 2px;
+}
+
+.hover-grow:hover {
+	transform: scale(1.05);
+}
+
+#pile {
+	position: relative;
+	float: left;
+}
+
+#pile > .card {
+	position: absolute;
 }
