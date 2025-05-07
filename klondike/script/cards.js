@@ -39,7 +39,7 @@ A class to handle the behavior of a playing card.
 		cardElt.draggable = true;
 
 			// Adding classes to HTML elements
-		cardElt.classList.add('card');
+		cardElt.classList.add('card', 'hover-grow');
 		cardValue.classList.add('card_value');
 		cardSuit.classList.add('card_suit');
 
@@ -113,5 +113,12 @@ A class using the previous one (Card) to handle the behavior of a deck of playin
 			this.cards = part1.concat(part2);
 		}
 		this.cards = newCards;
+	}
+
+	displayAll (destination)
+	{
+		this.cards.forEach((card) => {
+			card.display(destination);
+		});
 	}
 }
