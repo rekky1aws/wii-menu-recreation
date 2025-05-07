@@ -10,7 +10,7 @@ class Klondike
 		this.draggedCard = null;
 		this.dragDestination = null;
 
-		this.playfield = {
+		this.pf = {
 			main: playfield,
 			scored: {
 				spades: playfield.querySelector('#scored-spades'),
@@ -27,12 +27,12 @@ class Klondike
 
 		// Getting all rows
 		for (let i = 0; i < 7; i++) {
-			this.playfield.rows[i] = playfield.querySelector('#row' + (i+1));
+			this.pf.rows[i] = playfield.querySelector('#row' + (i+1));
 		}
 
-		this.playfield.main.addEventListener('dragstart', this.startDrag);
-		this.playfield.main.addEventListener('dragend', this.endDrag);
-		this.playfield.main.addEventListener('dragover', this.dragoverHandler);
+		this.pf.main.addEventListener('dragstart', this.startDrag);
+		this.pf.main.addEventListener('dragend', this.endDrag);
+		this.pf.main.addEventListener('dragover', this.dragoverHandler);
 	}
 
 	startDrag (evt)
@@ -78,16 +78,29 @@ class Klondike
 		this.deck.shuffle();
 
 		// Displaying all cards unrevealed to the pile.
-		this.deck.displayAll(this.playfield.draw.pile);
+		this.deck.displayAll(this.pf.draw.pile);
 
 		// Serving rows
-		for (let i=0; i<this.playfield.rows.length; i++) {
+		for (let i=0; i<this.pf.rows.length; i++) {
 			for (let j=0; j<i+1; j++) {
-				this.playfield.rows[i].append(this.playfield.draw.pile.lastChild);
+				this.pf.rows[i].append(this.drawOne);
 			}
-			console.log(this.playfield.rows[i].lastChild);
-			this.playfield.rows[i].lastChild.classList.remove('card-back');
+			this.revealLast(this.pf.rows[i]);
 		}
+
+		// Moving a card to be visible
+		this.pf.draw.visibleCard.append(this.drawOne);
+		this.revealLast(this.pf.draw.visibleCard);
+	}
+
+	get drawOne ()
+	{
+		return this.pf.draw.pile.lastChild;
+	}
+
+	revealLast (zone)
+	{
+		zone.lastChild.classList.remove('card-back');
 	}
 }
 
