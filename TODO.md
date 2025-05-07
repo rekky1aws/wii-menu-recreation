@@ -2,7 +2,10 @@
 
 ## Pending
  + Klondike
-  + Make cards movable
+  + Finish Setup
+  + Add a class to check if card can move
+    + Use it in drag eventListener
+  + Check card destination validity
 
 ## General
  + Add a master js to generate common elements
