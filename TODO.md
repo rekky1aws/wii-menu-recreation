@@ -6,6 +6,7 @@
   + Add a class to check if card can move
     + Use it in drag eventListener
   + Check card destination validity
+  + Better cards superposition
 
 ## General
  + Add a master js to generate common elements
