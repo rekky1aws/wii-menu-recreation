@@ -36,6 +36,7 @@
  + Channel prompt before opening
  + Loader
  + Settings
+ + Use HTML default drag' n' drop API for more compatibility with mobile
 
 ---
 
