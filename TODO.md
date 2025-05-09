@@ -107,9 +107,6 @@
  + Save Player names to localStorage
  + If players names are in localStorage load them  and ask user if they want to use it
 
- + Change end text to let players know that now is the time to use the cards to play
-    + Each player put a card on the table for two turns (resulting in two cards per player).
-
 ---
 
 ## Coming Apps
