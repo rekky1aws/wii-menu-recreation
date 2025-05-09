@@ -68,7 +68,7 @@ const events = [
 	"La contre-visite d'un appartement",
 	"Une descente des flics dans les caves d'Aulnay-sous-bois",
 	"Une opération à coeur ouvert",
-	"Une partie-fin e chez la marquise",
+	"Une partie-fine chez la marquise",
 	"Un examen de la prostate",
 	"Un Paris-Abidjan en première classe",
 	"Un McDo à 4 heures du matin",
