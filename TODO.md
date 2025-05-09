@@ -1,13 +1,17 @@
 # TO DO
 
+## Pending
+ + Klondike
+  + Finish Setup
+  + Add a class to check if card can move
+    + Use it in drag eventListener
+  + Check card destination validity
+
 ## General
  + Add a master js to generate common elements
   + Header
   + Home Button
   + Home Menu on press of escape
- + Fix GIFs not loading on GitHub Pages
-
- + Add Mister Coco to the main menu
 
  + TO FINISH
   + Klondike
@@ -23,7 +27,6 @@
   + (Imports when done)
 
 ## Main Menu
- + Fix images not loading on pages
  + Add Favicon
  + +/- buttons
   + positions
@@ -32,13 +35,15 @@
  + Add modals for warnings (photosensitivity and app status) 
  + Channel prompt before opening
  + Loader
+ + Settings
+ + Use HTML default drag' n' drop API for more compatibility with mobile
 
 ---
 
 ## Started Apps
 ### JSPaint
  + Add favicon
- + Add gif
+ + Replace Gif by a custom one
 
 ### DVD
  + Add favicon
@@ -48,18 +53,24 @@
  + Add Burger Menu
     + Content
     + f changeState
+ + Playfield :
+  + Top zone
+    + Validated Suits
+    + Pile
+    + Visible Card
+  + Rows
  + Gameplay :
    + Movable Cards
    + Check placable card
    + Card distribution
+   + Check Victory conditions
+    + Every suit has all of it's cards
 
 ### Static Generator
 + Add Favicon
  + Optimize to generate each frame faster
  + Header with sliders and buttons
    + pause button style
-   + control the ratio of black pixels
-   + number of pixels
 
 ### JSimon
  + Different Sounds for each buttons
@@ -87,10 +98,6 @@
  + Display game stats
 
 ### MisterCoco Web Helper
- + Style
-  + Fonts
-    + Title = Goldroom
-    + Cards = Leelawadee
  + Icons
  + Filter player better
   + Removes empty spaces and weird characters before analyzing names.
@@ -191,6 +198,11 @@
  + Laps
 
 ### Tic Tac Toe
+ + 3x3 grid
+ + 2 players
+  + each round is another players
+ + check victory
+ + check end
 
 ### Calculator
  + Hidden animation on special code entry

@@ -36,7 +36,7 @@ nav {
 	transform: scale(0.95);
 }
 
-.nav_header {
+.nav-header {
 	height: 10vh;
 	background-color: red;
 }
@@ -59,14 +59,34 @@ nav {
 	color: black;
 }
 
-.card_back {
+.card-back {
 	background-color: slateblue;
 }
 
-.card_back > .card_value {
+.card-back > .card-value {
 	display: none;
 }
 
-.card_back > .card_suit {
+.card-back > .card-suit {
 	display: none;
+}
+
+.card-slot {
+	padding: 5px;
+	min-width: 33px;
+	min-height: 66px;
+	margin: 2px;
+}
+
+.hover-grow:hover {
+	transform: scale(1.05);
+}
+
+#pile {
+	position: relative;
+	float: left;
+}
+
+#pile > .card {
+	position: absolute;
 }

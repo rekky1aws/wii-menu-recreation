@@ -3,7 +3,7 @@ class Card
 /*
 A class to handle the behavior of a playing card.
 */
-	constructor (value, suit, revealed = false) 
+	constructor (value, suit) 
 	/*
 		value: 1 <= int <= 13
 		suit: 0 (spades), 1 (diamonds), 2 (clubs), 3 (hearts) 
@@ -19,50 +19,49 @@ A class to handle the behavior of a playing card.
 
 		this.value = value;
 		this.suit = suit;
-		this.revealed = revealed;
 
 		return this;
 	}
 
 	display (parentElt)
 	{
-		// Association table
+			// Association table
 		const assocValue = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 		const assocSuit = ['♠', '♦', '♥', '♣'];
 
-		// Creating HTML elements
+			// Creating HTML elements
 		let cardElt = document.createElement('div');
 		let cardValue = document.createElement('div');
 		let cardSuit = document.createElement('div');
 		
-		// Adding classes to HTML elements
-		cardElt.classList.add('card');
-		cardValue.classList.add('card_value');
-		cardSuit.classList.add('card_suit');
+			// Making card draggable
+		cardElt.draggable = true;
 
-		// Setinng values up
-			cardValue.textContent = assocValue[this.value - 1];
-			cardSuit.textContent = assocSuit[this.suit];
+			// Adding classes to HTML elements
+		cardElt.classList.add('card', 'hover-grow');
+		cardValue.classList.add('card-value');
+		cardSuit.classList.add('card-suit');
 
-		// Change display
-		if (this.revealed)
-		{
+			// Setinng values up
+		cardValue.textContent = assocValue[this.value - 1];
+		cardSuit.textContent = assocSuit[this.suit];
+
 			// Adding class to display correct color
-			if (this.suit % 2 == 0) {
-				cardElt.classList.add('red');
-			} else {
-				cardElt.classList.add('black');
-			}
+		if (this.suit % 2 == 0) {
+			cardElt.classList.add('red');
 		} else {
-			// Adding class to displau the back of the card
-			cardElt.classList.add('card_back');
+			cardElt.classList.add('black');
 		}
 
-		// Appending all sub elements to cardElt
-			cardElt.appendChild(cardValue);
-			cardElt.appendChild(cardSuit);
+			// Adding class to displau the back of the card
+			// Cards are showing they're back by default
+		cardElt.classList.add('card-back');
+
+			// Appending all sub elements to cardElt
+		cardElt.appendChild(cardValue);
+		cardElt.appendChild(cardSuit);
 		
-		// Appending the cardElt to the given parent element
+			// Appending the cardElt to the given parent element
 		parentElt.appendChild(cardElt);
 
 		return true;
@@ -110,5 +109,12 @@ A class using the previous one (Card) to handle the behavior of a deck of playin
 			this.cards = part1.concat(part2);
 		}
 		this.cards = newCards;
+	}
+
+	displayAll (destination)
+	{
+		this.cards.forEach((card) => {
+			card.display(destination);
+		});
 	}
 }

@@ -10,44 +10,44 @@ document.body.addEventListener('mousemove', (e) => {
 	cursorImage.style.top = `${e.y + 5}px`;
 });
 
-// Detection du début du clic de la souris
+// Detecting the start of a mouse click
 document.body.addEventListener('mousedown', (e) => {
-    // On vérifie si l'endoroit cliqué est une image d'app
+    // Checking if user clicked on a game image
     if (e.target.className.split(' ').indexOf('game-image') !== -1) {
         
         selectedItem = e.target;
         
-        // Si on a une src pour une image, on crée un dupliqué de l'image qui va suivre la souris jusqu'au relachement 
+        // If we have a src for an img => image copy that follows mouse
         if (selectedItem.src) {
             movingImage = document.createElement('img');
             movingImage.src = selectedItem.src;
             movingImage.className = 'moving-image';
-            cursorImage.src = "/_media/images/cursors/grabbing_cursor.png";
-        // Sinon on crée une div qui aura le même comportement, avec le fond par défaut
+            cursorImage.src = "_media/images/cursors/grabbing_cursor.png";
+        // Else => div that follows mouse with empty game design
         } else {
             movingImage = document.createElement('div');
             movingImage.className = 'moving-image empty-moving-image';
         }
 
-        // On ajoute l'image au body pour qu'elle soit visible
+        // Adding img to body to make it visible
         document.body.appendChild(movingImage);
 
-        // On crée un intervale qui va déplacer l'image toutes les 10ms pour qu'elle suive le curseur
+        // Interval to move img/div every 10ms to make it follow the cursor
         grabbingInterval = setInterval(placeImageOnCursor, 10);
     }
 });
 
-// Detection de la fin du clic de la souris
+// Detecting the end of a mouse click
 document.body.addEventListener('mouseup', (e) => {
-    // On reset le style inline du body
+    // Resetting body style to remove inline
     document.body.removeAttribute('style');
     
-    // On vérifie la nature de l'endroit ou l'on arrete le clic
+    // Checking where the user stopped clicking
     if (e.target.className.split(' ').indexOf('game-image') !== -1 && selectedItem) {
-        // Echange des images et des liens des apps
+        
         swapItems(e.target, selectedItem);
         
-        // Suppression de l'intervalle pour le déplacement de la copie d'image
+        // Removing interval that moved element with the cursor
         clearInterval(grabbingInterval);
 
         cursPos.x = null;
@@ -56,7 +56,7 @@ document.body.addEventListener('mouseup', (e) => {
 
     selectedItem = null;
     
-    // Suppression de la copie d'image
+    // Removing image that followed the mouse
     if (movingImage && movingImage.parentNode) {
         movingImage.parentNode.removeChild(movingImage);
     }
@@ -66,7 +66,6 @@ document.body.addEventListener('mouseup', (e) => {
 // FUNCTIONS
 function placeImageOnCursor()
 {
-    // Permet de faire suivre l'image du curseur wii par rapport au curseur réel
     movingImage.style.left = `${cursPos.x + 5}px`;
     movingImage.style.top = `${cursPos.y + 5}px`;
 }
@@ -80,17 +79,17 @@ document.body.appendChild(cursorImage);
 // Making original cursor disappear
 document.body.style.cursor = "none";
 
-// Changement visuel du curseur lorsqu'on le passe sur un emplcement d'app
+// Changing fake cursor when hovering app
 document.querySelectorAll('.game-image').forEach(element => {
     element.addEventListener('mouseenter', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "/_media/images/cursors/grabbable_cursor.png";
+            cursorImage.src = "_media/images/cursors/grabbable_cursor.png";
         }
     });
 
     element.addEventListener('mouseleave', () => {
         if (selectedItem === null || selectedItem === undefined) {
-            cursorImage.src = "/_media/images/cursors/basic_cursor.png";
+            cursorImage.src = "_media/images/cursors/basic_cursor.png";
         }
     })
 });

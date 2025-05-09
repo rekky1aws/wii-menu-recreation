@@ -6,7 +6,7 @@ class Game {
     this.status = status;
 
     if (imageName != null) {
-      this.imageLink = `/_media/${imageName}`;
+      this.imageLink = `_media/${imageName}`;
     } else {
       this.imageLink = null;
     }
@@ -17,22 +17,22 @@ class Game {
     let game = document.createElement('a');
     let image;
 
-        // Ajout des propriétés à l'element
+        // Common element attributes
     game.href = this.gameLink;
     game.draggable = "false";
     game.className="game hover-light";
 
-        // On crée une image si on a une app
+        // If there's an app, create img
     if (this.imageLink !== null) {
       image = document.createElement('img');
       image.alt = this.name;
       image.src = this.imageLink;
-        // Sinon on crée une div
+        // Else create div
     } else {
       image = document.createElement('div');
     }
 
-        // Propriétés de l'element
+        // Adding element attributes
     image.classList.add('game-image');
     image.draggable = "false";
 
@@ -48,8 +48,8 @@ class Game {
 }
 
 class GameCollection {
-    // Une GameCollection représente une grille de jeux sur un écran.
-    // Elle permet de gérer automatiquement le fait que les jeux s'affichent par grilles de 3*4
+    // A GameCollection represents the games grid on a page.
+    // It automatically handles the grid displaying on a 3*4 size
   constructor (games = [])
   {
     this.collection = [];
@@ -86,10 +86,11 @@ const games = new GameCollection (
     new Game ('JS_Paint', 'gifs/paint.gif', 'JSPaint/'),
     new Game ('Static_Generator', 'gifs/static.gif', 'static_generator/'),
     new Game ('ScoreTracker', 'gifs/counter.gif', 'scoretracker/' ,'beta-game'),
-    new Game ('Klondike', 'gifs/klondike.gif', 'klondike/', 'beta-game'),
-    new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/', 'alpha-game'),
+    // new Game ('Klondike', 'gifs/klondike.gif', 'klondike/', 'beta-game'),
+    // new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/', 'alpha-game'),
     new Game ('Metallica Pinball Radio', 'gifs/metallica.gif', 'metallica_pinball_radio/'),
     new Game ('JSimon', 'gifs/jsimon.gif', 'JSimon/'),
+    new Game ('Mister Coco', 'gifs/mister-coco.gif', 'mister-coco/'),
   ]
   );
 
@@ -102,12 +103,24 @@ let movingImage;
 // FUNCTIONS
 function swapItems (sourceA, sourceB)
 {
-    // Permet de procéder à l'échange entre deux app
+    // Swapping two apps
   if (sourceA !== sourceB)
   {
         // Getting parents
     const parentA = sourceA.parentNode;
     const parentB = sourceB.parentNode;
+
+      // Saving parent classes
+    let parentClassSwpA = [...parentA.classList]
+    let parentClassSwpB = [...parentB.classList];
+
+      // Removing previous parent classes
+    parentA.classList.remove(...parentA.classList);
+    parentB.classList.remove(...parentB.classList);
+
+      // Applying new parent classes
+    parentA.classList.add(...parentClassSwpB);
+    parentB.classList.add(...parentClassSwpA);
 
         // Deleting original
     parentA.removeChild(sourceA);

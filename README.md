@@ -42,6 +42,18 @@ Controles :
    + Toucher le potard de gauche pour passer à la musique précédente.
    + Toucher le potard de droite pour passer à la musique suivante.
 
+### JSimon
+Jouez au jeu iconique que tout le monde connait : Simon; mais dans votre navigateur. Comparez vos scores avec vos amis !
+Vous pouvez utiliser les flèches du clavier pour jouer.
+
+### Mister Coco Assistant
+**Le jeu Mister Coco de l'éditeur Hiboutatillus**
+
+Les créateurs du jeu `Blanc Manger Coco` ont créé un autre jeu qui mélange les règles du précédent (notamment l'utilisation des cartes) avec celle du jeu de l'undercover.
+Cela donne donc le jeu `Mister Coco` ou chaque participant sera "invté" à un événement sauf un qui sera le Mister Coco et aura un but différent. Une fois que tout le monde connait l'événement auquel iel est convié, vient le moment ou chacun leur tour les joueurs mettront sur la table une de leurs cartes qui correspond selon eux à l'événement. On fait deux tours de tables et ensuite les joueur.euse.s procédent à un vote pour déterminer qui parmis eux était l'imposteur.
+
+Cette app sert à remplacer le petit appareil basé sur des filtres polarisant qui permet à chacun de connaitre son événement sans voir l'autre. Cet objet, étant assez fragile, j'ai eu l'idée d'en faire une version web utilisable sur mobile.
+
 ---
 
 ## English
@@ -83,3 +95,10 @@ Controls :
 ### JSimon
 Play the iconic game everyone knows : Simon; but in the web browser. Compare your scores with your friends.
 You can use the keyboard arrows to play.
+
+### Mister Coco Assistant
+App to replace the apparatus used in the game `Mister Coco` by Hiboutatillus.
+
+Currently not available in english (only in french for now) but maybe it will someday if I get support from the creators of the game (Hiboutatillus).
+
+You can still visit if you want.
