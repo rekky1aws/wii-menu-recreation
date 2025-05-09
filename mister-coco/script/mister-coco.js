@@ -7,6 +7,7 @@ const startBtn = document.querySelector('#start-button');
 const mainElt = document.querySelector('main');
 const secretElt = document.querySelector('#secret');
 const eventElt = document.querySelector('#event');
+const newGameBtn = document.querySelector('#new-btn');
 
 // VARIABLES
 let undercover;
@@ -16,7 +17,8 @@ let normalEvent;
 let undercoverEvent;
 
 // FUNCTIONS
-function playerNameAction (evt) {
+function playerNameAction (evt)
+{
 	// Removing input field if it's empty and there are still enough
 	// fields for a playable game.
 	// Not doing this if key is Tab to allow tab navigation.  
@@ -40,7 +42,8 @@ function playerNameAction (evt) {
 	}
 }
 
-function getPlayerList () {
+function getPlayerList ()
+{
 	const playerEntries = document.querySelectorAll('.player-name');
 	const players = Array.from(playerEntries).filter((e) => { // Removing empty fields.
 		if (e.value != "") {
@@ -52,7 +55,8 @@ function getPlayerList () {
 	return players;
 }
 
-function canGameStart (playerList) {
+function canGameStart (playerList)
+{
 	if (playerList.length < minPlayerNb) {
 		throw new Error(`Pas assez de joueurs, il devrait y en avoir un minimum de ${minPlayerNb}`);
 	}
@@ -62,7 +66,8 @@ function canGameStart (playerList) {
 	}
 }
 
-function playRound () {
+function playRound ()
+{
 	const viewBtn = document.querySelector('#view-btn');
 	const currentPlayer = document.querySelector('#current-player');
 
@@ -88,7 +93,8 @@ function chooseEvents ()
 	undercoverEvent = events[undercoverEventInd];
 }
 
-function showEvent () {
+function showEvent ()
+{
 	const nextBtn = document.querySelector('#next-btn');
 	const viewBtn = document.querySelector('#view-btn');
 
@@ -136,13 +142,18 @@ function startGame ()
 
 	
 	playRound();
+}
 
+function newGame ()
+{
+	window.location.reload(true);
 }
 
 // EVENT LISTENERS
 playerNameElts.forEach((elt) => {
 	elt.addEventListener("keyup", playerNameAction);
 });
+newGameBtn.addEventListener("click", newGame);
 
 startBtn.addEventListener("click", startGame);
 
