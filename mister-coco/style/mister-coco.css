@@ -131,10 +131,21 @@ main.postgame > #game {
 #event {
 	font-size: 2rem;
 	width: 50%;
-	outline: 2px solid #000000;
+	color: #000;
+	background-color: #FFF;
+	border: none;
 	padding: 0.5rem;
 	border-radius: 1rem;
 	font-family: Leelawadee, sans-serif;
+	outline: 2px solid #000000;
 	text-align: center;
-	margin: 1rem;
+
+	/* font-size: 2rem;
+	width: 50%;
+	
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-family: Leelawadee, sans-serif;
+	
+	margin: 1rem; */
 }

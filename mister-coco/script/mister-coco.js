@@ -63,13 +63,15 @@ function canGameStart (playerList) {
 }
 
 function playRound () {
+	const viewBtn = document.querySelector('#view-btn');
+	const currentPlayer = document.querySelector('#current-player');
+
 	// Resetting secret to avoid cheating
 	secretElt.classList.add('hidden');
+	eventElt.classList.add('hidden');
+	viewBtn.classList.remove('hidden');
 	eventElt.textContent = "";
 
-	const currentPlayer = document.querySelector('#current-player');
-	const viewBtn = document.querySelector('#view-btn');
-	
 	currentPlayer.textContent = playerList[playerIndex];
 	viewBtn.addEventListener('click', showEvent);
 	
@@ -88,11 +90,15 @@ function chooseEvents ()
 
 function showEvent () {
 	const nextBtn = document.querySelector('#next-btn');
+	const viewBtn = document.querySelector('#view-btn');
+
 	if (playerList[playerIndex] == undercover) {
 		eventElt.textContent = undercoverEvent;
 	} else {
 		eventElt.textContent = normalEvent;
 	}
+	eventElt.classList.remove('hidden');
+	viewBtn.classList.add('hidden');
 	secretElt.classList.remove('hidden');
 
 	playerIndex++;
