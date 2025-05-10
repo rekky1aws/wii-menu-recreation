@@ -2,7 +2,6 @@
 
 ## Pending
  + Klondike
-  + Finish Setup
   + Add a class to check if card can move
     + Use it in drag eventListener
   + Check card destination validity
