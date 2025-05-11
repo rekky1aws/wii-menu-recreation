@@ -49,13 +49,63 @@ class Klondike
 	{
 		console.group('endDrag'); // DEBUG
 		if (this.dragDestination) {
+			
 			// TODO : Check if this move is valid
+			if (!Klondike.checkMovability(this.draggedCard, this.dragDestination)) {
+				console.error("This card can't be moved here");
+				
+				console.groupEnd('endDrag'); // DEBUG
+
+				return false;
+			}
+
 			console.log('Moving Card'); // DEBUG
 			this.dragDestination.append(this.draggedCard);
 		}
 
 		console.groupEnd('endDrag'); // DEBUG
 
+	}
+
+	static checkMovability (currentCard, destination)
+	{
+		console.group('checkMovability'); // DEBUG
+
+		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+
+		const cardValue = assocValue.indexOf(currentCard.querySelector('.card-value').textContent) + 1;
+		const cardSuit = currentCard.querySelector('.card-suit').textContent;
+
+		let destLastValue;
+		let destLastSuit;
+
+		if (destination.childNodes.length > 0) {
+			destLastValue = assocValue.indexOf(destination.lastChild.querySelector('.card-value').textContent) + 1;
+		}
+
+		console.log("destLast value : " + destLastValue); // DEBUG
+
+		// If trying to place a king on a not empty row
+		if (cardValue == 13 && destination.childNodes.length) {
+			return false;
+		}
+
+		if (cardValue != 13) {
+			// If not a king and trying to be placed in an empty row
+			if (destination.childNodes.length === 0) {
+				return false;
+			}
+
+			// Placing only on a incorrect number
+			if (destLastValue != cardValue + 1) {
+				return false
+			}
+
+		}
+		
+		console.groupEnd('checkMovability'); // DEBUG
+
+		return true;
 	}
 
 	dragoverHandler (evt)
