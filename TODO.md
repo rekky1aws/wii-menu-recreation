@@ -2,6 +2,8 @@
 
 ## Pending
  + Klondike
+ + checkMovability
+  + Add a better way to calculate suit 
   + Add a class to check if card can move
     + Use it in drag eventListener
   + Check card destination validity
