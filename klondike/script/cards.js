@@ -26,7 +26,7 @@ A class to handle the behavior of a playing card.
 	display (parentElt)
 	{
 			// Association table
-		const assocValue = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 		const assocSuit = ['♠', '♦', '♥', '♣'];
 
 			// Creating HTML elements
