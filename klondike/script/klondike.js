@@ -72,15 +72,18 @@ class Klondike
 		console.group('checkMovability'); // DEBUG
 
 		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+		const assocSuit = ['♠', '♦', '♥', '♣'];
 
 		const cardValue = assocValue.indexOf(currentCard.querySelector('.card-value').textContent) + 1;
-		const cardSuit = currentCard.querySelector('.card-suit').textContent;
+		const cardSuit = assocSuit.indexOf(currentCard.querySelector('.card-suit').textContent);
 
 		let destLastValue;
 		let destLastSuit;
 
 		if (destination.childNodes.length > 0) {
 			destLastValue = assocValue.indexOf(destination.lastChild.querySelector('.card-value').textContent) + 1;
+
+			destLastSuit = assocSuit.indexOf(destination.lastChild.querySelector('.card-suit').textContent);
 		}
 
 		console.log("destLast value : " + destLastValue); // DEBUG
@@ -99,6 +102,11 @@ class Klondike
 			// Placing only on a incorrect number
 			if (destLastValue != cardValue + 1) {
 				return false
+			}
+
+			// Placing on a incorrect suit
+			if (destLastSuit != (cardSuit + 1) % 2) {
+				return false;
 			}
 
 		}
