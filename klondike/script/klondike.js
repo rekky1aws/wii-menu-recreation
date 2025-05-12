@@ -80,13 +80,16 @@ class Klondike
 		let destLastValue;
 		let destLastSuit;
 
-		if (destination.childNodes.length > 0) {
+		// Getting infos about the last card in destination.
+		if (destination.childNodes.length > 0 && !destination.lastChild.classList.contains('card-back')) {
 			destLastValue = assocValue.indexOf(destination.lastChild.querySelector('.card-value').textContent) + 1;
 
 			destLastSuit = assocSuit.indexOf(destination.lastChild.querySelector('.card-suit').textContent);
 		}
 
 		console.log("destLast value : " + destLastValue); // DEBUG
+
+		// TODO detect if card is being dragged to a top row
 
 		// If trying to place a king on a not empty row
 		if (cardValue == 13 && destination.childNodes.length) {
