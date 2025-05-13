@@ -73,6 +73,8 @@ class Klondike
 	{
 		// Checking if card is the last from the pile
 		if (currentCard !== currentCard.parentNode.lastChild) {
+			// TODO : check if card all cards after are movable
+
 			throw new Error("Card can't be moved because it isn't the last one of the pile.");
 			return false;
 		}
