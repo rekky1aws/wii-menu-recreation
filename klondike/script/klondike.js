@@ -51,16 +51,18 @@ class Klondike
 		if (this.dragDestination) {
 			
 			// TODO : Check if this move is valid
-			if (!Klondike.checkMovability(this.draggedCard, this.dragDestination)) {
-				console.error("This card can't be moved here");
-				
-				console.groupEnd('endDrag'); // DEBUG
+			try {
+				Klondike.checkMovability(this.draggedCard, this.dragDestination);
 
+				console.log('Moving Card'); // DEBUG
+				this.dragDestination.append(this.draggedCard);
+
+			} catch (e) {
+				// console.error("This card can't be moved here"); // DEBUG
+				console.error(e.message);
+				console.groupEnd('endDrag'); // DEBUG
 				return false;
 			}
-
-			console.log('Moving Card'); // DEBUG
-			this.dragDestination.append(this.draggedCard);
 		}
 
 		console.groupEnd('endDrag'); // DEBUG
@@ -69,6 +71,12 @@ class Klondike
 
 	static checkMovability (currentCard, destination)
 	{
+		// Checking if card is the last from the pile
+		if (currentCard !== currentCard.parentNode.lastChild) {
+			throw new Error("Card can't be moved because it isn't the last one of the pile.");
+			return false;
+		}
+
 		console.group('checkMovability'); // DEBUG
 
 		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
@@ -93,22 +101,26 @@ class Klondike
 
 		// If trying to place a king on a not empty row
 		if (cardValue == 13 && destination.childNodes.length) {
+			throw new Error("A king card can't be place on an non empty row.");
 			return false;
 		}
 
 		if (cardValue != 13) {
 			// If not a king and trying to be placed in an empty row
 			if (destination.childNodes.length === 0) {
+				throw new Error("Only a king card can be placed on an empty row.");
 				return false;
 			}
 
 			// Placing only on a incorrect number
 			if (destLastValue != cardValue + 1) {
-				return false
+				throw new Error("A card must be place on an other card with the value just above.");
+				return false;
 			}
 
 			// Placing on a incorrect suit
 			if (destLastSuit != (cardSuit + 1) % 2) {
+				throw new Error("A red card can be placed only on a black card, and a black card can only be placed on a red card.");
 				return false;
 			}
 
