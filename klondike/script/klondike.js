@@ -49,8 +49,6 @@ class Klondike
 	{
 		console.group('endDrag'); // DEBUG
 		if (this.dragDestination) {
-			
-			// TODO : Check if this move is valid
 			try {
 				Klondike.checkMovability(this.draggedCard, this.dragDestination);
 
@@ -81,6 +79,8 @@ class Klondike
 
 		console.group('checkMovability'); // DEBUG
 
+		console.log(destination); // DEBUG
+
 		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 		const assocSuit = ['♠', '♦', '♥', '♣'];
 
@@ -91,25 +91,38 @@ class Klondike
 		let destLastSuit;
 
 		// Getting infos about the last card in destination.
-		if (destination.childNodes.length > 0 && !destination.lastChild.classList.contains('card-back')) {
-			destLastValue = assocValue.indexOf(destination.lastChild.querySelector('.card-value').textContent) + 1;
+		if (destination.children.length > 0) {
+			if (!destination.lastChild.classList.contains('card-back')) {
+				destLastValue = assocValue.indexOf(destination.lastChild.querySelector('.card-value').textContent) + 1;
 
-			destLastSuit = assocSuit.indexOf(destination.lastChild.querySelector('.card-suit').textContent);
+				destLastSuit = assocSuit.indexOf(destination.lastChild.querySelector('.card-suit').textContent);
+			}
 		}
 
 		console.log("destLast value : " + destLastValue); // DEBUG
 
-		// TODO detect if card is being dragged to a top row
+		// If card is being dragged to a top row
+		if (destination.classList.contains('scored-row')) {
+			console.log('Top row'); // DEBUG
+
+			// If destination is not empty and draggedCard is an Ace
+			if (destination.children.length && cardValue == 1) {
+				throw new Error("An ace card can't be placed in a top row if there already is an another card there.")
+				return false;
+			}
+
+			return true;
+		}
 
 		// If trying to place a king on a not empty row
-		if (cardValue == 13 && destination.childNodes.length) {
+		if (cardValue == 13 && destination.children.length) {
 			throw new Error("A king card can't be place on an non empty row.");
 			return false;
 		}
 
 		if (cardValue != 13) {
 			// If not a king and trying to be placed in an empty row
-			if (destination.childNodes.length === 0) {
+			if (destination.children.length === 0) {
 				throw new Error("Only a king card can be placed on an empty row.");
 				return false;
 			}
