@@ -9,6 +9,9 @@ A class to handle the behavior of a playing card.
 		suit: 0 (spades), 1 (diamonds), 2 (clubs), 3 (hearts) 
 	*/
 	{
+		this.assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+		this.assocSuit = ['♠', '♦', '♣', '♥'];
+
 		// Throwing Errors if inputed values are wrong
 		if ((value < 1) || (value > 13)) {
 			throw new Error('Value must be an integer beetween 1 and 13 included');
@@ -25,10 +28,6 @@ A class to handle the behavior of a playing card.
 
 	display (parentElt)
 	{
-			// Association table
-		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-		const assocSuit = ['♠', '♦', '♣', '♥'];
-
 			// Creating HTML elements
 		let cardElt = document.createElement('div');
 		let cardValue = document.createElement('div');
@@ -43,8 +42,10 @@ A class to handle the behavior of a playing card.
 		cardSuit.classList.add('card-suit');
 
 			// Setinng values up
-		cardValue.textContent = assocValue[this.value - 1];
-		cardSuit.textContent = assocSuit[this.suit];
+		cardElt.setAttribute('numvalue', this.value);
+		cardElt.setAttribute('numsuit', this.suit);
+		cardValue.textContent = this.assocValue[this.value - 1];
+		cardSuit.textContent = this.assocSuit[this.suit];
 
 			// Adding class to display correct color
 		if (this.suit % 2 == 0) {
@@ -69,11 +70,7 @@ A class to handle the behavior of a playing card.
 
 	get textDisplay ()
 	{
-		// Association table
-		const assocValue = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-		const assocSuit = ['♠', '♦', '♣', '♥'];
-
-		return assocSuit[this.suit] + " " + assocValue[this.value - 1];
+		return this.assocSuit[this.suit] + " " + this.assocValue[this.value - 1];
 	}
 }
 
