@@ -81,11 +81,8 @@ class Klondike
 
 		console.log(destination); // DEBUG
 
-		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-		const assocSuit = ['♠', '♦', '♣', '♥'];
-
-		const cardValue = assocValue.indexOf(currentCard.querySelector('.card-value').textContent) + 1;
-		const cardSuit = assocSuit.indexOf(currentCard.querySelector('.card-suit').textContent);
+		const cardValue = currentCard.getAttribute('numvalue');
+		const cardSuit = currentCard.getAttribute('numsuit');
 
 		let destLastValue;
 		let destLastSuit;
@@ -93,9 +90,8 @@ class Klondike
 		// Getting infos about the last card in destination.
 		if (destination.children.length > 0) {
 			if (!destination.lastChild.classList.contains('card-back')) {
-				destLastValue = assocValue.indexOf(destination.lastChild.querySelector('.card-value').textContent) + 1;
-
-				destLastSuit = assocSuit.indexOf(destination.lastChild.querySelector('.card-suit').textContent);
+				destLastValue = destination.lastChild.getAttribute('numvalue');
+				destLastSuit = destination.lastChild.getAttribute('numsuit');
 			}
 		}
 
