@@ -81,8 +81,8 @@ class Klondike
 
 		console.log(destination); // DEBUG
 
-		const cardValue = currentCard.getAttribute('numvalue');
-		const cardSuit = currentCard.getAttribute('numsuit');
+		const cardValue = parseInt(currentCard.getAttribute('numvalue'));
+		const cardSuit = parseInt(currentCard.getAttribute('numsuit'));
 
 		let destLastValue;
 		let destLastSuit;
@@ -90,12 +90,10 @@ class Klondike
 		// Getting infos about the last card in destination.
 		if (destination.children.length > 0) {
 			if (!destination.lastChild.classList.contains('card-back')) {
-				destLastValue = destination.lastChild.getAttribute('numvalue');
-				destLastSuit = destination.lastChild.getAttribute('numsuit');
+				destLastValue = parseInt(destination.lastChild.getAttribute('numvalue'));
+				destLastSuit = parseInt(destination.lastChild.getAttribute('numsuit'));
 			}
 		}
-
-		console.log("destLast value : " + destLastValue); // DEBUG
 
 		// If card is being dragged to a top row
 		if (destination.classList.contains('scored-row')) {
