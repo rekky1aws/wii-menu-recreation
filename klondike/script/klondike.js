@@ -82,7 +82,7 @@ class Klondike
 		console.log(destination); // DEBUG
 
 		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-		const assocSuit = ['♠', '♦', '♥', '♣'];
+		const assocSuit = ['♠', '♦', '♣', '♥'];
 
 		const cardValue = assocValue.indexOf(currentCard.querySelector('.card-value').textContent) + 1;
 		const cardSuit = assocSuit.indexOf(currentCard.querySelector('.card-suit').textContent);

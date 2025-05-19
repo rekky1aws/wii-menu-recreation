@@ -27,7 +27,7 @@ A class to handle the behavior of a playing card.
 	{
 			// Association table
 		const assocValue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-		const assocSuit = ['♠', '♦', '♥', '♣'];
+		const assocSuit = ['♠', '♦', '♣', '♥'];
 
 			// Creating HTML elements
 		let cardElt = document.createElement('div');
@@ -48,9 +48,9 @@ A class to handle the behavior of a playing card.
 
 			// Adding class to display correct color
 		if (this.suit % 2 == 0) {
-			cardElt.classList.add('red');
-		} else {
 			cardElt.classList.add('black');
+		} else {
+			cardElt.classList.add('red');
 		}
 
 			// Adding class to displau the back of the card
@@ -71,7 +71,7 @@ A class to handle the behavior of a playing card.
 	{
 		// Association table
 		const assocValue = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-		const assocSuit = ['♠', '♦', '♥', '♣'];
+		const assocSuit = ['♠', '♦', '♣', '♥'];
 
 		return assocSuit[this.suit] + " " + assocValue[this.value - 1];
 	}
