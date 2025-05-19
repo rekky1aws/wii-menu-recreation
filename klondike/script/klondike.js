@@ -99,12 +99,33 @@ class Klondike
 		if (destination.classList.contains('scored-row')) {
 			console.log('Top row'); // DEBUG
 
-			// If destination is not empty and draggedCard is an Ace
-			if (destination.children.length && cardValue == 1) {
-				throw new Error("An ace card can't be placed in a top row if there already is an another card there.")
+			// If destination is empty and card is not an Ace
+			if(destination.children.length == 0 && cardValue != 1) {
+				throw new Error("Only an ace card can be placed first on the top rows.");
 				return false;
 			}
 
+			// If destination is not empty
+			if (destination.children.length) {
+				// If draggedCard is an Ace
+				if (cardValue == 1) {
+					throw new Error("An ace card can't be placed in a top row if there already is an another card there.")
+					return false;
+				}
+
+				// If the card doesn't have the correct suit
+				if (cardSuit != destLastSuit) {
+					throw	new Error("Only cards with the same suit can be placed on a single top row.");
+				}
+
+				// If the card doesn't have the correct value
+				if (cardValue != destLastValue + 1)
+				{
+					throw new Error("Only a card with the value just above can be placed on a top row.");
+					return false;
+				}
+			}
+		
 			return true;
 		}
 
@@ -128,7 +149,7 @@ class Klondike
 			}
 
 			// Placing on a incorrect suit
-			if (destLastSuit != (cardSuit + 1) % 2) {
+			if (destLastSuit % 2 != (cardSuit + 1) % 2) {
 				throw new Error("A red card can be placed only on a black card, and a black card can only be placed on a red card.");
 				return false;
 			}
