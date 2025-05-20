@@ -1,31 +1,0 @@
-[1mdiff --git a/klondike/script/klondike.js b/klondike/script/klondike.js[m
-[1mindex 2928e9d..6d68a61 100644[m
-[1m--- a/klondike/script/klondike.js[m
-[1m+++ b/klondike/script/klondike.js[m
-[36m@@ -81,8 +81,8 @@[m [mclass Klondike[m
- [m
- 		console.log(destination); // DEBUG[m
- [m
-[31m-		const cardValue = currentCard.getAttribute('numvalue');[m
-[31m-		const cardSuit = currentCard.getAttribute('numsuit');[m
-[32m+[m		[32mconst cardValue = parseInt(currentCard.getAttribute('numvalue'));[m[41m[m
-[32m+[m		[32mconst cardSuit = parseInt(currentCard.getAttribute('numsuit'));[m[41m[m
- [m
- 		let destLastValue;[m
- 		let destLastSuit;[m
-[36m@@ -90,13 +90,11 @@[m [mclass Klondike[m
- 		// Getting infos about the last card in destination.[m
- 		if (destination.children.length > 0) {[m
- 			if (!destination.lastChild.classList.contains('card-back')) {[m
-[31m-				destLastValue = destination.lastChild.getAttribute('numvalue');[m
-[31m-				destLastSuit = destination.lastChild.getAttribute('numsuit');[m
-[32m+[m				[32mdestLastValue = parseInt(destination.lastChild.getAttribute('numvalue'));[m[41m[m
-[32m+[m				[32mdestLastSuit = parseInt(destination.lastChild.getAttribute('numsuit'));[m[41m[m
- 			}[m
- 		}[m
- [m
-[31m-		console.log("destLast value : " + destLastValue); // DEBUG[m
-[31m-[m
- 		// If card is being dragged to a top row[m
- 		if (destination.classList.contains('scored-row')) {[m
- 			console.log('Top row'); // DEBUG[m
