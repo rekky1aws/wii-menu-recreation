@@ -55,16 +55,8 @@
  + Add Burger Menu
     + Content
     + f changeState
- + Playfield :
-  + Top zone
-    + Validated Suits
-    + Pile
-    + Visible Card
-  + Rows
  + Gameplay :
-   + Movable Cards
    + Check placable card
-   + Card distribution
    + Check Victory conditions
     + Every suit has all of it's cards
 
