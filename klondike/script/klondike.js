@@ -53,7 +53,15 @@ class Klondike
 				Klondike.checkMovability(this.draggedCard, this.dragDestination);
 
 				console.log('Moving Card'); // DEBUG
+				
+				const source = this.draggedCard.parentNode;
+
 				this.dragDestination.append(this.draggedCard);
+				
+				// Flipping the next card in pile if it exists.
+				if (source.lastChild) {
+					source.lastChild.classList.remove('card-back');
+				}
 
 			} catch (e) {
 				// console.error("This card can't be moved here"); // DEBUG
