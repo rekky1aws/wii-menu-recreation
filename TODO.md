@@ -3,11 +3,11 @@
 ## Pending
  + Klondike
  + checkMovability
-  + Add a better way to calculate suit 
   + Add a class to check if card can move
     + Use it in drag eventListener
   + Check card destination validity
   + Better cards superposition
+  + Add a way to move all cards under if they are correctly placed.
 
 ## General
  + Add a master js to generate common elements
