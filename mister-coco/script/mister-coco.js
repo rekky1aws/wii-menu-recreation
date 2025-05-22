@@ -168,6 +168,8 @@ function loadPlayers ()
 	return null;
 }
 
+// TODO : Inject loaded player names in DOM
+
 // EVENT LISTENERS
 playerNameElts.forEach((elt) => {
 	elt.addEventListener("keyup", playerNameAction);
@@ -177,4 +179,4 @@ newGameBtn.addEventListener("click", newGame);
 startBtn.addEventListener("click", startGame);
 
 // MAIN
-loadPlayers();
+let playerList = loadPlayers();
