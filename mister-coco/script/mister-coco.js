@@ -125,6 +125,8 @@ function startGame ()
 
 	try {
 		canGameStart(playerList);
+		savePlayers(playerList);
+
 	} catch (err) {
 		console.error(err);
 		return  0;
@@ -147,6 +149,12 @@ function startGame ()
 function newGame ()
 {
 	window.location.reload(true);
+}
+
+function savePlayers (playerList)
+{
+	window.localStorage.setItem("mister-coco-names", JSON.stringify(playerList));
+	console.log(window.localStorage.getItem("mister-coco-names"));
 }
 
 // EVENT LISTENERS
