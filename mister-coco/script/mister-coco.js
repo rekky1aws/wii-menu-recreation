@@ -154,7 +154,18 @@ function newGame ()
 function savePlayers (playerList)
 {
 	window.localStorage.setItem("mister-coco-names", JSON.stringify(playerList));
-	console.log(window.localStorage.getItem("mister-coco-names"));
+}
+
+function loadPlayers ()
+{
+	const players = window.localStorage.getItem("mister-coco-names");
+
+	if (players) {
+		const playersList = JSON.parse(players);
+		return playersList;
+	}
+
+	return null;
 }
 
 // EVENT LISTENERS
@@ -166,3 +177,4 @@ newGameBtn.addEventListener("click", newGame);
 startBtn.addEventListener("click", startGame);
 
 // MAIN
+loadPlayers();
