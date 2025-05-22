@@ -198,3 +198,10 @@
 ### Calculator
  + Hidden animation on special code entry
 
+### Turret defender idle
+ + Turret in the center
+ + Ennemies come from outside of the screen in a circle
+ + After every number of ennemies killed, make player choose beetween cards to upgrade
+ + HP bar going down for each ennemy hitting the turret
+ + Prestige to augment base damage based on how many ennemies killed in total
+  + loose all prestige points  if killed to make  the player prestige at the right timing
