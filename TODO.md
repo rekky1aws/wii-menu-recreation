@@ -93,14 +93,12 @@
 
 ### MisterCoco Web Helper
  + Icons
- + Filter player better
+ + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
   + No double names (use nickname or first letter of lastname to differentiate).
  + Flash messages to display errors.
- + Inject player names on page start if they exist
- + Add a button to remove a player in one click
- + If players names are in localStorage load them  and ask user if they want to use it
+ + Add a button to remove a player in one click.
 
 ---
 
