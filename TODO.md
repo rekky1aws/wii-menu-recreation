@@ -93,6 +93,9 @@
 
 ### MisterCoco Web Helper
  + Icons
+ + Better CSS for mobile game
+  + Media query to remove padding when screen is small
+  + Reduce font
  + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
