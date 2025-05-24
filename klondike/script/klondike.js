@@ -77,6 +77,14 @@ class Klondike
 
 	static checkMovability (currentCard, destination)
 	{
+		// Checking if card is visible
+		if (currentCard.classList.contains('card-back')) {
+			if (currentCard.parentNode.id !== 'pile') {
+				throw new Error("Can't move a card that is not revealed.");
+				return false;
+			}
+		}
+
 		// Checking if card is the last from the pile
 		if (currentCard !== currentCard.parentNode.lastChild) {
 			// TODO : check if card all cards after are movable
