@@ -96,6 +96,9 @@
  + Better CSS for mobile game
   + Media query to remove padding when screen is small
   + Reduce font
+ + Better display
+  + List all player, clicking on your name shows your event
+  + Allow player to se their event again if someone forgot.
  + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
