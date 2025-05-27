@@ -30,6 +30,12 @@ header > a {
 	border-radius: 1rem;
 }
 
+h1 {
+	display: flex;
+	flex-wrap: wrap;
+	gap:0.25rem;
+}
+
 header > h1 span {
 	font-family: Goldroom, serif;
 }
