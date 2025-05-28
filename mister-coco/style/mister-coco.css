@@ -72,7 +72,7 @@ main.postgame > #game {
 #player-entries input {
 	display: inline-block;
 	font-size: 2rem;
-	width: 50%;
+	width: 90%;
 	border-radius: 1rem;
 	padding: 0.5rem;
 	font-family: Leelawadee, sans-serif;
@@ -88,7 +88,7 @@ main.postgame > #game {
 
 .btn {
 	font-size: 2rem;
-	width: 50%;
+	width: 90%;
 	color: #FFF;
 	background-color: #80064A;
 	border: none;
@@ -136,7 +136,7 @@ main.postgame > #game {
 
 #event {
 	font-size: 2rem;
-	width: 50%;
+	width: 90%;
 	color: #000;
 	background-color: #FFF;
 	border: none;
@@ -154,4 +154,10 @@ main.postgame > #game {
 	font-family: Leelawadee, sans-serif;
 	
 	margin: 1rem; */
+}
+
+@media only screen and (min-width: 1024px) {
+	#player-entries input, .btn, #event {
+		width: 50%;
+	}
 }
