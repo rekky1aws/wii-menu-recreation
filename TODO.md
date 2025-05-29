@@ -93,9 +93,6 @@
 
 ### MisterCoco Web Helper
  + Icons
- + Better CSS for mobile game
-  + Media query to remove padding when screen is small
-  + Reduce font
  + Better display
   + List all player, clicking on your name shows your event
   + Allow player to se their event again if someone forgot.
