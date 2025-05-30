@@ -4,6 +4,7 @@ const maxPlayerNb = 8;
 
 const playerNamesContainer = document.querySelector('#player-entries');
 const playerNameElts = document.querySelectorAll('.player-name');
+const playerDelBtns = document.querySelectorAll('.del-player');
 const startBtn = document.querySelector('#start-button');
 const mainElt = document.querySelector('main');
 const secretElt = document.querySelector('#secret');
@@ -24,13 +25,30 @@ function playerNameAction (evt)
 	// fields for a playable game.
 	// Not doing this if key is Tab to allow tab navigation.  
 	if (evt.target.value === "" && evt.target.parentNode.children.length > minPlayerNb && evt.key !== "Tab") {
-		evt.target.remove();
+		evt.target.parentNode.remove();
 	}
 
 	// As soon as there is text in the last field, add a new one.
 	// Don't add a field if there is alreaddy enough players il the game.
 	if (evt.target.value !== "" && evt.target.parentNode.lastElementChild.value !== "" && evt.target.parentNode.children.length < maxPlayerNb) {
 			createNameInput();		
+	}
+}
+
+function playerDelAction(evt)
+{
+	const playerContainer = evt.target.parentNode;
+	const playerName = playerContainer.querySelector('.player-name').value;
+
+	// console.log(playerContainer); // DEBUG
+	// console.log(playerName); // DBEUG
+
+	if (confirm(`Êtes-vous sur de vouloir supprimer '${playerName}' de la liste de joueurs ?`)) {
+		if (playerContainer.parentNode.children.length > minPlayerNb) {
+			// console.log(`suppression de '${playerName}'`); // DEBUG
+			
+			playerContainer.remove();
+		}
 	}
 }
 
@@ -62,6 +80,7 @@ function createNameInput (name = null)
 	}
 
 	newInput.addEventListener('keyup', playerNameAction);
+	newDelBtn.addEventListener('click', playerDelAction);
 
 	newContainer.append(newInput);
 	newContainer.append(newDelBtn);
@@ -216,6 +235,12 @@ function injectPlayers ()
 playerNameElts.forEach((elt) => {
 	elt.addEventListener("keyup", playerNameAction);
 });
+
+playerDelBtns.forEach((elt) => {
+	elt.addEventListener("click", playerDelAction);
+});
+
+
 newGameBtn.addEventListener("click", newGame);
 
 startBtn.addEventListener("click", startGame);
