@@ -101,7 +101,6 @@
  + More verifications
   + No double names (use nickname or first letter of lastname to differentiate).
  + Flash messages to display errors.
- + Add a button to remove a player in one click.
 
 ---
 
