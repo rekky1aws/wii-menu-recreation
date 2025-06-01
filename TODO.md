@@ -101,6 +101,7 @@
  + More verifications
   + No double names (use nickname or first letter of lastname to differentiate).
  + Flash messages to display errors.
+ + Add a way for players to input a list of their own events
 
 ---
 
