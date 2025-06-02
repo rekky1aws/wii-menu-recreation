@@ -36,19 +36,36 @@ function playerNameAction (evt)
 
 function createNameInput (name = null)
 {
-	// <input type="text" name="player-name" placeholder="Entrez le nom du joueur" class="player-name">
-		const newInput = document.createElement('input');
-		newInput.type = "text";
-		newInput.name = "player-name";
-		newInput.placeholder = "Enter player name here";
-		newInput.classList.add("player-name");
+	/*
+	<div class="player-container">
+		<input type="text" name="player-name" placeholder="Nom du joueur" class="player-name">
+		<button class="del-player clickable">X</button>
+	</div>
+	*/
 
-		if (name) {
-			newInput.value = name;
-		}
+	const newContainer = document.createElement('container');
+	newContainer.classList.add("player-container");
 
-		newInput.addEventListener('keyup', playerNameAction);
-		playerNamesContainer.append(newInput);
+	const newInput = document.createElement('input');
+	newInput.type = "text";
+	newInput.name = "player-name";
+	newInput.placeholder = "Nom du Joueur";
+	newInput.classList.add("player-name");
+
+	const newDelBtn = document.createElement('button');
+	newDelBtn.classList.add("del-player");
+	newDelBtn.classList.add("clickable");
+	newDelBtn.textContent = "X";
+
+	if (name) {
+		newInput.value = name;
+	}
+
+	newInput.addEventListener('keyup', playerNameAction);
+
+	newContainer.append(newInput);
+	newContainer.append(newDelBtn);
+	playerNamesContainer.append(newContainer);
 }
 
 function getPlayerList ()
