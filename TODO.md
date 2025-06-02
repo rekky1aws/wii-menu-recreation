@@ -95,6 +95,8 @@
  + Icons
  + Better display
   + List all player, clicking on your name shows your event
+    + Here we can re-use the already existing code but in a new way
+    + Next btn brings users back to the player list
   + Allow player to se their event again if someone forgot.
  + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
