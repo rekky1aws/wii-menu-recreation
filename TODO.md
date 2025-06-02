@@ -1,13 +1,16 @@
 # TO DO
 
 ## Pending
+  + Mister coco
+   + Players name list so anyonne can view their event again
+
  + Klondike
- + checkMovability
-  + Add a better way to calculate suit 
-  + Add a class to check if card can move
-    + Use it in drag eventListener
-  + Check card destination validity
-  + Better cards superposition
+   + checkMovability
+    + Add a better way to calculate suit 
+    + Add a class to check if card can move
+      + Use it in drag eventListener
+    + Check card destination validity
+    + Better cards superposition
 
 ## General
  + Add a master js to generate common elements
