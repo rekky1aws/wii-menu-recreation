@@ -93,14 +93,18 @@
 
 ### MisterCoco Web Helper
  + Icons
- + Filter player better
+ + Better CSS for mobile game
+  + Media query to remove padding when screen is small
+  + Reduce font
+ + Better display
+  + List all player, clicking on your name shows your event
+  + Allow player to se their event again if someone forgot.
+ + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
   + No double names (use nickname or first letter of lastname to differentiate).
  + Flash messages to display errors.
- + Inject player names on page start if they exist
- + Add a button to remove a player in one click
- + If players names are in localStorage load them  and ask user if they want to use it
+ + Add a button to remove a player in one click.
 
 ---
 

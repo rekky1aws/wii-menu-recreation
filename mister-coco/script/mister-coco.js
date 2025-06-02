@@ -2,6 +2,7 @@
 const minPlayerNb = 3;
 const maxPlayerNb = 8;
 
+const playerNamesContainer = document.querySelector('#player-entries');
 const playerNameElts = document.querySelectorAll('.player-name');
 const startBtn = document.querySelector('#start-button');
 const mainElt = document.querySelector('main');
@@ -29,17 +30,25 @@ function playerNameAction (evt)
 	// As soon as there is text in the last field, add a new one.
 	// Don't add a field if there is alreaddy enough players il the game.
 	if (evt.target.value !== "" && evt.target.parentNode.lastElementChild.value !== "" && evt.target.parentNode.children.length < maxPlayerNb) {
+			createNameInput();		
+	}
+}
 
-		// <input type="text" name="player-name" placeholder="Entrez le nom du joueur" class="player-name">
+function createNameInput (name = null)
+{
+	// <input type="text" name="player-name" placeholder="Entrez le nom du joueur" class="player-name">
 		const newInput = document.createElement('input');
 		newInput.type = "text";
 		newInput.name = "player-name";
 		newInput.placeholder = "Enter player name here";
 		newInput.classList.add("player-name");
 
+		if (name) {
+			newInput.value = name;
+		}
+
 		newInput.addEventListener('keyup', playerNameAction);
-		evt.target.parentNode.append(newInput);
-	}
+		playerNamesContainer.append(newInput);
 }
 
 function getPlayerList ()
@@ -168,6 +177,22 @@ function loadPlayers ()
 	return null;
 }
 
+function injectPlayers ()
+{
+	for (let i = 0; i < playerList.length; i++) {
+		if (playerNameElts[i]) {
+			playerNameElts[i].value = playerList[i];
+		} else {
+			if (i < maxPlayerNb) {
+				createNameInput(playerList[i]);
+			}
+		}
+	}
+	if (playerList.length < maxPlayerNb) {
+		createNameInput();
+	}
+}
+
 // TODO : Inject loaded player names in DOM
 
 // EVENT LISTENERS
@@ -179,4 +204,7 @@ newGameBtn.addEventListener("click", newGame);
 startBtn.addEventListener("click", startGame);
 
 // MAIN
-let playerList = loadPlayers();
+playerList = loadPlayers();
+if (playerList) {
+	injectPlayers();
+}
