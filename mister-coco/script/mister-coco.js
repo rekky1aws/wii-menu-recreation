@@ -48,6 +48,8 @@ function playerDelAction(evt)
 			// console.log(`suppression de '${playerName}'`); // DEBUG
 			
 			playerContainer.remove();
+		} else {
+			playerContainer.querySelector('.player-name').value = "";
 		}
 	}
 }
