@@ -212,3 +212,6 @@
  + HP bar going down for each ennemy hitting the turret
  + Prestige to augment base damage based on how many ennemies killed in total
   + loose all prestige points  if killed to make  the player prestige at the right timing
+
+### Gamepad Tester
+ + See all input values from a gamepad
