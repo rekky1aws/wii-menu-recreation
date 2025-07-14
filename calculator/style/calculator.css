@@ -15,3 +15,27 @@ header {
 	padding: 0 0.5rem;
 	border-radius: 1rem;
 }
+
+.keyboard {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 0.5rem;
+}
+
+.key {
+	border: none;
+	font-size: 2rem;
+	border-radius: 5px;
+	padding: 0.25rem;
+}
+
+.equal {
+	grid-row: 4 / 6;
+	grid-column: 5;
+	background-color: lime;
+}
+
+.back {
+	background-color: red;
+}
