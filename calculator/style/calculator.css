@@ -37,6 +37,7 @@ main {
 	font-size: 2rem;
 	border-radius: 0.25rem;
 	padding: 0.25rem;
+	font-weight: bold;
 }
 
 .equal {
