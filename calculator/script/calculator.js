@@ -7,6 +7,8 @@ const expZone = document.querySelector('#exp');
 // FUNCTION
 function btnHandler (evt)
 {
+	// Checking for special keys
+	// back, equal, mod, pi, sq, sqrt, percentage, dot
 	if (evt.target.id) {
 		console.log(evt.target.id);
 
@@ -39,11 +41,16 @@ function btnHandler (evt)
 			case "sq-key":
 
 				break;
+
+			case "dot-key":
+
+				break;
 		}
 
 		return false;
 	}
 
+	// Other keys ave the correct value in them
 	expZone.value = expZone.value + evt.target.textContent
 }
 
