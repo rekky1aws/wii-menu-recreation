@@ -40,14 +40,27 @@ main {
 	font-weight: bold;
 }
 
-.equal {
+.green {
 	grid-row: 4 / 6;
 	grid-column: 5;
 	background-color: lime;
 }
 
-.back {
+.red {
 	background-color: red;
+}
+
+.cl-shrink {
+	transition: 0.1s ease-in-out;
+}
+
+.cl-shrink:hover {
+	box-shadow: 0 0.125rem 0.125rem 0.125rem #00000022;
+	transform: scale(1.05);
+}
+
+.cl-shrink:active {
+	transform: scale(0.95);
 }
 
 .expression {
