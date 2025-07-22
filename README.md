@@ -54,6 +54,9 @@ Cela donne donc le jeu `Mister Coco` ou chaque participant sera "invté" à un �
 
 Cette app sert à remplacer le petit appareil basé sur des filtres polarisant qui permet à chacun de connaitre son événement sans voir l'autre. Cet objet, étant assez fragile, j'ai eu l'idée d'en faire une version web utilisable sur mobile.
 
+### Calculator
+Une simple calculatrice. Peut-être que des choses s'y cachent. Rien de fou cependant...
+
 ---
 
 ## English
