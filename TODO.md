@@ -109,6 +109,12 @@
  + Flash messages to display errors.
  + Add a way for players to input a list of their own events
 
+### Calculator
+ + Handle all special keys
+ + f processExp
+ + Flash messages
+ + Hidden animation on special code entry
+
 ---
 
 ## Coming Apps
@@ -201,9 +207,6 @@
   + each round is another players
  + check victory
  + check end
-
-### Calculator
- + Hidden animation on special code entry
 
 ### Turret defender idle
  + Turret in the center
