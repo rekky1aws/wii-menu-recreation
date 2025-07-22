@@ -105,3 +105,6 @@ App to replace the apparatus used in the game `Mister Coco` by Hiboutatillus.
 Currently not available in english (only in french for now) but maybe it will someday if I get support from the creators of the game (Hiboutatillus).
 
 You can still visit if you want.
+
+### Calculator
+A simple calculator. Maybe it's hiding something. But nothing crazy though...
