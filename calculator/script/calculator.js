@@ -5,13 +5,16 @@ const expZone = document.querySelector('#exp');
 // VARIABLES
 
 // FUNCTION
+function addToExpZone (elt)
+{
+	expZone.value = expZone.value + elt;
+}
+
 function btnHandler (evt)
 {
 	// Checking for special keys
 	// back, equal, mod, pi, sq, sqrt, percentage, dot
 	if (evt.target.id) {
-		console.log(evt.target.id);
-
 		switch(evt.target.id)
 		{
 			case "back-key":
@@ -51,7 +54,7 @@ function btnHandler (evt)
 	}
 
 	// Other keys ave the correct value in them
-	expZone.value = expZone.value + evt.target.textContent
+	addToExpZone(evt.target.textContent)
 }
 
 // EVENT LISTENERS
