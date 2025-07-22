@@ -18,7 +18,9 @@ function btnHandler (evt)
 		switch(evt.target.id)
 		{
 			case "back-key":
-
+				if (expZone.value.length) {
+					expZone.value = expZone.value.substring(0, expZone.value.length - 1);
+				}
 				break;
 
 			case "equal-key":
