@@ -10,6 +10,13 @@ function addToExpZone (elt)
 	expZone.value = expZone.value + elt;
 }
 
+function processExp ()
+{
+	const expression = expZone.value;
+	// TODO : test if possible return result, else throw error
+	console.log(eval(expression)); // DEBUG
+}
+
 function btnHandler (evt)
 {
 	// Checking for special keys
@@ -24,7 +31,10 @@ function btnHandler (evt)
 				break;
 
 			case "equal-key":
-
+				if (expZone.value.length) {
+					// TODO : try catch and display error if fail 
+					processExp();
+				}
 				break;
 
 			case "mod-key":
