@@ -7,6 +7,7 @@ const expZone = document.querySelector('#exp');
 // FUNCTION
 function addToExpZone (elt)
 {
+	// TODO : check if it's possible
 	expZone.value = expZone.value + elt;
 }
 
