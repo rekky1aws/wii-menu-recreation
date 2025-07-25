@@ -59,7 +59,7 @@ function btnHandler (evt)
 				break;
 
 			case "dot-key":
-
+				addToExpZone(".");
 				break;
 		}
 
