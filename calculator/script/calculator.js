@@ -11,6 +11,18 @@ function addToExpZone (elt)
 	expZone.value = expZone.value + elt;
 }
 
+function endsByNumber ()
+{
+	const re = /\d$/;
+
+	if (re.test(expZone.value)) {
+		return true;
+	}
+
+	return false;
+
+}
+
 function processExp ()
 {
 	const expression = expZone.value;
@@ -59,7 +71,12 @@ function btnHandler (evt)
 				break;
 
 			case "dot-key":
-				addToExpZone(".");
+				console.log(endsByNumber());
+				if(endsByNumber()) {
+					addToExpZone(".");
+				} else {
+					addToExpZone("0.");
+				}
 				break;
 		}
 
