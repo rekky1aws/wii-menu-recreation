@@ -112,6 +112,8 @@
 ### Calculator
  + Handle all special keys
  + f processExp
+ + f addToExpZone
+  + Add verification before effectively adding to the expZone
  + Flash messages
  + Hidden animation on special code entry
 

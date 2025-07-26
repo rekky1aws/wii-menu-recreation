@@ -7,7 +7,20 @@ const expZone = document.querySelector('#exp');
 // FUNCTION
 function addToExpZone (elt)
 {
+	// TODO : check if it's possible
 	expZone.value = expZone.value + elt;
+}
+
+function endsByNumber ()
+{
+	const re = /\d$/;
+
+	if (re.test(expZone.value)) {
+		return true;
+	}
+
+	return false;
+
 }
 
 function processExp ()
@@ -58,7 +71,12 @@ function btnHandler (evt)
 				break;
 
 			case "dot-key":
-
+				console.log(endsByNumber());
+				if(endsByNumber()) {
+					addToExpZone(".");
+				} else {
+					addToExpZone("0.");
+				}
 				break;
 		}
 
