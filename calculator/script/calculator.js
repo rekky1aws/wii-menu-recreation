@@ -71,7 +71,6 @@ function btnHandler (evt)
 				break;
 
 			case "dot-key":
-				console.log(endsByNumber());
 				if(endsByNumber()) {
 					addToExpZone(".");
 				} else {
