@@ -1,5 +1,6 @@
 // CONSTANTS
 const keys = document.querySelectorAll('.key');
+const hisZone = document.querySelector('.history');
 const expZone = document.querySelector('#exp');
 
 // VARIABLES
@@ -11,6 +12,24 @@ function addToExpZone (elt)
 	expZone.value = expZone.value + elt;
 }
 
+function addToHistory (exp = 0, rslt = 0)
+{
+	const newHisElt = document.createElement('div');
+	const expElt = document.createElement('span');
+	const rsltElt = document.createElement('span');
+
+	newHisElt.classList.add('history-elt');
+	expElt.classList.add('history-exp');
+	rsltElt.classList.add('histort-rslt');
+
+	expElt.textContent = exp;
+	rsltElt.textContent = exp;
+
+	newHisElt.append(expElt);
+	newHisElt.append(rsltElt);
+	hisZone.append(newHisElt);
+}
+
 function endsByNumber ()
 {
 	const re = /\d$/;
@@ -20,7 +39,6 @@ function endsByNumber ()
 	}
 
 	return false;
-
 }
 
 function processExp ()
