@@ -77,7 +77,10 @@ function btnHandler (evt)
 				break;
 
 			case "sqrt-key":
-
+				if (endsByNumber()) {
+					addToExpZone("*");
+				}
+				addToExpZone("Math.sqrt(");
 				break;
 
 			case "percent-key":
