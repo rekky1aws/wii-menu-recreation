@@ -66,7 +66,7 @@ main {
 .expression {
 	background-color: #3D3D3D;
 	border-radius: 0.25rem;
-	padding:0.5rem 2rem;
+	padding: 0.5rem 2rem;
 }
 
 #exp {
@@ -84,4 +84,36 @@ main {
 
 #exp:active {
 	border:none;
+}
+
+.history {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	background-color: #000000;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	color: #FFFFFF;
+	font-family: sans-serif;
+	overflow: auto;
+	max-height: 20vh;
+}
+
+.history-elt {
+	background-color: #1D1D1D;
+	padding: 0.5rem;
+	color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.history-exp {
+	align-self: flex-start;
+	opacity: 0.5;
+}
+
+.history-rslt {
+	font-size: 1.25rem;
+	font-weight: bold;
 }
