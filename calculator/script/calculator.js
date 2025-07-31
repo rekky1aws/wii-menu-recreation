@@ -20,10 +20,10 @@ function addToHistory (exp = 0, rslt = 0)
 
 	newHisElt.classList.add('history-elt');
 	expElt.classList.add('history-exp');
-	rsltElt.classList.add('histort-rslt');
+	rsltElt.classList.add('history-rslt');
 
 	expElt.textContent = exp;
-	rsltElt.textContent = exp;
+	rsltElt.textContent = rslt;
 
 	newHisElt.append(expElt);
 	newHisElt.append(rsltElt);
@@ -113,3 +113,8 @@ keys.forEach((e) => {
 });
 
 // MAIN
+
+
+// DEBUG
+addToHistory();
+addToHistory("Math.PI*2", Math.PI*2);
