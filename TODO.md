@@ -116,6 +116,9 @@
   + Add verification before effectively adding to the expZone
  + Flash messages
  + Hidden animation on special code entry
+ + Add long press on back btn to delete all expression
+  + animation
+  + function
 
 ---
 
