@@ -41,11 +41,21 @@ function endsByNumber ()
 	return false;
 }
 
+function hisScrllDwn ()
+{
+	hisZone.scrollTop = hisZone.scrollHeight;
+}
+
 function processExp ()
 {
 	const expression = expZone.value;
 	// TODO : test if possible return result, else throw error
 	console.log(eval(expression)); // DEBUG
+}
+
+function clrExpZone ()
+{
+	expZone.value = "";
 }
 
 function btnHandler (evt)
@@ -65,6 +75,8 @@ function btnHandler (evt)
 				if (expZone.value.length) {
 					// TODO : try catch and display error if fail 
 					processExp();
+					hisScrllDwn();
+					clrExpZone();
 				}
 				break;
 
@@ -118,3 +130,5 @@ keys.forEach((e) => {
 // DEBUG
 addToHistory();
 addToHistory("Math.PI*2", Math.PI*2);
+addToHistory("3+45*7/8", 3+45*7/8);
+hisScrllDwn();
