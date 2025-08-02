@@ -96,6 +96,7 @@
  + Display game stats
 
 ### MisterCoco Web Helper
+ + Fix auto input add
  + Icons
  + Better display
   + List all player, clicking on your name shows your event
