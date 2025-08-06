@@ -174,6 +174,26 @@ main.postgame > #game {
 	font-weight: bold;
 }
 
+#name-grid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+#name-grid > div {
+	font-size:3rem;
+	aspect-ratio: 1 / 1;
+	background-color: #AAAAAAAA;
+	padding: 1rem;
+	border-radius: 1rem;
+	min-width:25%;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 10px 10px -10px #00000077;
+}
+
 @media only screen and (min-width: 1024px) {
 	.player-container, .btn, #event {
 		width: 50%;

@@ -10,6 +10,7 @@ const mainElt = document.querySelector('main');
 const secretElt = document.querySelector('#secret');
 const eventElt = document.querySelector('#event');
 const newGameBtn = document.querySelector('#new-btn');
+const nameGrid = document.querySelector('#name-grid');
 
 // VARIABLES
 let playerList;
@@ -192,8 +193,11 @@ function startGame ()
 	mainElt.classList.remove('pregame');
 	mainElt.classList.add('ingame');
 
-	
+	createNameGrid();
+
+	/*
 	playRound();
+	*/
 }
 
 function newGame ()
@@ -234,7 +238,21 @@ function injectPlayers ()
 	}
 }
 
-// TODO : Inject loaded player names in DOM
+function createNameGrid ()
+{
+	playerList.forEach((name) => {
+		const playerElt = document.createElement('div');
+		playerElt.textContent = name;
+		playerElt.classList.add("clickable");
+		playerElt.addEventListener("click", displayEvent);
+		nameGrid.append(playerElt);
+	});
+}
+
+function displayEvent (evt)
+{
+	console.log(evt.target.textContent);
+}
 
 // EVENT LISTENERS
 playerNameElts.forEach((elt) => {
