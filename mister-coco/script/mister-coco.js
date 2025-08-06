@@ -21,17 +21,20 @@ let undercoverEvent;
 // FUNCTIONS
 function playerNameAction (evt)
 {
+	const trgt = evt.target;
+	const container = trgt.parentNode;
+	
 	// Removing input field if it's empty and there are still enough
 	// fields for a playable game.
 	// Not doing this if key is Tab to allow tab navigation.  
-	if (evt.target.value === "" && evt.target.parentNode.children.length > minPlayerNb && evt.key !== "Tab") {
-		evt.target.parentNode.remove();
+	if (trgt.value === "" && playerNamesContainer.children.length > minPlayerNb && evt.key !== "Tab") {
+		container.remove();
 	}
 
 	// As soon as there is text in the last field, add a new one.
 	// Don't add a field if there is alreaddy enough players il the game.
-	if (evt.target.value !== "" && evt.target.parentNode.lastElementChild.value !== "" && evt.target.parentNode.children.length < maxPlayerNb) {
-			createNameInput();		
+	if (trgt.value !== "" && playerNamesContainer.lastElementChild.querySelector("input").value !== "" && playerNamesContainer.children.length < maxPlayerNb) {
+		createNameInput();		
 	}
 }
 
