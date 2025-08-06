@@ -12,9 +12,9 @@ const eventElt = document.querySelector('#event');
 const newGameBtn = document.querySelector('#new-btn');
 
 // VARIABLES
-let undercover;
 let playerList;
 let playerIndex = 0;
+let undercover;
 let normalEvent;
 let undercoverEvent;
 
@@ -23,7 +23,7 @@ function playerNameAction (evt)
 {
 	const trgt = evt.target;
 	const container = trgt.parentNode;
-	
+
 	// Removing input field if it's empty and there are still enough
 	// fields for a playable game.
 	// Not doing this if key is Tab to allow tab navigation.  
@@ -33,26 +33,26 @@ function playerNameAction (evt)
 
 	// As soon as there is text in the last field, add a new one.
 	// Don't add a field if there is alreaddy enough players il the game.
-	if (trgt.value !== "" && playerNamesContainer.lastElementChild.querySelector("input").value !== "" && playerNamesContainer.children.length < maxPlayerNb) {
+	if (trgt.value !== "" && playerNamesContainer.lastElementChild.querySelector(".player-name").value !== "" && playerNamesContainer.children.length < maxPlayerNb) {
 		createNameInput();		
 	}
 }
 
 function playerDelAction(evt)
 {
-	const playerContainer = evt.target.parentNode;
-	const playerName = playerContainer.querySelector('.player-name').value;
+	const player = evt.target.parentNode;
+	const playerName = player.querySelector('.player-name').value;
 
-	// console.log(playerContainer); // DEBUG
+	// console.log(player); // DEBUG
 	// console.log(playerName); // DBEUG
 
 	if (confirm(`Êtes-vous sur de vouloir supprimer '${playerName}' de la liste de joueurs ?`)) {
-		if (playerContainer.parentNode.children.length > minPlayerNb) {
+		if (player.parentNode.children.length > minPlayerNb) {
 			// console.log(`suppression de '${playerName}'`); // DEBUG
-			
-			playerContainer.remove();
+			// TODO : S'il n'y a pas d'autre entrée vide, supprimer uniquement le contenu sans suprimer toute la ligne
+			player.remove();
 		} else {
-			playerContainer.querySelector('.player-name').value = "";
+			player.querySelector('.player-name').value = "";
 		}
 	}
 }
