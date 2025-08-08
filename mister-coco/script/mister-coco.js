@@ -10,46 +10,50 @@ const mainElt = document.querySelector('main');
 const secretElt = document.querySelector('#secret');
 const eventElt = document.querySelector('#event');
 const newGameBtn = document.querySelector('#new-btn');
+const nameGrid = document.querySelector('#name-grid');
 
 // VARIABLES
-let undercover;
 let playerList;
 let playerIndex = 0;
+let undercover;
 let normalEvent;
 let undercoverEvent;
 
 // FUNCTIONS
 function playerNameAction (evt)
 {
+	const trgt = evt.target;
+	const container = trgt.parentNode;
+
 	// Removing input field if it's empty and there are still enough
 	// fields for a playable game.
 	// Not doing this if key is Tab to allow tab navigation.  
-	if (evt.target.value === "" && evt.target.parentNode.children.length > minPlayerNb && evt.key !== "Tab") {
-		evt.target.parentNode.remove();
+	if (trgt.value === "" && playerNamesContainer.children.length > minPlayerNb && evt.key !== "Tab") {
+		container.remove();
 	}
 
 	// As soon as there is text in the last field, add a new one.
 	// Don't add a field if there is alreaddy enough players il the game.
-	if (evt.target.value !== "" && evt.target.parentNode.lastElementChild.value !== "" && evt.target.parentNode.children.length < maxPlayerNb) {
-			createNameInput();		
+	if (trgt.value !== "" && playerNamesContainer.lastElementChild.querySelector(".player-name").value !== "" && playerNamesContainer.children.length < maxPlayerNb) {
+		createNameInput();		
 	}
 }
 
 function playerDelAction(evt)
 {
-	const playerContainer = evt.target.parentNode;
-	const playerName = playerContainer.querySelector('.player-name').value;
+	const player = evt.target.parentNode;
+	const playerName = player.querySelector('.player-name').value;
 
-	// console.log(playerContainer); // DEBUG
+	// console.log(player); // DEBUG
 	// console.log(playerName); // DBEUG
 
 	if (confirm(`Êtes-vous sur de vouloir supprimer '${playerName}' de la liste de joueurs ?`)) {
-		if (playerContainer.parentNode.children.length > minPlayerNb) {
+		if (player.parentNode.children.length > minPlayerNb) {
 			// console.log(`suppression de '${playerName}'`); // DEBUG
-			
-			playerContainer.remove();
+			// TODO : S'il n'y a pas d'autre entrée vide, supprimer uniquement le contenu sans suprimer toute la ligne
+			player.remove();
 		} else {
-			playerContainer.querySelector('.player-name').value = "";
+			player.querySelector('.player-name').value = "";
 		}
 	}
 }
@@ -189,8 +193,11 @@ function startGame ()
 	mainElt.classList.remove('pregame');
 	mainElt.classList.add('ingame');
 
-	
+	createNameGrid();
+
+	/*
 	playRound();
+	*/
 }
 
 function newGame ()
@@ -231,7 +238,21 @@ function injectPlayers ()
 	}
 }
 
-// TODO : Inject loaded player names in DOM
+function createNameGrid ()
+{
+	playerList.forEach((name) => {
+		const playerElt = document.createElement('div');
+		playerElt.textContent = name;
+		playerElt.classList.add("clickable");
+		playerElt.addEventListener("click", displayEvent);
+		nameGrid.append(playerElt);
+	});
+}
+
+function displayEvent (evt)
+{
+	console.log(evt.target.textContent);
+}
 
 // EVENT LISTENERS
 playerNameElts.forEach((elt) => {
