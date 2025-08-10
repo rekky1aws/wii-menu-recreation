@@ -18,7 +18,6 @@ const currPlayerElt = document.querySelector("#current-player");
 
 // VARIABLES
 let playerList;
-let playerIndex = 0;
 let undercover;
 let normalEvent;
 let undercoverEvent;
@@ -136,13 +135,6 @@ function chooseEvents ()
 
 function showEvent ()
 {
-	const viewBtn = document.querySelector('#view-btn');
-
-	if (playerList[playerIndex] == undercover) {
-		eventElt.textContent = undercoverEvent;
-	} else {
-		eventElt.textContent = normalEvent;
-	}
 	eventElt.classList.remove('hidden');
 	viewBtn.classList.add('hidden');
 	secretElt.classList.remove('hidden');
@@ -242,6 +234,8 @@ function displayGameElt (evt)
 	gameElt.classList.add('show');
 	currPlayerElt.textContent = evt.target.textContent;
 
+	console.log(undercover); // DEBUG
+	console.log(evt.target.textContent === undercover); // DEBUG
 	if (evt.target.textContent == undercover) {
 		eventElt.textContent = undercoverEvent;
 	} else {
