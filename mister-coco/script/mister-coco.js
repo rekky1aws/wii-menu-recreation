@@ -12,6 +12,9 @@ const eventElt = document.querySelector('#event');
 const newGameBtn = document.querySelector('#new-btn');
 const nameGrid = document.querySelector('#name-grid');
 const delAllBtn = document.querySelector('#del-all-btn');
+const gameElt = document.querySelector('#game');
+const viewBtn = document.querySelector('#view-btn');
+const currPlayerElt = document.querySelector("#current-player");
 
 // VARIABLES
 let playerList;
@@ -120,22 +123,6 @@ function canGameStart (playerList)
 	}
 }
 
-function playRound ()
-{
-	const viewBtn = document.querySelector('#view-btn');
-	const currentPlayer = document.querySelector('#current-player');
-
-	// Resetting secret to avoid cheating
-	secretElt.classList.add('hidden');
-	eventElt.classList.add('hidden');
-	viewBtn.classList.remove('hidden');
-	eventElt.textContent = "";
-
-	currentPlayer.textContent = playerList[playerIndex];
-	viewBtn.addEventListener('click', showEvent);
-	
-}
-
 function chooseEvents ()
 {
 	const normalEventInd = Math.floor(Math.random() * events.length);
@@ -149,7 +136,6 @@ function chooseEvents ()
 
 function showEvent ()
 {
-	const nextBtn = document.querySelector('#next-btn');
 	const viewBtn = document.querySelector('#view-btn');
 
 	if (playerList[playerIndex] == undercover) {
@@ -160,17 +146,6 @@ function showEvent ()
 	eventElt.classList.remove('hidden');
 	viewBtn.classList.add('hidden');
 	secretElt.classList.remove('hidden');
-
-	playerIndex++;
-	if (playerIndex < playerList.length) {
-		nextBtn.addEventListener('click', playRound);
-		return 0;
-	} else {
-		nextBtn.addEventListener('click', () => {
-			mainElt.classList.remove('ingame');
-			mainElt.classList.add('postgame');
-		});
-	}
 }
 
 function startGame ()
@@ -257,14 +232,33 @@ function createNameGrid ()
 		const playerElt = document.createElement('div');
 		playerElt.textContent = name;
 		playerElt.classList.add("clickable");
-		playerElt.addEventListener("click", displayEvent);
+		playerElt.addEventListener("click", displayGameElt);
 		nameGrid.append(playerElt);
 	});
 }
 
-function displayEvent (evt)
+function displayGameElt (evt)
 {
-	console.log(evt.target.textContent);
+	gameElt.classList.add('show');
+	currPlayerElt.textContent = evt.target.textContent;
+
+	if (evt.target.textContent == undercover) {
+		eventElt.textContent = undercoverEvent;
+	} else {
+		eventElt.textContent = normalEvent;
+	}
+}
+
+function clearGameElt (evt)
+{
+	if(evt.target !== gameElt) {
+		return false;
+	}
+	gameElt.classList.remove('show');
+	secretElt.classList.add('hidden');
+	eventElt.classList.add('hidden');
+	eventElt.textContent = "Event placeholder";
+	viewBtn.classList.remove('hidden');
 }
 
 // EVENT LISTENERS
@@ -279,7 +273,8 @@ playerDelBtns.forEach((elt) => {
 newGameBtn.addEventListener("click", newGame);
 startBtn.addEventListener("click", startGame);
 delAllBtn.addEventListener("click", delAllPlayers);
-
+gameElt.addEventListener("click", clearGameElt);
+viewBtn.addEventListener('click', showEvent);
 // MAIN
 playerList = loadPlayers();
 if (playerList) {

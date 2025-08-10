@@ -115,6 +115,12 @@ main.postgame > #game {
 #game {
 	display: none; /* block when visible */
 	opacity: 0; /* 1 when visible */
+	transition: 0.2sec ease-in-out;
+
+	/* DEBUG */
+/*	display:block;
+	opacity: 1;*/
+	/* ENDDEBUG */
 
 	position: fixed;
 	width: 100vw;
@@ -124,9 +130,13 @@ main.postgame > #game {
 	font-size: 2rem;
 }
 
+#game.show {
+	display: block;
+	opacity: 1;
+}
+
 #game > div {
 	display: flex;
-	transition: 0.2sec ease-in-out;
 	
 	width: calc(100% - (2*5rem));
 	height: calc(100% - (2*5rem));
