@@ -150,6 +150,18 @@ main.postgame > #game {
 	box-shadow: 0px 10px 10px -10px #00000077;
 }
 
+#current-player {
+	font-size: 2rem;
+	color: #000;
+	background-color: #FFF;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-family: Leelawadee, sans-serif;
+	outline: 2px solid #000000;
+	text-align: center;
+}
+
 #secret {
 	display: flex;
 	flex-direction: column;

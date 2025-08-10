@@ -251,7 +251,7 @@ function displayGameElt (evt)
 
 function clearGameElt (evt)
 {
-	if(evt.target !== gameElt) {
+	if(evt.target !== gameElt && evt.target !== gameElt.firstElementChild) {
 		return false;
 	}
 	gameElt.classList.remove('show');
