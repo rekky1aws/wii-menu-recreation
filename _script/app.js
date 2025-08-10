@@ -90,7 +90,7 @@ const games = new GameCollection (
     // new Game ('Device_Infos', 'gifs/terminal.gif', 'device_infos/', 'alpha-game'),
     new Game ('Metallica Pinball Radio', 'gifs/metallica.gif', 'metallica_pinball_radio/'),
     new Game ('JSimon', 'gifs/jsimon.gif', 'JSimon/'),
-    new Game ('Mister Coco', 'gifs/mister-coco.gif', 'mister-coco/', 'beta-game'),
+    new Game ('Mister Coco', 'gifs/mister-coco.gif', 'mister-coco/'),
   ]
   );
 
