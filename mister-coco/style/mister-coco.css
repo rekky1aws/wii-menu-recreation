@@ -113,7 +113,9 @@ main.postgame > #game {
 }
 
 #game {
-	display: block;
+	display: none; /* block when visible */
+	opacity: 0; /* 1 when visible */
+
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
@@ -123,9 +125,7 @@ main.postgame > #game {
 }
 
 #game > div {
-	display: none; /* flex when visible */
-	opacity: 0; /* 1 when visible */
-
+	display: flex;
 	transition: 0.2sec ease-in-out;
 	
 	width: calc(100% - (2*5rem));
