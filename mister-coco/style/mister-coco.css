@@ -44,7 +44,6 @@ main.pregame > #pregame {
 	display: flex;
 }
 
-main.ingame > #game,
 main.postgame > #postgame {
 	display: block;
 }
@@ -88,7 +87,7 @@ main.postgame > #game {
 
 .btn {
 	font-size: 2rem;
-	width: 90%;
+	width: 100%;
 	color: #FFF;
 	background-color: #80064A;
 	border: none;
@@ -114,11 +113,31 @@ main.postgame > #game {
 }
 
 #game {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
 	font-size: 2rem;
+}
+
+#game > div {
+	display: none; /* flex when visible */
+	opacity: 0; /* 1 when visible */
+
+	transition: 0.2sec ease-in-out;
+	
+	width: calc(100% - (2*5rem));
+	height: calc(100% - (2*5rem));
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: #00000022;
+	margin: 5rem;
+	backdrop-filter: blur(2rem);
+	border-radius: 5rem;
+	box-shadow: 0px 10px 10px -10px #00000077;
 }
 
 #secret {
@@ -185,7 +204,7 @@ main.postgame > #game {
 #name-grid > div {
 	font-size:3rem;
 	aspect-ratio: 1 / 1;
-	background-color: #AAAAAAAA;
+	background-color: #DDDDDD;
 	padding: 1rem;
 	border-radius: 1rem;
 	min-width:20%;
@@ -194,8 +213,20 @@ main.postgame > #game {
 	box-shadow: 0px 10px 10px -10px #00000077;
 }
 
+#del-all-btn {
+	display: block;
+	font-size: 1.25rem;
+	background-color: darkred;
+}
+
+#player-list-cmds {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 0.5rem;
+}
+
 @media only screen and (min-width: 1024px) {
-	.player-container, .btn, #event {
+	.player-container, #event {
 		width: 50%;
 	}
 }

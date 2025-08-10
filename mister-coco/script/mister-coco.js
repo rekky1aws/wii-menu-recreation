@@ -2,15 +2,16 @@
 const minPlayerNb = 3;
 const maxPlayerNb = 8;
 
-const playerNamesContainer = document.querySelector('#player-entries');
 const playerNameElts = document.querySelectorAll('.player-name');
 const playerDelBtns = document.querySelectorAll('.del-player');
+const playerNamesContainer = document.querySelector('#player-entries');
 const startBtn = document.querySelector('#start-button');
 const mainElt = document.querySelector('main');
 const secretElt = document.querySelector('#secret');
 const eventElt = document.querySelector('#event');
 const newGameBtn = document.querySelector('#new-btn');
 const nameGrid = document.querySelector('#name-grid');
+const delAllBtn = document.querySelector('#del-all-btn');
 
 // VARIABLES
 let playerList;
@@ -47,14 +48,16 @@ function playerDelAction(evt)
 	// console.log(player); // DEBUG
 	// console.log(playerName); // DBEUG
 
-	if (confirm(`Êtes-vous sur de vouloir supprimer '${playerName}' de la liste de joueurs ?`)) {
-		if (player.parentNode.children.length > minPlayerNb) {
-			// console.log(`suppression de '${playerName}'`); // DEBUG
-			// TODO : S'il n'y a pas d'autre entrée vide, supprimer uniquement le contenu sans suprimer toute la ligne
-			player.remove();
-		} else {
-			player.querySelector('.player-name').value = "";
-		}
+	if (!confirm(`Êtes-vous sur de vouloir supprimer '${playerName}' de la liste de joueurs ?`)) {
+		return false;
+	}
+	
+	if (player.parentNode.children.length > minPlayerNb) {
+		// console.log(`suppression de '${playerName}'`); // DEBUG
+		// TODO : S'il n'y a pas d'autre entrée vide, supprimer uniquement le contenu sans suprimer toute la ligne
+		player.remove();
+	} else {
+		player.querySelector('.player-name').value = "";
 	}
 }
 
@@ -200,6 +203,16 @@ function startGame ()
 	*/
 }
 
+function delAllPlayers ()
+{
+	if (!confirm("Suprimer tous les joueurs ? (Cet action supprimera aussi les joueurs chargés automatiquement depuis la mémoire de l'appareil)")) {
+		return false;
+	}
+
+	window.localStorage.removeItem("mister-coco-names");
+	newGame();
+}
+
 function newGame ()
 {
 	window.location.reload(true);
@@ -263,10 +276,9 @@ playerDelBtns.forEach((elt) => {
 	elt.addEventListener("click", playerDelAction);
 });
 
-
 newGameBtn.addEventListener("click", newGame);
-
 startBtn.addEventListener("click", startGame);
+delAllBtn.addEventListener("click", delAllPlayers);
 
 // MAIN
 playerList = loadPlayers();
