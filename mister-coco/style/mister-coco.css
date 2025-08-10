@@ -113,7 +113,15 @@ main.postgame > #game {
 }
 
 #game {
-	display: block;
+	display: none; /* block when visible */
+	opacity: 0; /* 1 when visible */
+	transition: 0.2sec ease-in-out;
+
+	/* DEBUG */
+/*	display:block;
+	opacity: 1;*/
+	/* ENDDEBUG */
+
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
@@ -122,11 +130,13 @@ main.postgame > #game {
 	font-size: 2rem;
 }
 
-#game > div {
-	display: none; /* flex when visible */
-	opacity: 0; /* 1 when visible */
+#game.show {
+	display: block;
+	opacity: 1;
+}
 
-	transition: 0.2sec ease-in-out;
+#game > div {
+	display: flex;
 	
 	width: calc(100% - (2*5rem));
 	height: calc(100% - (2*5rem));
@@ -138,6 +148,18 @@ main.postgame > #game {
 	backdrop-filter: blur(2rem);
 	border-radius: 5rem;
 	box-shadow: 0px 10px 10px -10px #00000077;
+}
+
+#current-player {
+	font-size: 2rem;
+	color: #000;
+	background-color: #FFF;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-family: Leelawadee, sans-serif;
+	outline: 2px solid #000000;
+	text-align: center;
 }
 
 #secret {
