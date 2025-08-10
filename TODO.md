@@ -97,6 +97,7 @@
 
 ### MisterCoco Web Helper
  + Fix auto input add
+  + Add a new field after deleting if the last field is not empty
  + Icons
  + Better display
   + List all player, clicking on your name shows your event
