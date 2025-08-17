@@ -57,6 +57,11 @@ Cette app sert à remplacer le petit appareil basé sur des filtres polarisant q
 ### Calculator
 Une simple calculatrice. Peut-être que des choses s'y cachent. Rien de fou cependant...
 
+### Barrels
+Un jeu de reflexion basé sur le jeu des tonneaux présent dans le jeu vidéo *Mario & Luigi : Superstar Saga* d'*Alpha Dream* et *Vanpool*, édité par *Nintendo* et sorti en 2003 sur la console portable *Game Boy Advance*.
+
+Le but est de déplacer des tonneaux colorés selon certaines contraintes afin de remplir une ligne ou une colonne entièrement de tonneaux d'une seule et même couleur. Une fois cela fait, les tonneaux disparaitront pour etre remplacés par de nouveaux tonneaux de couleurs aléatoires.
+
 ---
 
 ## English
