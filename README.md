@@ -113,3 +113,8 @@ You can still visit if you want.
 
 ### Calculator
 A simple calculator. Maybe it's hiding something. But nothing crazy though...
+
+### Barrels
+A simple puzzle game based on the barrel games playable in the videogame *Mario & Luigi : Superstar Saga* developed by *Alpha Dream* and *Vanpool*, edited by *Nintendo* and released in 2003 on the portable console *Game Boy Advance*.
+
+The goal is to move colored barrels to fill a whole line or column with the same color. Once done, those barrels will disappear and new randomly colored ones will appear.
