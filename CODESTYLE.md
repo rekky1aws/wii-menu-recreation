@@ -1,5 +1,17 @@
 # Codestyle
 
+## Architecture
+For each app, we have :
+ + app_name
+ 	+ script
+ 		+ app_name.js
+ 	+ style
+ 		+ app_name.css
+ 	+ index.html
+
+In `script` and `style` we can have more files to make it easier to read with a descriptive name.
+We can have multiple HTML files too if needed.
+
 ## Git
 Commits for apps should start with `[XXX]`, XXX being the code corresponding to the app :
  + [BAR] Barrels
