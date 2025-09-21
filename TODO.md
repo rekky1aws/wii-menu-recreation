@@ -2,8 +2,7 @@
 
 ## Pending
   + Mister coco
-   + Players name list so anyonne can view their event again
-  + Filter names
+   + Filter names
 
  + Klondike
    + checkMovability
