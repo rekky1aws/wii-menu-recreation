@@ -1,6 +1,9 @@
 # TO DO
 
 ## Pending
+  + ScoreTracker
+    + controls style
+
   + Mister coco
    + Filter names
 
