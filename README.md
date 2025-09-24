@@ -4,6 +4,9 @@
 + [:fr: Français](#Français)
 + [:gb: :us: English](#English)
 
+## Details
+The trello board corresponding to this porject can be seen [here](https://trello.com/b/DZTRz8Ei/wii-menu-apps)
+
 ---
 
 ## Français
