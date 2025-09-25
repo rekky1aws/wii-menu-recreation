@@ -1,19 +1,22 @@
 # TO DO
 
 ## Pending
-  + ScoreTracker
-    + controls style
+ + Trello
+  + Clean Update
 
-  + Mister coco
-   + Filter names
+ + ScoreTracker
+  + controls style
+
+ + Mister coco
+  + Filter names
 
  + Klondike
-   + checkMovability
-    + Add a better way to calculate suit 
-    + Add a class to check if card can move
-      + Use it in drag eventListener
-    + Check card destination validity
-    + Better cards superposition
+  + checkMovability
+   + Add a better way to calculate suit 
+   + Add a class to check if card can move
+    + Use it in drag eventListener
+   + Check card destination validity
+   + Better cards superposition
 
 ## General
  + Add a master js to generate common elements
