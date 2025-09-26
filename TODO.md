@@ -102,8 +102,6 @@
 
 ### MisterCoco Web Helper
  + Icon
- + Fix auto input add
-  + Add a new field after deleting if the last field is not empty
  + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
