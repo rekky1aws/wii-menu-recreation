@@ -1,6 +1,8 @@
 # TO DO
 
 ## Pending
+ + Common elements
+
  + Trello
   + Clean Update
 
