@@ -1,0 +1,11 @@
+.cliquable {
+	transition: ease-in-out 0.2s;
+}
+
+.cliquable:hover {
+	transform: scale(1.1);
+}
+
+.cliquable:active {
+	transform: scale(0.9);
+}
