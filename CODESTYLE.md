@@ -12,6 +12,14 @@ For each app, we have :
 In `script` and `style` we can have more files to make it easier to read with a descriptive name.
 We can have multiple HTML files too if needed.
 
+## Inclusions
+Every app should include :
+ + styles :
+  + `/_style/header.css`
+  + `/_style/common.css`
+ + script :
+  + `/_script/header.js`
+
 ## Git
 Commits for apps should start with `[XXX]`, XXX being the code corresponding to the app :
  + [BAR] Barrels
