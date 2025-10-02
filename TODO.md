@@ -2,7 +2,13 @@
 
 ## Pending
  + Common elements
+  + Make JS to auto add the / 
   + Use header everywhere
+  + Use common.css/clickable instead of cliquable
+
+ + JSimon
+  + Fix infos display
+   + Move it to footer
 
  + Trello
   + Clean Update
@@ -78,9 +84,10 @@
 
 ### Static Generator
 + Add Favicon
- + Optimize to generate each frame faster
- + Header with sliders and buttons
-   + pause button style
++ Optimize to generate each frame faster
++ Move button to open menu on the right side of the screen
++ Menu with sliders and buttons
+ + pause button style
 
 ### JSimon
  + Different Sounds for each buttons

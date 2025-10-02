@@ -14,21 +14,6 @@ main {
 	align-items: center;
 }
 
-header {
-	display: flex;
-	justify-content: space-between;
-}
-
-header > #infos {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-
-header > #infos span {
-	font-weight: bold;
-}
-
 #game {
 	display: grid;
 	width: calc(min(60vh, 33vw));

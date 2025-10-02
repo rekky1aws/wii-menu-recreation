@@ -12,34 +12,6 @@ body {
 	font-family: Leelawadee, sans-serif;
 }
 
-header {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 1rem;
-}
-
-header > a {
-	text-decoration: none;
-	color: #FFFFFF;
-	background-color: slateblue;
-	font-size: 1.5rem;
-	text-align: center;
-	vertical-align: middle;
-	padding: 0 0.5rem;
-	border-radius: 1rem;
-}
-
-h1 {
-	display: flex;
-	flex-wrap: wrap;
-	gap:0.25rem;
-}
-
-header > h1 span {
-	font-family: Goldroom, serif;
-}
-
 main.pregame > #pregame {
 	display: flex;
 }

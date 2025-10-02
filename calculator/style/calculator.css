@@ -2,14 +2,6 @@ body {
 	background-color: #1D1D1D;
 }
 
-header {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 1rem;
-	color: #FFFFFF;
-}
-
 main {
 	width:100%;
 	display: flex;

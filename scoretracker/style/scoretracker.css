@@ -3,12 +3,6 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
 main {
 	display: flex;
 	flex-direction: column;
