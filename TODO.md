@@ -30,6 +30,8 @@
    + Check card destination validity
    + Better cards superposition
 
+ + DVD
+  + Add the new sounds
 ## General
  + Add a master js to generate common elements
   + Header
