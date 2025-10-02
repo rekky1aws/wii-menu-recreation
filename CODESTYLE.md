@@ -20,6 +20,10 @@ Every app should include :
  + script :
   + `/_script/header.js`
 
+## Naming
+HTML / CSS classes and id are in `snake_case`.
+JS variables are in `camelCase`.
+
 ## Git
 Commits for apps should start with `[XXX]`, XXX being the code corresponding to the app :
  + [BAR] Barrels
