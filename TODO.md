@@ -13,6 +13,8 @@
  + Mister coco
   + Filter names
 
+ + Barrels Game
+
  + Klondike
   + checkMovability
    + Add a better way to calculate suit 
