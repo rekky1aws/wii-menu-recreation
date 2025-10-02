@@ -2,6 +2,7 @@
 
 ## Pending
  + Common elements
+  + Use header everywhere
 
  + Trello
   + Clean Update
