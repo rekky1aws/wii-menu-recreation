@@ -3,7 +3,6 @@
 ## Pending
  + Common elements
   + Make JS to auto add the / 
-  + Use header everywhere
   + Use common.css/clickable instead of cliquable
 
  + JSimon
