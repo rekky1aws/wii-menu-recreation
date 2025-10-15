@@ -65,6 +65,9 @@ Un jeu de reflexion basé sur le jeu des tonneaux présent dans le jeu vidéo *M
 
 Le but est de déplacer des tonneaux colorés selon certaines contraintes afin de remplir une ligne ou une colonne entièrement de tonneaux d'une seule et même couleur. Une fois cela fait, les tonneaux disparaitront pour etre remplacés par de nouveaux tonneaux de couleurs aléatoires.
 
+### Sticky Note
+Notes pour la journée. Ajoutez une note, elle  reste pendant 24h ou jusqu'a ce que vous la suprrimiez manuellement. Si vous revenez plus tard (après les 24h), il vous sera demandé si vous souhaitez reconduire ou non la note pour la journéee en cours.
+
 ---
 
 ## English
@@ -121,3 +124,6 @@ A simple calculator. Maybe it's hiding something. But nothing crazy though...
 A simple puzzle game based on the barrel games playable in the videogame *Mario & Luigi : Superstar Saga* developed by *Alpha Dream* and *Vanpool*, edited by *Nintendo* and released in 2003 on the portable console *Game Boy Advance*.
 
 The goal is to move colored barrels to fill a whole line or column with the same color. Once done, those barrels will disappear and new randomly colored ones will appear.
+
+### Sticky Note
+Notes for the day. Add a note, it stays for 24h or until you clear it. If you come back later (after 24h), you are asked what to keep or not.
