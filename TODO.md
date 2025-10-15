@@ -32,6 +32,7 @@
 
  + DVD
   + Add the new sounds
+
 ## General
  + Add a master js to generate common elements
   + Header
@@ -139,6 +140,20 @@
  + Reproduce barrel game from Mario & Luigi Superstar Saga
  + 6x6 Grid 
 
+### Sticky Note
+ + Add a note
+  + Store it to localStorage
+    + Name
+    + DateTime
+
+ + Load notes  for localStorage on startup
+
+ + Delete note
+  + Delete visual
+  + Delete memory
+  + Delete localStorage
+
+ + Bonus : display remaining time on notes
 ---
 
 ## Coming Apps
