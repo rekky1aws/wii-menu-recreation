@@ -6,9 +6,18 @@ const notesContainer = document.querySelector('#notes-container');
 function createNewNote (content)
 {
   const newNoteElt = document.createElement('div');
-  newNoteElt.classList.add('note');
-  newNoteElt.textContent = content;
+  const newNoteContent = document.createElement('div');
+  const newNoteDelBtn = document.createElement('button');
 
+  newNoteElt.classList.add('note');
+  newNoteContent.classList.add('note-content');
+  newNoteDelBtn.classList.add('clickable', 'note-del');
+
+  newNoteContent.textContent = content;
+  newNoteDelBtn.textContent = "X";
+
+  newNoteElt.append(newNoteContent);
+  newNoteElt.append(newNoteDelBtn);
   notesContainer.append(newNoteElt);
 }
 
