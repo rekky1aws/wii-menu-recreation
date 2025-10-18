@@ -11,7 +11,6 @@
 	background-color: #F9EEDC;
 	padding: 0.5em;
 	box-shadow: ;
-	font-weight: bold;
 	border-radius: 0.5rem;
 	min-height: 10rem;
 	box-shadow: 0 1rem 1rem -1rem #00000077;
@@ -27,6 +26,22 @@
 	cursor: grabbing;
 	transform: scale(1.025);
 	box-shadow: 0 1.5rem 1.5rem -0.5rem #00000033;
+}
+
+.note-content {
+	font-weight: bold;
+}
+
+.note-date {
+	position: absolute;
+	opacity: 0.75;
+	bottom: 0.5rem;
+	font-size: 0.75rem;
+	transition: linear 0.1s;
+}
+
+.note-date:hover {
+	opacity: 1;
 }
 
 .note-del {

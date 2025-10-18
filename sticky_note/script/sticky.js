@@ -14,18 +14,20 @@ function createNewNoteElt (content)
 {
   const newNoteElt = document.createElement('li');
   const newNoteContent = document.createElement('div');
+  const newNoteDate = document.createElement('div');
   const newNoteDelBtn = document.createElement('button');
 
   newNoteElt.classList.add('note');
   newNoteContent.classList.add('note-content');
   newNoteDelBtn.classList.add('clickable', 'note-del');
+  newNoteDate.classList.add('note-date');
 
   newNoteContent.textContent = content;
+  newNoteDate.textContent = new Date().toString()
 
   newNoteDelBtn.addEventListener('click', deleteNote);
 
-  newNoteElt.append(newNoteContent);
-  newNoteElt.append(newNoteDelBtn);
+  newNoteElt.append(newNoteContent, newNoteDate, newNoteDelBtn);
   notesContainer.append(newNoteElt);
 }
 
