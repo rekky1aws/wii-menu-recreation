@@ -10,9 +10,9 @@ function deleteNote (evt)
   }
 }
 
-function createNewNote (content)
+function createNewNoteElt (content)
 {
-  const newNoteElt = document.createElement('div');
+  const newNoteElt = document.createElement('li');
   const newNoteContent = document.createElement('div');
   const newNoteDelBtn = document.createElement('button');
 
@@ -21,7 +21,6 @@ function createNewNote (content)
   newNoteDelBtn.classList.add('clickable', 'note-del');
 
   newNoteContent.textContent = content;
-  newNoteDelBtn.textContent = "X";
 
   newNoteDelBtn.addEventListener('click', deleteNote);
 
@@ -35,7 +34,7 @@ function newNoteHandler (evt)
   // console.log(evt.key); // DBEUG
   
   if (evt.key == "Enter") {
-    createNewNote(newNote.value);
+    createNewNoteElt(newNote.value);
     newNote.value = "";
   }
 }
