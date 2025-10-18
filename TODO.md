@@ -5,6 +5,10 @@
   + Make JS to auto add the / 
   + Use common.css/clickable instead of cliquable
 
+ + Sticky Notes
+  + Button to delete all notes at the same time (with confirmation)
+  
+
  + JSimon
   + Fix infos display
    + Move it to footer
@@ -154,6 +158,7 @@
   + Delete localStorage
 
  + Bonus : display remaining time on notes
+ + Bonus : make notes sortables
 ---
 
 ## Coming Apps
