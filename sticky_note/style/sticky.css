@@ -32,7 +32,7 @@
 	font-weight: bold;
 }
 
-.note-date {
+.note-countdown {
 	position: absolute;
 	opacity: 0.75;
 	bottom: 0.5rem;
@@ -40,7 +40,7 @@
 	transition: linear 0.1s;
 }
 
-.note-date:hover {
+.note-countdown:hover {
 	opacity: 1;
 }
 
