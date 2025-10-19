@@ -7,7 +7,6 @@
 
  + Sticky Notes
   + Button to delete all notes at the same time (with confirmation)
-  
 
  + JSimon
   + Fix infos display
@@ -145,12 +144,9 @@
  + 6x6 Grid 
 
 ### Sticky Note
- + Add a note
-  + Store it to localStorage
-    + Name
-    + DateTime
+ + Save notes to localStorage
 
- + Load notes  for localStorage on startup
+ + Load notes from localStorage on startup
 
  + Delete note
   + Delete visual
