@@ -144,16 +144,25 @@
  + 6x6 Grid 
 
 ### Sticky Note
+ + On note creation
+  + If task time is over, add to a list of timed out tasks and don't add it to the DOM now
+
  + Save notes to localStorage
 
  + Load notes from localStorage on startup
-
+  + Once all the tasks are loaded, display a list of checkbox with all timed out tasks to ask what to keep or not
+  + Reset the date for kept tasks
+  + Run the display function on kept tasks to display them in DOM.
+  
  + Delete note
-  + Delete visual
   + Delete memory
   + Delete localStorage
 
+ + UI :
+  + Media query to reduce grid-template-columns on smaller devices
+
  + Bonus : display remaining time on notes
+  + Refresh countdown every seconds
  + Bonus : make notes sortables
 ---
 
