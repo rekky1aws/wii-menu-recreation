@@ -47,17 +47,17 @@ function createNewNoteElt (content, date='')
   } else { // Else add date to 24h after creation
     noteDate = new Date(new Date().getTime() + (60 * 60 * 24 * 1000));
   }
-  const countdownSecs = new Date(noteDate.getTime() - new Date().getTime()).getTime() / 1000;
+  const countdownInSecs = new Date(noteDate.getTime() - new Date().getTime()).getTime() / 1000;
   // Pre-pending a 0 if the number is only one character long
-  let countdownHours = `${countdownSecs / (60 * 60)}`;
+  let countdownHours = `${countdownInSecs / (60 * 60)}`;
   if (countdownHours.length == 1) {
     countdownHours = "0" + countdownHours;
   }
-  let countdownMinutes = `${(countdownSecs / (60)) % 60}`;
+  let countdownMinutes = `${(countdownInSecs / (60)) % 60}`;
   if (countdownMinutes.length == 1) {
     countdownMinutes = "0" + countdownMinutes;
   }
-  let countdownSeconds = `${countdownSecs % 60}`;
+  let countdownSeconds = `${countdownInSecs % 60}`;
   console.log(countdownSeconds.length);
   if (countdownSeconds.length == 1) {
     countdownSeconds = "0" + countdownSeconds;
