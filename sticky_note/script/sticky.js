@@ -1,6 +1,7 @@
 // CONSTANT
 const newNote = document.querySelector('#new-note');
 const notesContainer = document.querySelector('#notes-container');
+const delAllBtn = document.querySelector('#del-all-btn');
 
 // FUNCTIONS
 function deleteNote (evt)
@@ -10,9 +11,17 @@ function deleteNote (evt)
   }
 }
 
-function refreshCD (container)
+function deleteAllNotes ()
 {
+  if (confirm('Are you sure you want to delete ALL the notes ? (This will clear them in memory too)')) {
+    notesContainer.innerHTML = "";
+    // TODO : clear notes in localStorage
+  }
+}
 
+function refreshCountdowns (container)
+{
+  // TODO : refresh the countdowns of every note each 
 }
 
 function createNewNoteElt (content, date='')
@@ -73,10 +82,11 @@ function newNoteHandler (evt)
   
   if (evt.key == "Enter") {
     createNewNoteElt(newNote.value);
-    // saveNotes();
+    // TODO : Save notes in localStorage
     newNote.value = "";
   }
 }
 
 // EVENT LISTENERS
 newNote.addEventListener('keyup', newNoteHandler);
+delAllBtn.addEventListener('click', deleteAllNotes);
