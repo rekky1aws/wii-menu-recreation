@@ -15,8 +15,24 @@ function deleteAllNotes ()
 {
   if (confirm('Are you sure you want to delete ALL the notes ? (This will clear them in memory too)')) {
     notesContainer.innerHTML = "";
-    // TODO : clear notes in localStorage
+    localStorage.removeItem('storedNotes');
   }
+}
+
+function saveNotes ()
+{
+  console.log("saving notes"); // DEBUG
+  const data = [];
+  notesContainer.childNodes.forEach(note => {
+    let noteData = {
+      content: note.querySelector('.note-content').textContent,
+      date: note.querySelector('.note-date').textContent
+    };
+    data.push(noteData);
+  });
+
+  localStorage.setItem('storedNotes', JSON.stringify(data));
+  console.log("notes saved to localStorage"); // DEBUG
 }
 
 function refreshCountdowns (container)
@@ -58,7 +74,7 @@ function createNewNoteElt (content, date='')
     countdownMinutes = "0" + countdownMinutes;
   }
   let countdownSeconds = `${countdownInSecs % 60}`;
-  console.log(countdownSeconds.length);
+  // console.log(countdownSeconds.length); // DEBUG
   if (countdownSeconds.length == 1) {
     countdownSeconds = "0" + countdownSeconds;
   }
@@ -74,6 +90,8 @@ function createNewNoteElt (content, date='')
   // Adding tags to the DOM
   newNoteElt.append(newNoteContent, newNoteDate, newNoteCD, newNoteDelBtn);
   notesContainer.append(newNoteElt);
+
+  console.log("created note element"); // DEBUG
 }
 
 function newNoteHandler (evt)
@@ -82,7 +100,7 @@ function newNoteHandler (evt)
   
   if (evt.key == "Enter") {
     createNewNoteElt(newNote.value);
-    // TODO : Save notes in localStorage
+    saveNotes();
     newNote.value = "";
   }
 }
