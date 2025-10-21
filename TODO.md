@@ -3,7 +3,7 @@
 ## Pending
  + Common elements
   + Make JS to auto add the / 
-  + Use common.css/clickable instead of cliquable
+  + Use common.css/clickable instead of cliquable (rpelace in all apps codes)
 
  + Sticky Notes
   + Save notes
@@ -164,6 +164,7 @@
  + Bonus : display remaining time on notes
   + Refresh countdown every seconds
  + Bonus : make notes sortables
+ 
 ---
 
 ## Coming Apps
