@@ -6,6 +6,7 @@
   + Use common.css/clickable instead of cliquable
 
  + Sticky Notes
+  + Save notes
 
  + JSimon
   + Fix infos display
