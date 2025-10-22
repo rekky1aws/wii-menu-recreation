@@ -35,6 +35,17 @@ function saveNotes ()
   console.log("notes saved to localStorage"); // DEBUG
 }
 
+function loadNotes ()
+{
+  console.log("loading notes"); // DEBUG
+  const data = JSON.parse(localStorage.getItem('storedNotes'));;
+  console.log(data); // DEBUG
+
+  data.forEach(note => {
+    createNewNoteElt(note.content, note.date);
+  });
+}
+
 function refreshCountdowns (container)
 {
   // TODO : refresh the countdowns of every note each 
@@ -65,15 +76,15 @@ function createNewNoteElt (content, date='')
   }
   const countdownInSecs = new Date(noteDate.getTime() - new Date().getTime()).getTime() / 1000;
   // Pre-pending a 0 if the number is only one character long
-  let countdownHours = `${countdownInSecs / (60 * 60)}`;
+  let countdownHours = `${Math.floor(countdownInSecs / (60 * 60))}`;
   if (countdownHours.length == 1) {
     countdownHours = "0" + countdownHours;
   }
-  let countdownMinutes = `${(countdownInSecs / (60)) % 60}`;
+  let countdownMinutes = `${Math.floor((countdownInSecs / (60)) % 60)}`;
   if (countdownMinutes.length == 1) {
     countdownMinutes = "0" + countdownMinutes;
   }
-  let countdownSeconds = `${countdownInSecs % 60}`;
+  let countdownSeconds = `${Math.floor(countdownInSecs % 60)}`;
   // console.log(countdownSeconds.length); // DEBUG
   if (countdownSeconds.length == 1) {
     countdownSeconds = "0" + countdownSeconds;
@@ -108,3 +119,6 @@ function newNoteHandler (evt)
 // EVENT LISTENERS
 newNote.addEventListener('keyup', newNoteHandler);
 delAllBtn.addEventListener('click', deleteAllNotes);
+
+// MAIN
+loadNotes();
