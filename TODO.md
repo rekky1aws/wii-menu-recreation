@@ -6,11 +6,11 @@
   + Use common.css/clickable instead of cliquable (rpelace in all apps codes)
 
  + Sticky Notes
-  + Load notes on page load.
+  + Check notes on load.
     + If a note's time is over push it in another list
     + Display a list of checkbox of all the timed over notes to ask user which one to keep
     + For every note keeped add it in the DOM with no date (so it's automatically reset the timer to 24h)
-    + Save this state to localStorage. 
+    + Save to localStorage. 
 
  + JSimon
   + Fix infos display
@@ -149,9 +149,8 @@
 
 ### Sticky Note
 
- + Load notes from localStorage on startup
-  + On note creation
-   + If task time is over, add to a list of timed out tasks and don't add it to the DOM now
+ + Check notes on load
+  + If task time is over, add to a list of timed out tasks and don't add it to the DOM now
   + Once all the tasks are loaded, display a list of checkbox with all timed out tasks to ask what to keep or not
   + Reset the date for kept tasks
   + Run the display function on kept tasks to display them in DOM.
