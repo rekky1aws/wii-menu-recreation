@@ -148,10 +148,10 @@
  + 6x6 Grid 
 
 ### Sticky Note
- + On note creation
-  + If task time is over, add to a list of timed out tasks and don't add it to the DOM now
 
  + Load notes from localStorage on startup
+  + On note creation
+   + If task time is over, add to a list of timed out tasks and don't add it to the DOM now
   + Once all the tasks are loaded, display a list of checkbox with all timed out tasks to ask what to keep or not
   + Reset the date for kept tasks
   + Run the display function on kept tasks to display them in DOM.
