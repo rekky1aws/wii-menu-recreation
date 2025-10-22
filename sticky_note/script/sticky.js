@@ -3,6 +3,9 @@ const newNote = document.querySelector('#new-note');
 const notesContainer = document.querySelector('#notes-container');
 const delAllBtn = document.querySelector('#del-all-btn');
 
+// VARIABLES
+let cdRefreshIntvl;
+
 // FUNCTIONS
 function deleteNote (evt)
 {
@@ -38,17 +41,64 @@ function saveNotes ()
 function loadNotes ()
 {
   console.log("loading notes"); // DEBUG
+  // No notes in localStorage => nothing to load
+  if (!localStorage.getItem('storedNotes')) {
+    return false;
+  }
+
   const data = JSON.parse(localStorage.getItem('storedNotes'));;
   console.log(data); // DEBUG
 
   data.forEach(note => {
+    // TODO : check countdown < 0 => dont display and put it in separate list
     createNewNoteElt(note.content, note.date);
   });
 }
 
 function refreshCountdowns (container)
 {
-  // TODO : refresh the countdowns of every note each 
+  console.log("refreshing countdowns");
+  // No notes => no countdown to refresh
+  if (!notesContainer.childNodes.length) {
+    return false;
+  }
+  notesContainer.childNodes.forEach(noteElt => {
+    const date = noteElt.querySelector('.note-date').textContent;
+    const cdElt = noteElt.querySelector('.note-countdown');
+
+    // Date TIMED OUT => no need to calculate more.
+    if (cdElt.textContent == "TIMED OUT") {
+      return false;
+    }
+
+    // Handling dates
+    let noteDate = new Date(date);
+    const countdownInSecs = new Date(noteDate.getTime() - new Date().getTime()).getTime() / 1000;
+
+    if (countdownInSecs <= 0) {
+      cdElt.textContent = "TIMED OUT";
+      cdElt.classList.add('timed-out');
+      return false;
+    }
+
+    // Pre-pending a 0 if the number is only one character long
+    let countdownHours = `${Math.floor(countdownInSecs / (60 * 60))}`;
+    if (countdownHours.length == 1) {
+      countdownHours = "0" + countdownHours;
+    }
+    let countdownMinutes = `${Math.floor((countdownInSecs / (60)) % 60)}`;
+    if (countdownMinutes.length == 1) {
+      countdownMinutes = "0" + countdownMinutes;
+    }
+    let countdownSeconds = `${Math.floor(countdownInSecs % 60)}`;
+    // console.log(countdownSeconds.length); // DEBUG
+    if (countdownSeconds.length == 1) {
+      countdownSeconds = "0" + countdownSeconds;
+    }
+
+    const countdownFinal = `${countdownHours}:${countdownMinutes}:${countdownSeconds}`;
+    cdElt.textContent = countdownFinal;
+  });
 }
 
 function createNewNoteElt (content, date='')
@@ -67,36 +117,17 @@ function createNewNoteElt (content, date='')
   newNoteDate.classList.add('note-date', 'hidden');
   newNoteCD.classList.add('note-countdown');
 
-  // Handling dates
   let noteDate;
   if (date) { // If task already exists and has a date
     noteDate = new Date(date);
   } else { // Else add date to 24h after creation
     noteDate = new Date(new Date().getTime() + (60 * 60 * 24 * 1000));
   }
-  const countdownInSecs = new Date(noteDate.getTime() - new Date().getTime()).getTime() / 1000;
-  // Pre-pending a 0 if the number is only one character long
-  let countdownHours = `${Math.floor(countdownInSecs / (60 * 60))}`;
-  if (countdownHours.length == 1) {
-    countdownHours = "0" + countdownHours;
-  }
-  let countdownMinutes = `${Math.floor((countdownInSecs / (60)) % 60)}`;
-  if (countdownMinutes.length == 1) {
-    countdownMinutes = "0" + countdownMinutes;
-  }
-  let countdownSeconds = `${Math.floor(countdownInSecs % 60)}`;
-  // console.log(countdownSeconds.length); // DEBUG
-  if (countdownSeconds.length == 1) {
-    countdownSeconds = "0" + countdownSeconds;
-  }
-
-  const countdownFinal = `${countdownHours}:${countdownMinutes}:${countdownSeconds}`;
 
   // Setting HTML tags
   newNoteContent.textContent = content;
   newNoteDate.textContent = noteDate.toISOString();
-  newNoteCD.textContent = countdownFinal;
-  newNoteCD.title = `${countdownFinal} to ${newNoteDate.textContent}`;
+  newNoteCD.textContent = "XX:XX:XX";
 
   // Deletion button interaction
   newNoteDelBtn.addEventListener('click', deleteNote);
@@ -111,7 +142,7 @@ function createNewNoteElt (content, date='')
 function newNoteHandler (evt)
 {
   // console.log(evt.key); // DBEUG
-  
+
   if (evt.key == "Enter") {
     createNewNoteElt(newNote.value);
     saveNotes();
@@ -125,3 +156,5 @@ delAllBtn.addEventListener('click', deleteAllNotes);
 
 // MAIN
 loadNotes();
+refreshCountdowns();
+cdRefreshIntvl = setInterval(refreshCountdowns, 1000);

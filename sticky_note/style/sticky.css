@@ -44,6 +44,13 @@
 	opacity: 1;
 }
 
+.note-countdown.timed-out {
+	opacity: 1;
+	font-weight: bold;
+	color: red;
+	font-size: 1rem;
+}
+
 .note-del {
 	position: absolute;
 	background-color: darkred;
