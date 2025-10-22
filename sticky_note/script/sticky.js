@@ -90,10 +90,13 @@ function createNewNoteElt (content, date='')
     countdownSeconds = "0" + countdownSeconds;
   }
 
-  // Setting HTML tags content
+  const countdownFinal = `${countdownHours}:${countdownMinutes}:${countdownSeconds}`;
+
+  // Setting HTML tags
   newNoteContent.textContent = content;
   newNoteDate.textContent = noteDate.toISOString();
-  newNoteCD.textContent = countdownHours + ":" + countdownMinutes + ":" + countdownSeconds;
+  newNoteCD.textContent = countdownFinal;
+  newNoteCD.title = `${countdownFinal} to ${newNoteDate.textContent}`;
 
   // Deletion button interaction
   newNoteDelBtn.addEventListener('click', deleteNote);
