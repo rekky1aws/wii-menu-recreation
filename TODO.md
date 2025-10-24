@@ -16,7 +16,7 @@
   + Fix infos display
    + Move it to footer
 
- + Trello
+ + [META] Trello
   + Clean Update
 
  + ScoreTracker
