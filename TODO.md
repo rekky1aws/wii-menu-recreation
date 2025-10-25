@@ -22,13 +22,6 @@
  + ScoreTracker
   + controls style
 
- + Mister coco
-  + Filter names
-
- + Barrels Game
-
- + Calculator
-
  + Klondike
   + checkMovability
    + Add a better way to calculate suit 
