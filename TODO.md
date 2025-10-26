@@ -3,7 +3,9 @@
 ## Pending
  + Common elements
   + Make JS to auto add the / 
-  + Use common.css/clickable instead of cliquable (rpelace in all apps codes)
+  + Use common.css/clickable instead of cliquable (replace in all apps codes)
+  + Home Button
+  + Home Menu (button or press escape)
 
  + Sticky Notes
   + Check notes on load.
@@ -34,10 +36,6 @@
   + Add the new sounds
 
 ## General
- + Add a master js to generate common elements
-  + Header
-  + Home Button
-  + Home Menu on press of escape
 
  + TO FINISH
   + Klondike
