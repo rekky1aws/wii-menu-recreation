@@ -43,6 +43,8 @@
   + Klondike
   + (Imports when done)
 
+ + Add Sticky note to the menu
+
 ## Main Menu
  + Add Favicon
  + +/- buttons
