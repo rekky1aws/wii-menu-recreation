@@ -85,7 +85,6 @@
  + pause button style
 
 ### JSimon
- + Different Sounds for each buttons
  + localStorage
   + last score
   + best score
