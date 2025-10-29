@@ -68,6 +68,8 @@ Le but est de déplacer des tonneaux colorés selon certaines contraintes afin d
 ### Sticky Note
 Notes pour la journée. Ajoutez une note, elle  reste pendant 24h ou jusqu'a ce que vous la suprrimiez manuellement. Si vous revenez plus tard (après les 24h), il vous sera demandé si vous souhaitez reconduire ou non la note pour la journéee en cours.
 
+Le stockage des notes est géré avec le localStorage. Il est donc dépendant de l'appareil et n'est pas stocké ailleurs que sur celui ci.
+
 ---
 
 ## English
@@ -127,3 +129,5 @@ The goal is to move colored barrels to fill a whole line or column with the same
 
 ### Sticky Note
 Notes for the day. Add a note, it stays for 24h or until you clear it. If you come back later (after 24h), you are asked what to keep or not.
+
+Notes' storage is handled  with localStorage, making it dependant on the device used and stored only on it.
