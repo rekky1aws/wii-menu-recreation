@@ -143,8 +143,6 @@
  + UI :
   + Media query to reduce grid-template-columns on smaller devices
 
- + Bonus : display remaining time on notes
-  + Refresh countdown every seconds
  + Bonus : make notes sortables
 
 ---
