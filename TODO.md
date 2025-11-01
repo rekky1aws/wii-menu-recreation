@@ -134,6 +134,9 @@
 
 ### Sticky Note
 
+ + Favicon
+ + Menu Image
+
  + Check notes on load.
   + If a note's time is over push it in another list
   + Display a list of checkbox of all the timed over notes to ask user which one to keep
