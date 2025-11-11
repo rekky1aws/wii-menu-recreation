@@ -140,6 +140,8 @@
   + For every note keeped add it in the DOM with no date (so it's automatically reset the timer to 24h)
   + Save to localStorage.
 
+ + Add a button to edit a note. 
+
  + UI :
   + Media query to reduce grid-template-columns on smaller devices
 
