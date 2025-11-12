@@ -93,6 +93,7 @@ const games = new GameCollection (
     new Game ('Mister Coco', 'gifs/mister-coco.gif', 'mister-coco/'),
     // new Game ('Barrels', '', 'barrels/', 'alpha-game'),
     // new Game ('Calculator', '', 'calculator/', 'alpha-game'),
+    new Game ('Sticky Note', 'gifs/sticky_note.gif', 'sticky_note/'),
   ]
   );
 
