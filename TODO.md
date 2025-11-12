@@ -136,7 +136,10 @@
 
  + Check notes on load.
   + If a note's time is over push it in another list
-  + Display a list of checkbox of all the timed over notes to ask user which one to keep
+  + Display a list of radio array for all the timed over notes to ask user which one to :
+   + Delete
+   + Keep for 24 more hours
+   + Keep for 1 more hour
   + For every note keeped add it in the DOM with no date (so it's automatically reset the timer to 24h)
   + Save to localStorage.
 
