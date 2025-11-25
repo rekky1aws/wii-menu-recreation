@@ -165,11 +165,6 @@
   + grid
   + calculate cell next stage
 
-### Ovo
- + One and two player version of the game OVO
-  + 6x6 board
-  + movable eggs with a color "underneath"
-
 ### Arkanoid
  + Clasic brick breaker
   + moving ball
@@ -258,3 +253,21 @@
 ### Gamepad Tester
  + See all input values from a gamepad
 
+### Cardbox Game
+ + 4x4 Grid
+ + 7 "boxes" randomly placed
+ + Numbers that "see" boxes horizontally and vertically
+
+### Hashiwokakero
+ + See [Wiki](https://en.wikipedia.org/wiki/Hashiwokakero)
+
+---
+
+## Discontinued apps
+### Ovo
+This will probably exist, but not in this project. We will probably relase it with my friend [lolocontact](https://github.com/lolocontact) on our [online boardgame project](https://github.com/lolocontact/JDS).
+
+
+ + One and two player version of the game OVO
+  + 6x6 board
+  + movable eggs with a color "underneath"
