@@ -8,8 +8,7 @@
   + Home Menu (button or press escape)
 
  + JSimon
-  + Fix infos display
-   + Move it to footer
+  + Timer
 
  + [META] Trello
   + Clean Update
