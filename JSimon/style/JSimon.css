@@ -102,3 +102,9 @@ footer > * {
 	padding: 0.2rem 0.5rem;
 	background-color: #FFFFFF11;
 }
+
+#credits > a {
+	color: lightblue;
+	font-weight: bold;
+	text-decoration: none;
+}
