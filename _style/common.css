@@ -1,0 +1,16 @@
+.clickable {
+	transition: ease-in-out 0.2s;
+}
+
+.clickable:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.1);
+}
+
+.clickable:active {
+	transform: scale(0.9);
+}
+
+.hidden {
+	display: none;
+}

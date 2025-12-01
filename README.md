@@ -4,6 +4,9 @@
 + [:fr: Français](#Français)
 + [:gb: :us: English](#English)
 
+## Details
+The trello board corresponding to this porject can be seen [here](https://trello.com/b/DZTRz8Ei/wii-menu-apps)
+
 ---
 
 ## Français
@@ -54,6 +57,19 @@ Cela donne donc le jeu `Mister Coco` ou chaque participant sera "invté" à un �
 
 Cette app sert à remplacer le petit appareil basé sur des filtres polarisant qui permet à chacun de connaitre son événement sans voir l'autre. Cet objet, étant assez fragile, j'ai eu l'idée d'en faire une version web utilisable sur mobile.
 
+### Calculator
+Une simple calculatrice. Peut-être que des choses s'y cachent. Rien de fou cependant...
+
+### Barrels
+Un jeu de reflexion basé sur le jeu des tonneaux présent dans le jeu vidéo *Mario & Luigi : Superstar Saga* d'*Alpha Dream* et *Vanpool*, édité par *Nintendo* et sorti en 2003 sur la console portable *Game Boy Advance*.
+
+Le but est de déplacer des tonneaux colorés selon certaines contraintes afin de remplir une ligne ou une colonne entièrement de tonneaux d'une seule et même couleur. Une fois cela fait, les tonneaux disparaitront pour etre remplacés par de nouveaux tonneaux de couleurs aléatoires.
+
+### Sticky Note
+Notes pour la journée. Ajoutez une note, elle  reste pendant 24h ou jusqu'a ce que vous la suprrimiez manuellement. Si vous revenez plus tard (après les 24h), il vous sera demandé si vous souhaitez reconduire ou non la note pour la journéee en cours.
+
+Le stockage des notes est géré avec le localStorage. Il est donc dépendant de l'appareil et n'est pas stocké ailleurs que sur celui ci.
+
 ---
 
 ## English
@@ -102,3 +118,16 @@ App to replace the apparatus used in the game `Mister Coco` by Hiboutatillus.
 Currently not available in english (only in french for now) but maybe it will someday if I get support from the creators of the game (Hiboutatillus).
 
 You can still visit if you want.
+
+### Calculator
+A simple calculator. Maybe it's hiding something. But nothing crazy though...
+
+### Barrels
+A simple puzzle game based on the barrel games playable in the videogame *Mario & Luigi : Superstar Saga* developed by *Alpha Dream* and *Vanpool*, edited by *Nintendo* and released in 2003 on the portable console *Game Boy Advance*.
+
+The goal is to move colored barrels to fill a whole line or column with the same color. Once done, those barrels will disappear and new randomly colored ones will appear.
+
+### Sticky Note
+Notes for the day. Add a note, it stays for 24h or until you clear it. If you come back later (after 24h), you are asked what to keep or not.
+
+Notes' storage is handled  with localStorage, making it dependant on the device used and stored only on it.

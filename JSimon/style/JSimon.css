@@ -2,6 +2,8 @@ body {
 	background-color: #1D1D1D;
 	color: #FFFFFF;
 	font-family: 'Helvetica', sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 main {
@@ -14,19 +16,18 @@ main {
 	align-items: center;
 }
 
-header {
+footer {
+	margin: 0;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
 	display: flex;
 	justify-content: space-between;
+	background-color: #FFFFFF11;
 }
 
-header > #infos {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-}
-
-header > #infos span {
-	font-weight: bold;
+footer > * {
+	margin: 0.5rem;
 }
 
 #game {
@@ -89,4 +90,21 @@ header > #infos span {
 	font-weight: bold;
 	border: none;
 	box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.75);
+}
+
+#infos {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.2rem;
+}
+
+#infos > * {
+	padding: 0.2rem 0.5rem;
+	background-color: #FFFFFF11;
+}
+
+#credits > a {
+	color: lightblue;
+	font-weight: bold;
+	text-decoration: none;
 }

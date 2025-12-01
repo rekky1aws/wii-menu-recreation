@@ -12,33 +12,10 @@ body {
 	font-family: Leelawadee, sans-serif;
 }
 
-header {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 1rem;
-}
-
-header > a {
-	text-decoration: none;
-	color: #FFFFFF;
-	background-color: slateblue;
-	font-size: 1.5rem;
-	text-align: center;
-	vertical-align: middle;
-	padding: 0 0.5rem;
-	border-radius: 1rem;
-}
-
-header > h1 span {
-	font-family: Goldroom, serif;
-}
-
 main.pregame > #pregame {
 	display: flex;
 }
 
-main.ingame > #game,
 main.postgame > #postgame {
 	display: block;
 }
@@ -66,7 +43,7 @@ main.postgame > #game {
 #player-entries input {
 	display: inline-block;
 	font-size: 2rem;
-	width: 50%;
+	width: 90%;
 	border-radius: 1rem;
 	padding: 0.5rem;
 	font-family: Leelawadee, sans-serif;
@@ -82,7 +59,7 @@ main.postgame > #game {
 
 .btn {
 	font-size: 2rem;
-	width: 50%;
+	width: 100%;
 	color: #FFF;
 	background-color: #80064A;
 	border: none;
@@ -108,11 +85,53 @@ main.postgame > #game {
 }
 
 #game {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	display: none; /* block when visible */
+	opacity: 0; /* 1 when visible */
+	transition: 0.2sec ease-in-out;
+
+	/* DEBUG */
+/*	display:block;
+	opacity: 1;*/
+	/* ENDDEBUG */
+
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
 	font-size: 2rem;
+}
+
+#game.show {
+	display: block;
+	opacity: 1;
+}
+
+#game > div {
+	display: flex;
+	
+	width: calc(100% - (2*5rem));
+	height: calc(100% - (2*5rem));
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: #00000022;
+	margin: 5rem;
+	backdrop-filter: blur(2rem);
+	border-radius: 5rem;
+	box-shadow: 0px 10px 10px -10px #00000077;
+}
+
+#current-player {
+	font-size: 2rem;
+	color: #000;
+	background-color: #FFF;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-family: Leelawadee, sans-serif;
+	outline: 2px solid #000000;
+	text-align: center;
 }
 
 #secret {
@@ -130,7 +149,7 @@ main.postgame > #game {
 
 #event {
 	font-size: 2rem;
-	width: 50%;
+	width: 90%;
 	color: #000;
 	background-color: #FFF;
 	border: none;
@@ -148,4 +167,60 @@ main.postgame > #game {
 	font-family: Leelawadee, sans-serif;
 	
 	margin: 1rem; */
+}
+
+.player-container {
+	display: flex;
+	gap: 5px;
+	margin: 5px;
+	width: 90%;
+	justify-content: center;
+	align-items: center;
+}
+
+.del-player {
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	background-color: darkred;
+	font-weight: bold;
+}
+
+#name-grid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5vw;
+}
+
+#name-grid > div {
+	font-size:3rem;
+	aspect-ratio: 1 / 1;
+	background-color: #DDDDDD;
+	padding: 1rem;
+	border-radius: 1rem;
+	min-width:20%;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 10px 10px -10px #00000077;
+}
+
+#del-all-btn {
+	display: block;
+	font-size: 1.25rem;
+	background-color: darkred;
+}
+
+#player-list-cmds {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 0.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+	.player-container, #event {
+		width: 50%;
+	}
 }

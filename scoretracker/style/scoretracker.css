@@ -3,10 +3,10 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
-header {
+main {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+	gap:2rem;
 }
 
 /* Reusable */
@@ -89,4 +89,22 @@ header {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 1.5em;
+}
+
+#controls {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+#controls > button {
+	font-size: 1.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: none;
+}
+
+#addPlayer {
+
 }

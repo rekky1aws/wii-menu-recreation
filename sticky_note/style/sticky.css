@@ -1,0 +1,63 @@
+#notes-container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding: 1rem;
+	gap: 1rem;
+}
+
+.note {
+	position: relative;
+	list-style: none;
+	background-color: #F9EEDC;
+	padding: 0.5em;
+	box-shadow: ;
+	border-radius: 0.5rem;
+	min-height: 10rem;
+	box-shadow: 0 1rem 1rem -1rem #00000077;
+	transition: linear 0.1s;
+}
+
+.note:hover {
+	cursor: grab;
+	transform: scale(1.01);
+}
+
+.note:active {
+	cursor: grabbing;
+	transform: scale(1.025);
+	box-shadow: 0 1.5rem 1.5rem -0.5rem #00000033;
+}
+
+.note-content {
+	font-weight: bold;
+}
+
+.note-countdown {
+	position: absolute;
+	opacity: 0.75;
+	bottom: 0.5rem;
+	font-size: 0.75rem;
+	transition: linear 0.1s;
+}
+
+.note-countdown:hover {
+	opacity: 1;
+}
+
+.note-countdown.timed-out {
+	opacity: 1;
+	font-weight: bold;
+	color: red;
+	font-size: 1rem;
+}
+
+.note-del {
+	position: absolute;
+	background-color: darkred;
+	border: none;
+	border-radius: 50%;
+	width: 0.75rem;
+	height: 0.75rem;
+	top: 0.25rem;
+	right: 0.25rem;
+}

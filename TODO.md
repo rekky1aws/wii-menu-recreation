@@ -1,19 +1,31 @@
 # TO DO
 
 ## Pending
+ + Common elements
+  + Make JS to auto add the / 
+  + Use common.css/clickable instead of cliquable (replace in all apps codes)
+  + Home Button
+  + Home Menu (button or press escape)
+
+ + [META] Trello
+  + Clean Update
+
+ + ScoreTracker
+  + polish controls style
+
  + Klondike
- + checkMovability
-  + Add a class to check if card can move
+  + checkMovability
+   + Add a better way to calculate suit 
+   + Add a CSS class to check if card can move
     + Use it in drag eventListener
-  + Check card destination validity
-  + Better cards superposition
-  + Add a way to move all cards under if they are correctly placed.
+   + Check card destination validity
+   + Better cards superposition
+   + Add a way to move all cards under if they are correctly placed.
+
+ + DVD
+  + Add the new sounds
 
 ## General
- + Add a master js to generate common elements
-  + Header
-  + Home Button
-  + Home Menu on press of escape
 
  + TO FINISH
   + Klondike
@@ -27,6 +39,8 @@
  + Complete README
   + Klondike
   + (Imports when done)
+
+ + Add Sticky note to the menu
 
 ## Main Menu
  + Add Favicon
@@ -62,12 +76,13 @@
 
 ### Static Generator
 + Add Favicon
- + Optimize to generate each frame faster
- + Header with sliders and buttons
-   + pause button style
++ Optimize to generate each frame faster
++ Move button to open menu on the right side of the screen
++ Menu with sliders and buttons
+ + pause button style
 
 ### JSimon
- + Different Sounds for each buttons
+ + Time spent on page
  + localStorage
   + last score
   + best score
@@ -92,14 +107,50 @@
  + Display game stats
 
 ### MisterCoco Web Helper
- + Icons
- + Filter player better
+ + Icon
+ + Filter players names better
   + Removes empty spaces and weird characters before analyzing names.
  + More verifications
   + No double names (use nickname or first letter of lastname to differentiate).
  + Flash messages to display errors.
- + Save Player names to localStorage
- + If players names are in localStorage load them  and ask user if they want to use it
+ + Add a way for players to input a list of their own events
+
+### Calculator
+ + Handle all special keys
+ + f processExp
+ + f addToExpZone
+  + Add verification before effectively adding to the expZone
+ + Flash messages
+ + Hidden animation on special code entry
+ + Add long press on back btn to delete all expression
+  + animation
+  + function
+
+### Barrels
+ + Reproduce barrel game from Mario & Luigi Superstar Saga
+ + 6x6 Grid 
+
+### Sticky Note
+
+ + Check notes on load.
+  + If a note's time is over push it in another list
+  + Display a list of radio array for all the timed over notes to ask user which one to :
+   + Delete
+   + Keep for 24 more hours
+   + Keep for 1 more hour
+  + For every note keeped add it in the DOM with no date (so it's automatically reset the timer to 24h)
+  + Save to localStorage.
+
+ + Add a button to edit a note.
+
+ + Add a progress bar at the bottom of notes.
+
+ + UI :
+  + Media query to reduce grid-template-columns on smaller devices
+
+ + Bonus : display remaining time on notes
+  + Refresh countdown every seconds
+ + Bonus : make notes sortables
 
 ---
 
@@ -111,11 +162,6 @@
  + Playable conway's game of life
   + grid
   + calculate cell next stage
-
-### Ovo
- + One and two player version of the game OVO
-  + 6x6 board
-  + movable eggs with a color "underneath"
 
 ### Arkanoid
  + Clasic brick breaker
@@ -194,6 +240,32 @@
  + check victory
  + check end
 
-### Calculator
- + Hidden animation on special code entry
+### Turret defender idle
+ + Turret in the center
+ + Ennemies come from outside of the screen in a circle
+ + After every number of ennemies killed, make player choose beetween cards to upgrade
+ + HP bar going down for each ennemy hitting the turret
+ + Prestige to augment base damage based on how many ennemies killed in total
+  + loose all prestige points  if killed to make  the player prestige at the right timing
 
+### Gamepad Tester
+ + See all input values from a gamepad
+
+### Cardbox Game
+ + 4x4 Grid
+ + 7 "boxes" randomly placed
+ + Numbers that "see" boxes horizontally and vertically
+
+### Hashiwokakero
+ + See [Wiki](https://en.wikipedia.org/wiki/Hashiwokakero)
+
+---
+
+## Discontinued apps
+### Ovo
+This will probably exist, but not in this project. We will probably relase it with my friend [lolocontact](https://github.com/lolocontact) on our [online boardgame project](https://github.com/lolocontact/JDS).
+
+
+ + One and two player version of the game OVO
+  + 6x6 board
+  + movable eggs with a color "underneath"

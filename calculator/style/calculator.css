@@ -1,0 +1,116 @@
+body {
+	background-color: #1D1D1D;
+}
+
+main {
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.back-button {
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: slateblue;
+	font-size: 1.5rem;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 0.5rem;
+	border-radius: 1rem;
+}
+
+.keyboard {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 0.5rem;
+}
+
+.key {
+	background-color: #2C2C2C;
+	color: #FFFFFF;
+	border: none;
+	font-size: 2rem;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+	font-weight: bold;
+}
+
+.green {
+	grid-row: 4 / 6;
+	grid-column: 5;
+	background-color: lime;
+}
+
+.red {
+	background-color: red;
+}
+
+.cl-shrink {
+	transition: 0.1s ease-in-out;
+}
+
+.cl-shrink:hover {
+	box-shadow: 0 0.125rem 0.125rem 0.125rem #00000022;
+	transform: scale(1.05);
+}
+
+.cl-shrink:active {
+	transform: scale(0.95);
+}
+
+.expression {
+	background-color: #4A4A4A;
+	border-radius: 0.25rem;
+	padding: 0.5rem 2rem;
+}
+
+#exp {
+	background-color: #4A4A4A;
+	border: none;
+	padding: 0.5rem 0;
+	display: block;
+	height: 3rem;
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: right;
+}
+
+#exp:active {
+	border:none;
+}
+
+.history {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	background-color: #2C2C2C;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	color: #FFFFFF;
+	font-family: sans-serif;
+	overflow: auto;
+	max-height: 20vh;
+}
+
+.history-elt {
+	background-color: #3B3B3B;
+	padding: 0.5rem;
+	color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.history-exp {
+	align-self: flex-start;
+	opacity: 0.5;
+}
+
+.history-rslt {
+	font-size: 1.25rem;
+	font-weight: bold;
+}

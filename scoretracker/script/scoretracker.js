@@ -1,6 +1,5 @@
 // CONSTANTS
 const addPlayerBtn = document.querySelector('#addPlayer');
-const changeThemeBtn = document.querySelector('#changeTheme');
 const resetScoresBtn = document.querySelector('#resetScores');
 const removeAllPlayersBtn = document.querySelector('#removeAllPlayers');
 const playerZone = document.querySelector('#playerZone');
@@ -51,7 +50,6 @@ function saveLocal ()
 
 // EVENT LISTENERS
 addPlayerBtn.addEventListener('click', addPlayer);
-changeThemeBtn.addEventListener('click', changeTheme);
 resetScoresBtn.addEventListener('click', resetScores);
 removeAllPlayersBtn.addEventListener('click', removeAllPlayers);
 
