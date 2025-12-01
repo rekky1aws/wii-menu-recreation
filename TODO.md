@@ -7,14 +7,11 @@
   + Home Button
   + Home Menu (button or press escape)
 
- + JSimon
-  + Timer
-
  + [META] Trello
   + Clean Update
 
  + ScoreTracker
-  + controls style
+  + polish controls style
 
  + Klondike
   + checkMovability
@@ -84,6 +81,7 @@
  + pause button style
 
 ### JSimon
+ + Time spent on page
  + localStorage
   + last score
   + best score
