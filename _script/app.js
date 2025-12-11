@@ -91,7 +91,7 @@ const games = new GameCollection (
     new Game ('Metallica Pinball Radio', 'gifs/metallica.gif', 'metallica_pinball_radio/'),
     new Game ('JSimon', 'gifs/jsimon.gif', 'JSimon/'),
     new Game ('Mister Coco', 'gifs/mister-coco.gif', 'mister-coco/'),
-    new Game ('Sticky Notes', 'gifs/loop2.gif', 'sticky_note/')
+    new Game ('Sticky Notes', 'gifs/loop2.gif', 'sticky_note/'),
     // new Game ('Barrels', '', 'barrels/', 'alpha-game'),
     // new Game ('Calculator', '', 'calculator/', 'alpha-game'),
     new Game ('Sticky Note', 'gifs/sticky_note.gif', 'sticky_note/'),
