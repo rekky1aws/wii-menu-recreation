@@ -48,12 +48,22 @@ class Klondike
 	endDrag (evt)
 	{
 		console.group('endDrag'); // DEBUG
+		console.log(this.dragDestination); // DEBUG
+
 		if (this.dragDestination) {
 			try {
 				Klondike.checkMovability(this.draggedCard, this.dragDestination);
 
 				console.log('Moving Card'); // DEBUG
+				
+				const source = this.draggedCard.parentNode;
+
 				this.dragDestination.append(this.draggedCard);
+				
+				// Flipping the next card in pile if it exists.
+				if (source.lastChild) {
+					source.lastChild.classList.remove('card-back');
+				}
 
 			} catch (e) {
 				// console.error("This card can't be moved here"); // DEBUG
@@ -69,6 +79,22 @@ class Klondike
 
 	static checkMovability (currentCard, destination)
 	{
+		console.log(destination); // DEBUG
+
+		// Checking if card is visible
+		if (currentCard.classList.contains('card-back')) {
+			if (currentCard.parentNode.id !== 'pile') {
+				throw new Error("Can't move a card that is not revealed.");
+				return false;
+			} else { // If card is from the draw pile
+				if (destination.id !== 'visible') { // But card isn't moved to the draw visible card.
+					throw new Error("Can't move a card from the draw pile anywhere than the draw visible.");
+				}
+
+				return true;
+			}
+		}
+
 		// Checking if card is the last from the pile
 		if (currentCard !== currentCard.parentNode.lastChild) {
 			// TODO : check if card all cards after are movable
@@ -164,13 +190,19 @@ class Klondike
 	dragoverHandler (evt)
 	{
 		// console.group('dropHandler'); // DEBUG
+		console.log(evt.target);
+
 		if (evt.target.classList.contains('card-reciever')) {
 			this.dragDestination = evt.target;
 		} else if (evt.target.classList.contains('card')) {
 			if (evt.target.parentNode.classList.contains('card-reciever')) {
 				this.dragDestination = evt.target.parentNode;
 			}
-		} else {
+		} else if (evt.target.classList.contains('card-value') || evt.target.classList.contains('card-suit')) {
+			if (evt.target.parentNode.parentNode.classList.contains('card-reciever')) {
+				this.dragDestination = evt.target.parentNode.parentNode;
+			}
+		}	else {
 			this.dragDestination = null;
 		}
 		// console.groupEnd('dropHandler'); // DEBUG
