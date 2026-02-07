@@ -37,3 +37,4 @@ Commits for apps should start with `[XXX]`, XXX being the code corresponding to 
  + [MCA] Mister Coco Assistant
  + [SCO] Score Tracker
  + [STA] Static Generator
+ + [PCL] Polar Clock
