@@ -7,7 +7,7 @@ function updateSeconds ()
 	let millisecValue = date.getMilliseconds();
 	let percentage = secondsValue / 60 * 100;
 
-	secondsArc.setAttribute('stroke-dasharray', `${percentage}%, 100%`);
+	secondsArc.setAttribute('stroke-dasharray', `${percentage}%, 200%`);
 	setTimeout(updateSeconds, 1000 - millisecValue);
 }
 
