@@ -152,11 +152,23 @@
   + Refresh countdown every seconds
  + Bonus : make notes sortables
 
+### Polar Clock
+ + Concentric circles progressing to show time span.
+  + minutes
+  + hours
+  + day of week
+  + day of month
+  + month
+ + Full date display at the bottom
+ + Hideable menu to change what circles to display or not
+ + adaptative size of svg
+  + detect viewport height and width
+  + change circles center (cx, cy)
+  + change circles radius (r)
+  + change stroke width
 ---
 
 ## Coming Apps
-### Polar Clock
- + Concentric circles progressing to show time span.
 
 ### Game of Life
  + Playable conway's game of life
