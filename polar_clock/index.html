@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../_style/header.css">
-	<link rel="stylesheet" type="text/css" href="../_style/common.css">
+	<link rel="stylesheet" type="text/css" href="../_style/header.css">
+	<link rel="stylesheet" type="text/css" href="./style/polar_clock.css">
 	<script src="../_script/header.js" type="text/javascript" charset="utf-8" defer></script>
-	<script src="script/polar_clock.js" type="text/javascript" charset="utf-8" defer></script>
+	<script src="./script/polar_clock.js" type="text/javascript" charset="utf-8" defer></script>
 	<script>
 		// Add tailing / in url if missing to load css and js above 
 		if (window.location.href.slice(-1) != '/') {
@@ -16,7 +17,7 @@
 	<title>Polar Clock</title>
 </head>
 <body>
-	<svg width="300" height="300">
+	<svg width="300" height="300" id="clock">
 		<circle
 			id="seconds"
 			cx="150"
