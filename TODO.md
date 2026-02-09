@@ -132,6 +132,9 @@
 
 ### Sticky Note
 
+ + Favicon
+ + Menu Image
+
  + Check notes on load.
   + If a note's time is over push it in another list
   + Display a list of radio array for all the timed over notes to ask user which one to :
@@ -148,8 +151,6 @@
  + UI :
   + Media query to reduce grid-template-columns on smaller devices
 
- + Bonus : display remaining time on notes
-  + Refresh countdown every seconds
  + Bonus : make notes sortables
 
 ### Polar Clock
