@@ -167,6 +167,14 @@
   + change circles center (cx, cy)
   + change circles radius (r)
   + change stroke width
+ + Bonus :
+  + Options 
+    + Differents themes of colors
+     + Monochrome
+     + Static Rainbow (each ring has a color but doesn't change)
+     + Dynamic Rainbow (ring color is defined by a function that maps every possible value to a color (for hours it's #FFFFFF/60))
+     + Custom (user can defined each ring's color)
+    + Show / Hide for each ring
 ---
 
 ## Coming Apps
