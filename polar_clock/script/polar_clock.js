@@ -5,6 +5,7 @@ const secondsArc = document.querySelector('#seconds');
 const minutesArc = document.querySelector('#minutes');
 const hoursArc = document.querySelector('#hours');
 const daysArc = document.querySelector('#days');
+const	monthsArc = document.querySelector('#months')
 
 // FUNCTIONS
 function isYearBisextile (year)
@@ -53,7 +54,34 @@ function updateDays (daysValue = new Date().getDate())
 	daysArc.setAttribute('stroke-dasharray', `${daysValue}, 200%`);
 }
 
+function updateMonths (monthsValue = new Date().getMonth())
+{
+	monthsArc.setAttribute('stroke-dasharray', `${monthsValue}, 200%`);
+}
+
 function updateAll ()
+{
+	let date = new Date();
+	let millisecValue = date.getMilliseconds();
+
+	updateSeconds(date.getSeconds());
+	if (date.getSeconds() == 0) {
+		updateMinutes(date.getMinutes());
+	}
+	if (date.getMinutes() == 0) {
+		updateHours(date.getHours());
+	}
+	if (date.getHours() == 0) {
+		updateDays(date.getDate());
+	}
+	if (date.getDate() == 1) {
+		updateMonths(date.getMonth());
+	}
+
+	setTimeout(updateAll, 1000 - millisecValue);
+}
+
+function firstUpdate ()
 {
 	let date = new Date();
 	let millisecValue = date.getMilliseconds();
@@ -62,10 +90,11 @@ function updateAll ()
 	updateMinutes(date.getMinutes());
 	updateHours(date.getHours());
 	updateDays(date.getDate());
+	updateMonths(date.getMonth());
 
 	setTimeout(updateAll, 1000 - millisecValue);
 }
 
 // MAIN
 setDaysArcLength();
-updateAll();
+firstUpdate();
