@@ -22,6 +22,10 @@
    + Better cards superposition
    + Add a way to move all cards under if they are correctly placed.
 
+ + Polar Clock
+  + Center Clock
+  + Responsive size
+
  + DVD
   + Add the new sounds
 
