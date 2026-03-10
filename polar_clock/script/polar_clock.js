@@ -13,8 +13,8 @@ function isYearBisextile (year)
 		return false;
 	}
 
-	if (year % 100 != 0) {
-		if (year % 400 != 0) {
+	if (year % 100 == 0) {
+		if (year % 400 == 0) {
 			return false;
 		}
 	}
@@ -69,4 +69,3 @@ function updateAll ()
 // MAIN
 setDaysArcLength();
 updateAll();
-
