@@ -38,3 +38,4 @@ Commits for apps should start with `[XXX]`, XXX being the code corresponding to 
  + [SCO] Score Tracker
  + [STA] Static Generator
  + [PCL] Polar Clock
+ + [MIN] Mines

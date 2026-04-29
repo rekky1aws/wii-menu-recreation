@@ -179,6 +179,17 @@
      + Dynamic Rainbow (ring color is defined by a function that maps every possible value to a color (for hours it's #FFFFFF/60))
      + Custom (user can defined each ring's color)
     + Show / Hide for each ring
+
+### Minesweeper
+ + Classic Minesweeper game
+  + Generating a grid with mines
+  + Clicking a box shows numbers of mines in the 8 surrounding boxes
+  + If there's no mine around, show boxes until there is
+ + Bonus features
+  + Change size
+  + Change number of mines
+  + Inifinite canvas
+   + Regions to clear to unlock neighboring regions
 ---
 
 ## Coming Apps
@@ -194,12 +205,6 @@
   + bricks on top of the screen
   + a bar to throw the ball back to the bricks
  + Menu to start a new game
-
-### Minesweeper
- + Classic Minesweeper game
-  + Generating a grid with mines
-  + Clicking a box shows numbers of mines in the 8 surrounding boxes
-  + If there's no mine around, show boxes until there is
 
 ### Tetrjs
  + Tetris Game
