@@ -28,3 +28,7 @@ if (!Object.values(htmlBody.children).map(x => x.tagName).includes('HEADER')) {
 	header.append(backBtn, title, menuBtn);
 	htmlBody.prepend(header);
 }
+
+if (window.location.href.slice(-1) != '/') {
+	window.location.replace(window.location.href+"/");
+}
