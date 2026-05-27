@@ -164,7 +164,10 @@
   + day of week
   + day of month
   + month
- + Full date display at the bottom
+ + Use variables for colors
+  + in digital
+  + in clock
+  + background
  + Hideable menu to change what circles to display or not
  + adaptative size of svg
   + detect viewport height and width
