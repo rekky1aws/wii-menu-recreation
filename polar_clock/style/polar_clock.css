@@ -2,3 +2,7 @@
 	transform-origin: center;
 	transform: rotate(-90deg);
 }
+
+#digital {
+	display: flex;
+}

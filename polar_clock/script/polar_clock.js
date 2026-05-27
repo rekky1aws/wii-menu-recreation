@@ -1,11 +1,22 @@
 // CONSTANTS
 const daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-const secondsArc = document.querySelector('#seconds');
-const minutesArc = document.querySelector('#minutes');
-const hoursArc = document.querySelector('#hours');
-const daysArc = document.querySelector('#days');
-const	monthsArc = document.querySelector('#months')
+const arcs = {
+	seconds: document.querySelector('#seconds-arc'),
+	minutes: document.querySelector('#minutes-arc'),
+	hours: document.querySelector('#hours-arc'),
+	days: document.querySelector('#days-arc'),
+	months: document.querySelector('#months-arc')
+};
+
+const digits = {
+	seconds: document.querySelector('#seconds-digit'),
+	minutes: document.querySelector('#minutes-digit'),
+	hours: document.querySelector('#hours-digit'),
+	days: document.querySelector('#days-digit'),
+	months: document.querySelector('#months-digit'),
+	years: document.querySelector('#years-digit')
+}
 
 // FUNCTIONS
 function isYearBisextile (year)
@@ -31,32 +42,24 @@ function setDaysArcLength ()
 	if (month == 2 && isYearBisextile(date.getFullYear())) {
 		daysInMonth++;
 	}
-	daysArc.setAttribute('pathLength', daysInMonth);
+	arcs.days.setAttribute('pathLength', daysInMonth);
 }
 
-function updateSeconds (secondsValue = new Date().getSeconds())
-{
-	secondsArc.setAttribute('stroke-dasharray', `${secondsValue}, 200%`);
+function updateArc (key, value) {
+	arcs[key].setAttribute('stroke-dasharray', `${value}, 200%`);
 }
 
-function updateMinutes (minutesValue = new Date().getMinutes())
-{
-	minutesArc.setAttribute('stroke-dasharray', `${minutesValue}, 200%`);
+function updateDigit (key, value) {
+	if (`${value}`.length < 2) {
+		digits[key].textContent =  `0${value}`;
+	} else {
+		digits[key].textContent =  value;
+	}
 }
 
-function updateHours (hoursValue = new Date().getHours())
-{
-	hoursArc.setAttribute('stroke-dasharray', `${hoursValue}, 200%`);
-}
-
-function updateDays (daysValue = new Date().getDate())
-{
-	daysArc.setAttribute('stroke-dasharray', `${daysValue}, 200%`);
-}
-
-function updateMonths (monthsValue = new Date().getMonth())
-{
-	monthsArc.setAttribute('stroke-dasharray', `${monthsValue}, 200%`);
+function updatePart (key, value) {
+	updateArc(key, value);
+	updateDigit(key, value);
 }
 
 function updateAll ()
@@ -64,18 +67,21 @@ function updateAll ()
 	let date = new Date();
 	let millisecValue = date.getMilliseconds();
 
-	updateSeconds(date.getSeconds());
+	updatePart('seconds', date.getSeconds());
 	if (date.getSeconds() == 0) {
-		updateMinutes(date.getMinutes());
+		updatePart('minutes', date.getMinutes());
 	}
 	if (date.getMinutes() == 0) {
-		updateHours(date.getHours());
+		updatePart('hours', date.getHours());
 	}
 	if (date.getHours() == 0) {
-		updateDays(date.getDate());
+		updatePart('days', date.getDate());
 	}
 	if (date.getDate() == 1) {
-		updateMonths(date.getMonth());
+		updatePart('months', date.getMonth());
+	}
+	if (date.getMonth() == 1) {
+		updateDigit('years', date.getFullYear());
 	}
 
 	setTimeout(updateAll, 1000 - millisecValue);
@@ -86,11 +92,12 @@ function firstUpdate ()
 	let date = new Date();
 	let millisecValue = date.getMilliseconds();
 
-	updateSeconds(date.getSeconds());
-	updateMinutes(date.getMinutes());
-	updateHours(date.getHours());
-	updateDays(date.getDate());
-	updateMonths(date.getMonth());
+	updatePart('seconds', date.getSeconds());
+	updatePart('minutes', date.getMinutes());
+	updatePart('hours', date.getHours());
+	updatePart('days', date.getDate());
+	updatePart('months', date.getMonth());
+	updateDigit('years', date.getFullYear());
 
 	setTimeout(updateAll, 1000 - millisecValue);
 }

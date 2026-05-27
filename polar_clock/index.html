@@ -19,7 +19,7 @@
 <body>
 	<svg width="500" height="500" id="clock">
 		<circle
-			id="seconds"
+			id="months-arc"
 			cx="250"
 			cy="250"
 			r="50"
@@ -28,10 +28,10 @@
 			stroke-width="20"
 			stroke="#B6FF5C"
 			stroke-dasharray="0%, 1000000"
-			pathLength="60"
+			pathLength="12"
 		/>
 		<circle
-			id="minutes"
+			id="days-arc"
 			cx="250"
 			cy="250"
 			r="75"
@@ -40,10 +40,10 @@
 			stroke-width="20"
 			stroke="#DBDB43"
 			stroke-dasharray="0%, 200%"
-			pathLength="60"
+			pathLength="31"
 		/>
 		<circle
-			id="hours"
+			id="hours-arc"
 			cx="250"
 			cy="250"
 			r="100"
@@ -55,7 +55,7 @@
 			pathLength="24"
 		/>
 		<circle
-			id="days"
+			id="minutes-arc"
 			cx="250"
 			cy="250"
 			r="125"
@@ -64,10 +64,10 @@
 			stroke-width="20"
 			stroke="#881600"
 			stroke-dasharray="0%, 200%"
-			pathLength="31"
+			pathLength="60"
 		/>
 		<circle
-			id="months"
+			id="seconds-arc"
 			cx="250"
 			cy="250"
 			r="150"
@@ -76,9 +76,21 @@
 			stroke-width="20"
 			stroke="#4E0110"
 			stroke-dasharray="0%, 200%"
-			pathLength="12"
+			pathLength="60"
 		/>
 	</svg>
-
+	<div id="digital">
+		<div id="years-digit"></div>
+		-
+		<div id="months-digit"></div>
+		-
+		<div id="days-digit"></div>
+		&nbsp;
+		<div id="seconds-digit"></div>
+		:
+		<div id="minutes-digit"></div>
+		:
+		<div id="hours-digit"></div>
+	</div>
 </body>
 </html>
