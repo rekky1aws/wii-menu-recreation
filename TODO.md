@@ -158,12 +158,6 @@
  + Bonus : make notes sortables
 
 ### Polar Clock
- + Concentric circles progressing to show time span.
-  + minutes
-  + hours
-  + day of week
-  + day of month
-  + month
  + Use variables for colors
   + in digital
   + in clock
