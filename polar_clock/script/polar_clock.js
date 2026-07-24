@@ -18,6 +18,15 @@ const digits = {
 	years: document.querySelector('#years-digit')
 }
 
+const colors = {
+	seconds: "#4E0110",
+	minutes: "#881600",
+	hours: "#C16200",
+	days: "#DBDB43",
+	months: "#B6FF5C",
+	years: "#BDFF6B"
+}
+
 // FUNCTIONS
 function isYearBisextile (year)
 {
@@ -102,6 +111,19 @@ function firstUpdate ()
 	setTimeout(updateAll, 1000 - millisecValue);
 }
 
+function updateColors ()
+{
+	Object.keys(colors).forEach((element) => {
+		if (arcs[element]) {
+			arcs[element].setAttribute('stroke', colors[element]);
+		}
+		if (digits[element]) {
+			digits[element].style.color = colors[element];
+		}
+	});
+}
+
 // MAIN
 setDaysArcLength();
+updateColors();
 firstUpdate();
