@@ -158,10 +158,6 @@
  + Bonus : make notes sortables
 
 ### Polar Clock
- + Use variables for colors
-  + in digital
-  + in clock
-  + background
  + Hideable menu to change what circles to display or not
  + adaptative size of svg
   + detect viewport height and width
