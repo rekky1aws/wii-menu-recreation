@@ -2,6 +2,8 @@
 const daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 const body = document.querySelector('body');
+const appMenu = document.querySelector('#app-menu');
+const appMenuBtn = document.querySelector('#app-menu-btn');
 
 const arcs = {
 	seconds: document.querySelector('#seconds-arc'),
@@ -129,6 +131,22 @@ function updateColors ()
 	body.style.backgroundColor = colors.background;
 	body.style.color = colors.foreground;
 }
+
+function changeMenuState ()
+{
+	appMenu.classList.toggle('hidden');
+
+	return false;
+
+	if (appMenu.classList.contains('hidden')) {
+		appMenu.classList.remove('hidden');
+	} else {
+		appMenu.classList.add('hidden');
+	}
+}
+
+// EVENT LISTENERS
+appMenuBtn.addEventListener('click', changeMenuState);
 
 // MAIN
 setDaysArcLength();
