@@ -1,6 +1,8 @@
 // CONSTANTS
 const daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+const body = document.querySelector('body');
+
 const arcs = {
 	seconds: document.querySelector('#seconds-arc'),
 	minutes: document.querySelector('#minutes-arc'),
@@ -19,12 +21,14 @@ const digits = {
 }
 
 const colors = {
-	seconds: "#4E0110",
+	seconds: "#8D021E",
 	minutes: "#881600",
 	hours: "#C16200",
 	days: "#DBDB43",
 	months: "#B6FF5C",
-	years: "#BDFF6B"
+	years: "#BDFF6B",
+	background: "#1D1D1D",
+	foreground: "#E2E2E2"
 }
 
 // FUNCTIONS
@@ -121,6 +125,9 @@ function updateColors ()
 			digits[element].style.color = colors[element];
 		}
 	});
+
+	body.style.backgroundColor = colors.background;
+	body.style.color = colors.foreground;
 }
 
 // MAIN
