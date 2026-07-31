@@ -145,6 +145,11 @@ function changeMenuState ()
 	}
 }
 
+function clockPlacement ()
+{
+	
+}
+
 // EVENT LISTENERS
 appMenuBtn.addEventListener('click', changeMenuState);
 
