@@ -4,6 +4,7 @@ const daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const body = document.querySelector('body');
 const appMenu = document.querySelector('#app-menu');
 const appMenuBtn = document.querySelector('#app-menu-btn');
+const clock = document.querySelector('#clock');
 
 const arcs = {
 	seconds: document.querySelector('#seconds-arc'),
@@ -156,4 +157,5 @@ appMenuBtn.addEventListener('click', changeMenuState);
 // MAIN
 setDaysArcLength();
 updateColors();
+clockPlacement();
 firstUpdate();
