@@ -18,63 +18,65 @@
 	<title>Polar Clock</title>
 </head>
 <body>
-	<svg width="350" height="350" id="clock">
-		<circle
-			id="months-arc"
-			cx="175"
-			cy="175"
-			r="50"
-			fill="none"
-			stroke-linecap="round"
-			stroke-width="20"
-			stroke-dasharray="0%, 1000000"
-			pathLength="12"
-		/>
-		<circle
-			id="days-arc"
-			cx="175"
-			cy="175"
-			r="75"
-			fill="none"
-			stroke-linecap="round"
-			stroke-width="20"
-			stroke-dasharray="0%, 200%"
-			pathLength="31"
-		/>
-		<circle
-			id="hours-arc"
-			cx="175"
-			cy="175"
-			r="100"
-			fill="none"
-			stroke-linecap="round"
-			stroke-width="20"
-			stroke-dasharray="0%, 200%"
-			pathLength="24"
-		/>
-		<circle
-			id="minutes-arc"
-			cx="175"
-			cy="175"
-			r="125"
-			fill="none"
-			stroke-linecap="round"
-			stroke-width="20"
-			stroke-dasharray="0%, 200%"
-			pathLength="60"
-		/>
-		<circle
-			id="seconds-arc"
-			cx="175"
-			cy="175"
-			r="150"
-			fill="none"
-			stroke-linecap="round"
-			stroke-width="20"
-			stroke-dasharray="0%, 200%"
-			pathLength="60"
-		/>
-	</svg>
+	<div id="clock-container">
+		<svg width="350" height="350" id="clock">
+			<circle
+				id="months-arc"
+				cx="175"
+				cy="175"
+				r="50"
+				fill="none"
+				stroke-linecap="round"
+				stroke-width="20"
+				stroke-dasharray="0%, 1000000"
+				pathLength="12"
+			/>
+			<circle
+				id="days-arc"
+				cx="175"
+				cy="175"
+				r="75"
+				fill="none"
+				stroke-linecap="round"
+				stroke-width="20"
+				stroke-dasharray="0%, 200%"
+				pathLength="31"
+			/>
+			<circle
+				id="hours-arc"
+				cx="175"
+				cy="175"
+				r="100"
+				fill="none"
+				stroke-linecap="round"
+				stroke-width="20"
+				stroke-dasharray="0%, 200%"
+				pathLength="24"
+			/>
+			<circle
+				id="minutes-arc"
+				cx="175"
+				cy="175"
+				r="125"
+				fill="none"
+				stroke-linecap="round"
+				stroke-width="20"
+				stroke-dasharray="0%, 200%"
+				pathLength="60"
+			/>
+			<circle
+				id="seconds-arc"
+				cx="175"
+				cy="175"
+				r="150"
+				fill="none"
+				stroke-linecap="round"
+				stroke-width="20"
+				stroke-dasharray="0%, 200%"
+				pathLength="60"
+			/>
+		</svg>
+	</div>
 	<div id="digital">
 		<div id="years-digit"></div>
 		-
