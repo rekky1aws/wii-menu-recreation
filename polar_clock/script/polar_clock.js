@@ -133,26 +133,12 @@ function updateColors ()
 	body.style.color = colors.foreground;
 }
 
-function changeMenuState ()
-{
-	appMenu.classList.toggle('hidden');
-
-	return false;
-
-	if (appMenu.classList.contains('hidden')) {
-		appMenu.classList.remove('hidden');
-	} else {
-		appMenu.classList.add('hidden');
-	}
-}
-
 function clockPlacement ()
 {
 	
 }
 
 // EVENT LISTENERS
-appMenuBtn.addEventListener('click', changeMenuState);
 
 // MAIN
 setDaysArcLength();
