@@ -21,7 +21,16 @@ const digits = {
 	days: document.querySelector('#days-digit'),
 	months: document.querySelector('#months-digit'),
 	years: document.querySelector('#years-digit')
-}
+};
+
+const colorSelectors = {
+	seconds: document.querySelector('#seconds-color'),
+	minutes: document.querySelector('#minutes-color'),
+	hours: document.querySelector('#hours-color'),
+	days: document.querySelector('#days-color'),
+	months: document.querySelector('#months-color'),
+	years: document.querySelector('#years-color'),
+};
 
 const colors = {
 	seconds: "#8D021E",
@@ -32,7 +41,7 @@ const colors = {
 	years: "#BDFF6B",
 	background: "#1D1D1D",
 	foreground: "#E2E2E2"
-}
+};
 
 // FUNCTIONS
 function isYearBisextile (year)
@@ -133,6 +142,13 @@ function updateColors ()
 	body.style.color = colors.foreground;
 }
 
+function setDefaultColorSelVal ()
+{
+	Object.keys(colorSelectors).forEach( color => {
+		colorSelectors[color].setAttribute('value', colors[color]);
+	});
+}
+
 function clockPlacement ()
 {
 	
@@ -141,6 +157,7 @@ function clockPlacement ()
 // EVENT LISTENERS
 
 // MAIN
+setDefaultColorSelVal();
 setDaysArcLength();
 updateColors();
 clockPlacement();
