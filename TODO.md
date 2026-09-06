@@ -157,7 +157,6 @@
  + Bonus : make notes sortables
 
 ### Polar Clock
- + Menu to change what circles to display or not
  + adaptative size of svg
   + detect viewport height and width
   + change circles center (cx, cy)
