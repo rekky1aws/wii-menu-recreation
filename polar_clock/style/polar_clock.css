@@ -36,4 +36,6 @@
 	gap: 1vh;
 	align-items: center;
 	justify-content: center;
+	padding: 0.5vh;
+	background-color: #1D1D1D1D;
 }
