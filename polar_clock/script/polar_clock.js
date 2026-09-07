@@ -129,12 +129,13 @@ function firstUpdate ()
 
 function updateColors ()
 {
-	Object.keys(colors).forEach((element) => {
-		if (arcs[element]) {
-			arcs[element].setAttribute('stroke', colors[element]);
+	Object.keys(colors).forEach((key) => {
+		if (arcs[key]) {
+			arcs[key].removeAttribute('stroke');
+			arcs[key].setAttribute('stroke', colors[key]);
 		}
-		if (digits[element]) {
-			digits[element].style.color = colors[element];
+		if (digits[key]) {
+			digits[key].style.color = colors[key];
 		}
 	});
 
@@ -155,6 +156,14 @@ function clockPlacement ()
 }
 
 // EVENT LISTENERS
+Object.keys(colorSelectors).forEach(key => {
+	colorSelectors[key].addEventListener('change', (evt) => {
+		if (colors[key]) {
+			colors[key] = evt.target.value;
+		}
+		updateColors();
+	});
+});
 
 // MAIN
 setDefaultColorSelVal();
