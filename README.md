@@ -70,6 +70,12 @@ Notes pour la journée. Ajoutez une note, elle  reste pendant 24h ou jusqu'a ce 
 
 Le stockage des notes est géré avec le localStorage. Il est donc dépendant de l'appareil et n'est pas stocké ailleurs que sur celui ci.
 
+
+### Polar Clock
+Horloge polaire inspirée par [celle-ci](https://mbostock.github.io/protovis/ex/clock.html) avec possibilité de changer les couleurs.
+
+Pour le moment le responsive n'est pas encore mis en place mais je compte le faire un jour.
+
 ---
 
 ## English
@@ -131,3 +137,8 @@ The goal is to move colored barrels to fill a whole line or column with the same
 Notes for the day. Add a note, it stays for 24h or until you clear it. If you come back later (after 24h), you are asked what to keep or not.
 
 Notes' storage is handled  with localStorage, making it dependant on the device used and stored only on it.
+
+### Polar Clock
+Polar Clock inspired by [this one](https://mbostock.github.io/protovis/ex/clock.html) with a menu to change colors.
+
+This app is not responsive as for now but I will do it sooner or later.
